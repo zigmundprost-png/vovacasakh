@@ -80,16 +80,16 @@ export function Header() {
             <Phone className="h-[18px] w-[18px]" strokeWidth={2.4} aria-hidden />
           </a>
 
-          {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
-          <a
-            href={MAX_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground shadow-[0_6px_16px_-6px_oklch(0.555_0.205_260/0.5)] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          {/* MAX временно отключён */}
+          <button
+            type="button"
+            disabled
+            title="Скоро будет доступно"
+            className="hidden md:inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
           >
             <MaxLogo className="h-5 w-5" />
-            Написать в MAX
-          </a>
+            MAX&nbsp;— скоро
+          </button>
 
           <button
             type="button"
@@ -116,16 +116,16 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
-            <a
-              href={MAX_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="md:hidden mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-[15px] font-bold text-primary-foreground hover:bg-primary-hover"
+            {/* MAX временно отключён */}
+            <button
+              type="button"
+              disabled
+              title="Скоро будет доступно"
+              className="md:hidden mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-[15px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
             >
               <MaxLogo className="h-5 w-5" />
-              Написать в MAX
+              MAX&nbsp;— скоро
+            </button>
             </a>
           </nav>
         </div>
