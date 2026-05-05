@@ -1,5 +1,6 @@
 import { Section } from "./Section";
-import { Star } from "lucide-react";
+import { Star, BadgeCheck } from "lucide-react";
+import { WHATSAPP_LINK } from "@/lib/links";
 
 type Review = { name: string; date: string; text: string };
 
@@ -148,6 +149,30 @@ export function Reviews() {
         </p>
       }
     >
+      <div className="mb-6 flex items-start gap-3 rounded-2xl border-l-4 border-[color:var(--accent-warm)] border-y border-r border-y-[color:var(--card-soft-border)] border-r-[color:var(--card-soft-border)] bg-[oklch(0.98_0.025_45)] p-5">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm)]">
+          <BadgeCheck className="h-[18px] w-[18px]" strokeWidth={2.2} aria-hidden />
+        </span>
+        <div className="min-w-0">
+          <p className="font-display text-[14px] font-extrabold uppercase tracking-[0.08em] text-[color:var(--accent-warm)]">
+            Отзывы настоящие
+          </p>
+          <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground">
+            Все отзывы — с реальной площадки объявлений, их можно проверить по ссылке.
+            Кому интересно —{" "}
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[color:var(--accent-warm)] underline underline-offset-2 hover:opacity-80"
+            >
+              напишите, пришлю ссылку
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+
       <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4 [&>*]:break-inside-avoid">
         {REVIEWS.map((r) => (
           <article
