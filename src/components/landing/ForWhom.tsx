@@ -16,7 +16,7 @@ const NOT_FIT = [
 
 export function ForWhom() {
   return (
-    <Section id="for-whom" eyebrow="Подходит / не подходит" title="Кому подойдёт такой ремонт">
+    <Section id="for-whom" eyebrow="Подходит / не подходит" title="Кому я подойду">
       <div className="grid gap-5 lg:grid-cols-2">
         <Column title="Подходит, если" items={FIT} good />
         <Column title="Не лучший формат, если" items={NOT_FIT} />
