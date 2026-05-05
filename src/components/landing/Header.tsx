@@ -84,7 +84,7 @@ export function Header() {
 
           <a
             href="#brief"
-            className="hidden md:inline-flex items-center gap-2 whitespace-nowrap rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
+            className="hidden md:inline-flex xl:hidden items-center gap-2 whitespace-nowrap rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
           >
             <MaxLogo className="h-5 w-5" />
             Подготовить заявку
