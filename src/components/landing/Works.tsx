@@ -14,6 +14,15 @@ import work12 from "@/assets/works/work-12.webp";
 import work13 from "@/assets/works/work-13.webp";
 import work14 from "@/assets/works/work-14.webp";
 import work15 from "@/assets/works/work-15.webp";
+import work16 from "@/assets/works/work-16.webp";
+import work17 from "@/assets/works/work-17.webp";
+import work18 from "@/assets/works/work-18.webp";
+import work19 from "@/assets/works/work-19.webp";
+import work20 from "@/assets/works/work-20.webp";
+import work21 from "@/assets/works/work-21.webp";
+import work22 from "@/assets/works/work-22.webp";
+import work23 from "@/assets/works/work-23.webp";
+import work24 from "@/assets/works/work-24.webp";
 
 const WORKS = [
   { src: work1, title: "Большой угловой диван", desc: "Замена поролона и восстановление формы сидений." },
@@ -31,6 +40,15 @@ const WORKS = [
   { src: work8, title: "Кровать, тёмный корпус", desc: "Восстановление сколов и торцов." },
   { src: work9, title: "Гинекологическое кресло", desc: "Полная разборка, ремонт механизма и обивки." },
   { src: work10, title: "Каркас кровати, торцы", desc: "Восстановление углов и кромки." },
+  { src: work16, title: "Диван-кровать с раскладкой", desc: "Ремонт раскладного механизма и замена ламелей." },
+  { src: work24, title: "Механизм дивана-книжки", desc: "Замена и регулировка фурнитуры раскладки." },
+  { src: work23, title: "Кухонный гарнитур, венге", desc: "Ремонт фасадов и направляющих ящиков." },
+  { src: work22, title: "Угловой офисный стол", desc: "Сборка стола после переезда офиса." },
+  { src: work21, title: "Большой угловой стол", desc: "Сборка рабочего места под ключ." },
+  { src: work20, title: "Стол для переговорной", desc: "Сборка стола и офисных кресел." },
+  { src: work19, title: "Офисные столы, белый каркас", desc: "Сборка партии столов в новом офисе." },
+  { src: work18, title: "Шкафы для документов", desc: "Сборка и установка шкафов в ряд." },
+  { src: work17, title: "Шкафы со стеклянными дверцами", desc: "Сборка медицинской мебели в коридоре." },
 ];
 
 export function Works() {
