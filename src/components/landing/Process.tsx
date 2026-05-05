@@ -59,16 +59,16 @@ export function Process() {
       </ol>
 
       <div className="mt-10 flex justify-center">
-        {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
-        <a
-          href={MAX_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3.5 text-[15px] font-bold text-primary-foreground shadow-[0_8px_20px_-8px_oklch(0.555_0.205_260/0.5)] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        {/* MAX временно отключён */}
+        <button
+          type="button"
+          disabled
+          title="Скоро будет доступно"
+          className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3.5 text-[15px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
         >
           <MaxLogo className="h-5 w-5" />
-          Показать поломку в MAX
-        </a>
+          MAX&nbsp;— скоро
+        </button>
       </div>
     </Section>
   );

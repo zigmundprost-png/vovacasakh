@@ -20,17 +20,17 @@ export function MobileStickyCta() {
           <WhatsAppIcon className="h-[52px] w-[52px] drop-shadow-[0_8px_16px_rgba(37,211,102,0.45)]" rounded={false} />
         </a>
 
-        {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
-        <a
-          href={MAX_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Написать в MAX"
-          className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-primary px-4 text-[15px] font-bold text-primary-foreground shadow-[0_8px_20px_-8px_oklch(0.555_0.205_260/0.55)] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        {/* MAX временно отключён */}
+        <button
+          type="button"
+          disabled
+          aria-label="Кнопка MAX появится позже"
+          title="Скоро будет доступно"
+          className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-primary px-4 text-[15px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
         >
           <MaxLogo className="h-5 w-5 shrink-0" />
-          Написать в MAX
-        </a>
+          MAX&nbsp;— скоро
+        </button>
 
         <a
           href={PHONE_LINK}

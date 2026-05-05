@@ -55,20 +55,20 @@ export function DesktopFloatingCta() {
           </span>
         </a>
 
-        <a
-          href={MAX_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex items-center gap-3 rounded-2xl border border-[color:var(--card-soft-border)] bg-card pl-2 pr-5 py-2 shadow-[0_10px_24px_-12px_rgba(15,23,42,0.25)] transition-all hover:border-primary/40 hover:shadow-[0_14px_28px_-12px_oklch(0.555_0.205_260/0.5)]"
+        <button
+          type="button"
+          disabled
+          title="Скоро будет доступно"
+          className="group flex w-full items-center gap-3 rounded-2xl border border-[color:var(--card-soft-border)] bg-card pl-2 pr-5 py-2 opacity-55 grayscale cursor-not-allowed text-left"
         >
           <span className="flex h-10 w-10 shrink-0 items-center justify-center">
             <MaxLogo className="h-10 w-10" />
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-[13px] font-bold text-foreground">MAX</span>
-            <span className="text-[11px] text-muted-foreground">Отправить фото / видео</span>
+            <span className="text-[11px] text-muted-foreground">Скоро будет доступно</span>
           </span>
-        </a>
+        </button>
       </div>
 
       {/* Главная плавающая кнопка */}
