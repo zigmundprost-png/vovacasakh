@@ -48,6 +48,7 @@ function Index() {
       <main className="pb-24 md:pb-0">
         <Hero />
         <TrustStrip />
+        <About />
         <Problem />
         <Services />
         <Process />
