@@ -2,7 +2,6 @@ import {
   Image as ImageIcon,
   Wrench,
   Sparkles,
-  Send,
   ArrowRight,
   Sofa,
   Video,
@@ -12,6 +11,8 @@ import {
   MapPin,
 } from "lucide-react";
 import { MAX_LINK } from "@/lib/links";
+import { MaxLogo } from "./MaxLogo";
+
 
 const VALUE_PROPS = [
   { icon: Sofa, text: "Диваны, кресла, стулья и кровати" },
