@@ -58,7 +58,7 @@ export function DesktopFloatingCta() {
         <button
           type="button"
           disabled
-          title="Скоро будет доступно"
+          title="Отправить фото или видео (скоро)"
           className="group flex w-full items-center gap-3 rounded-2xl border border-[color:var(--card-soft-border)] bg-card pl-2 pr-5 py-2 opacity-55 grayscale cursor-not-allowed text-left"
         >
           <span className="flex h-10 w-10 shrink-0 items-center justify-center">
@@ -66,7 +66,7 @@ export function DesktopFloatingCta() {
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-[13px] font-bold text-foreground">MAX</span>
-            <span className="text-[11px] text-muted-foreground">Скоро будет доступно</span>
+            <span className="text-[11px] text-muted-foreground">Отправить фото или видео (скоро)</span>
           </span>
         </button>
       </div>

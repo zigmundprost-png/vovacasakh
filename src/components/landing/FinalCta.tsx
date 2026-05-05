@@ -12,11 +12,11 @@ export function FinalCta() {
         </span>
         <h2 className="font-display mt-4 text-[28px] font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-[42px]">
           Покажите поломку — Владимир скажет,{" "}
-          <span className="text-primary">какой шаг лучше дальше</span>
+          <span className="text-primary">что делать дальше</span>
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.6] text-muted-foreground">
-          Пришлите фото или короткое видео в MAX. Так быстрее понять, можно ли
-          дать предварительную оценку, нужен ли выезд и стоит ли рассматривать ремонт.
+          Пришлите фото или короткое видео в MAX. Так быстрее понять, нужен ли
+          выезд и стоит ли ремонтировать.
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -28,7 +28,7 @@ export function FinalCta() {
             className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed sm:w-auto"
           >
             <MaxLogo className="h-6 w-6 shrink-0" />
-            MAX&nbsp;— скоро
+            Написать в MAX (скоро)
           </button>
           <a
             href={PHONE_LINK}

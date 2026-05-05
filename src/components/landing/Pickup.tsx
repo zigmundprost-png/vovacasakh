@@ -4,7 +4,7 @@ import { Truck, Package, Camera, Home } from "lucide-react";
 const PERKS = [
   { icon: Home, text: "Не нужно самому искать машину" },
   { icon: Package, text: "Меньше грязи и суеты дома" },
-  { icon: Truck, text: "После работы привезу мебель обратно" },
+  { icon: Truck, text: "Привезу обратно и помогу занести" },
   { icon: Camera, text: "По желанию пришлю фото- или видеоотчёт" },
 ];
 
@@ -12,7 +12,7 @@ export function Pickup() {
   return (
     <Section
       id="pickup"
-      eyebrow="Если дома неудобно"
+      eyebrow="Забор и возврат"
       title="Если дома ремонтировать неудобно — мебель можно забрать"
       intro={
         <>
@@ -40,8 +40,7 @@ export function Pickup() {
       </ul>
 
       <p className="mt-6 text-[13px] text-muted-foreground">
-        Забор, доставка, грузчики и выезд в другой город обсуждаем заранее и
-        считаем отдельно.
+        Забор и возврат, грузчики и выезд за город — обсуждаем заранее.
       </p>
     </Section>
   );

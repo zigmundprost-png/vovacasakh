@@ -17,14 +17,14 @@ import { MaxLogo } from "./MaxLogo";
 const VALUE_PROPS = [
   { icon: Sofa, text: "Диваны, кресла, стулья и кровати" },
   { icon: Video, text: "Можно начать с фото или видео" },
-  { icon: ShieldCheck, text: "Скажу честно, есть ли смысл ремонтировать" },
+  { icon: ShieldCheck, text: "Объясню по-человечески, что сломалось" },
   { icon: Truck, text: "При необходимости заберу и привезу обратно" },
 ];
 
 const TRUST_STATS = [
   { value: "20+ лет", label: "в мебельной работе" },
-  { value: "от 5 000 ₽", label: "ремонт" },
-  { value: "700 ₽", label: "выезд по Южно-Сахалинску" },
+  { value: "от 5 000 ₽", label: "Ремонт мягкой мебели" },
+  { value: "700 ₽", label: "Выезд и диагностика" },
 ];
 
 export function Hero() {
@@ -43,7 +43,7 @@ export function Hero() {
               Сломался диван?
               <br />
               <span className="relative inline-block text-primary">
-                Не спешите покупать новый.
+                Не спешите покупать новый
                 <svg
                   aria-hidden
                   viewBox="0 0 320 14"
@@ -63,7 +63,7 @@ export function Hero() {
 
             <p className="mt-6 text-[16px] leading-[1.6] text-muted-foreground sm:text-[17px]">
               Владимир — частный мастер по ремонту мягкой мебели. Посмотрит поломку
-              по фото или видео и скажет, есть ли смысл её ремонтировать.
+              по фото или видео и скажет, есть ли смысл ремонта.
             </p>
 
             {/* Feature cards */}
@@ -92,7 +92,7 @@ export function Hero() {
                 className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed sm:w-auto sm:self-start"
               >
                 <MaxLogo className="h-6 w-6 shrink-0" />
-                Написать в MAX&nbsp;— скоро
+                Написать в MAX (скоро)
               </button>
 
               <a

@@ -88,7 +88,7 @@ export function Header() {
             className="hidden md:inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
           >
             <MaxLogo className="h-5 w-5" />
-            MAX&nbsp;— скоро
+            Написать в MAX (скоро)
           </button>
 
           <button
@@ -124,7 +124,7 @@ export function Header() {
               className="md:hidden mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-[15px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
             >
               <MaxLogo className="h-5 w-5" />
-              MAX&nbsp;— скоро
+              Написать в MAX (скоро)
             </button>
           </nav>
         </div>
