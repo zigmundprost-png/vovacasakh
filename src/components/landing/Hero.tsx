@@ -118,14 +118,21 @@ export function Hero() {
             </div>
 
             {/* Полоса доверия с цифрами */}
-            <dl className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-border pt-6">
-              {TRUST_STATS.map((s, i) => (
-                <div key={s.value} className="flex items-center gap-7">
-                  {i > 0 && <span aria-hidden className="hidden h-8 w-px bg-border sm:block" />}
-                  <div>
-                    <dt className="font-display text-[16px] font-bold text-foreground">{s.value}</dt>
-                    <dd className="text-[12px] text-muted-foreground">{s.label}</dd>
-                  </div>
+            <dl className="mt-8 grid grid-cols-2 gap-3 border-t border-border pt-6 sm:grid-cols-4 sm:gap-4">
+              {TRUST_STATS.map(({ icon: Icon, value, label }) => (
+                <div
+                  key={value}
+                  className="rounded-2xl border border-[color:var(--card-soft-border)] bg-card p-4 transition-colors hover:border-primary/30"
+                >
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--card-soft)] text-primary">
+                    <Icon className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden />
+                  </span>
+                  <dt className="font-display mt-3 text-[18px] font-extrabold leading-tight text-foreground">
+                    {value}
+                  </dt>
+                  <dd className="mt-0.5 text-[12px] leading-snug text-muted-foreground">
+                    {label}
+                  </dd>
                 </div>
               ))}
             </dl>
