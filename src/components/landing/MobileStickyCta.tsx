@@ -1,6 +1,7 @@
 import { Phone } from "lucide-react";
-import { MAX_LINK, PHONE_LINK } from "@/lib/links";
+import { MAX_LINK, PHONE_LINK, WHATSAPP_LINK } from "@/lib/links";
 import { MaxLogo } from "./MaxLogo";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function MobileStickyCta() {
   return (
@@ -9,13 +10,23 @@ export function MobileStickyCta() {
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <div className="mx-auto flex max-w-6xl items-center gap-2 px-4 py-2.5">
+        <a
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Написать в WhatsApp"
+          className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[18px] bg-[#25D366] text-white shadow-[0_8px_18px_-8px_rgba(37,211,102,0.6)] transition-colors hover:bg-[#1DB954] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        >
+          <WhatsAppIcon className="h-[24px] w-[24px]" />
+        </a>
+
         {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
         <a
           href={MAX_LINK}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Написать в MAX"
-          className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-primary px-5 text-[15px] font-bold text-primary-foreground shadow-[0_8px_20px_-8px_oklch(0.555_0.205_260/0.55)] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-primary px-4 text-[15px] font-bold text-primary-foreground shadow-[0_8px_20px_-8px_oklch(0.555_0.205_260/0.55)] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           <MaxLogo className="h-5 w-5 shrink-0" />
           Написать в MAX
@@ -24,9 +35,9 @@ export function MobileStickyCta() {
         <a
           href={PHONE_LINK}
           aria-label="Позвонить мастеру"
-          className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[18px] border border-[color:var(--card-soft-border)] bg-card text-primary transition-colors hover:bg-[color:var(--card-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[18px] bg-foreground text-background transition-colors hover:bg-foreground/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          <Phone className="h-[20px] w-[20px]" aria-hidden />
+          <Phone className="h-[20px] w-[20px]" strokeWidth={2.4} aria-hidden />
         </a>
       </div>
     </div>
