@@ -85,7 +85,7 @@ function NotDoingCard({ items }: { items: string[] }) {
           <X className="h-5 w-5" strokeWidth={2.4} />
         </span>
         <h3 className="font-display text-[19px] font-bold text-foreground">
-          За что Владимир не берётся
+          За что я не берусь
         </h3>
       </div>
       <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
