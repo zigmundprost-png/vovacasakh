@@ -102,9 +102,27 @@ const CATEGORIES: ("Все" | Category)[] = ["Все", "Ремонт", "Сбор
 
 export function Works() {
   const [active, setActive] = useState<"Все" | Category>("Все");
-  const [open, setOpen] = useState<Work | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const filtered = active === "Все" ? WORKS : WORKS.filter((w) => w.category === active);
+  const open = openIndex !== null ? filtered[openIndex] : null;
+
+  const goPrev = useCallback(() => {
+    setOpenIndex((i) => (i === null ? i : (i - 1 + filtered.length) % filtered.length));
+  }, [filtered.length]);
+  const goNext = useCallback(() => {
+    setOpenIndex((i) => (i === null ? i : (i + 1) % filtered.length));
+  }, [filtered.length]);
+
+  useEffect(() => {
+    if (openIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") goPrev();
+      else if (e.key === "ArrowRight") goNext();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [openIndex, goPrev, goNext]);
 
   return (
     <Section
@@ -125,7 +143,10 @@ export function Works() {
             <button
               key={c}
               type="button"
-              onClick={() => setActive(c)}
+              onClick={() => {
+                setActive(c);
+                setOpenIndex(null);
+              }}
               className={`rounded-full border px-4 py-1.5 text-sm font-medium transition ${
                 isActive
                   ? "border-foreground bg-foreground text-background"
@@ -139,11 +160,11 @@ export function Works() {
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        {filtered.map((w) => (
+        {filtered.map((w, i) => (
           <button
             key={w.title}
             type="button"
-            onClick={() => setOpen(w)}
+            onClick={() => setOpenIndex(i)}
             className="group relative overflow-hidden rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-foreground"
           >
             <div className="relative aspect-square bg-surface">
@@ -161,13 +182,55 @@ export function Works() {
         ))}
       </div>
 
-      <Dialog open={!!open} onOpenChange={(v) => !v && setOpen(null)}>
-        <DialogContent className="max-w-3xl p-0 overflow-hidden">
+      <Dialog open={openIndex !== null} onOpenChange={(v) => !v && setOpenIndex(null)}>
+        <DialogContent
+          className="max-w-3xl p-0 overflow-hidden [&>button]:hidden"
+          onOpenAutoFocus={(e) => e.preventDefault()}
+        >
           {open && (
-            <div>
-              <img src={open.src} alt={open.title} className="w-full max-h-[75vh] object-contain bg-black" />
+            <div className="relative">
+              {/* Close — крупный, красный, в правом верхнем углу для удобства на мобилках */}
+              <button
+                type="button"
+                onClick={() => setOpenIndex(null)}
+                aria-label="Закрыть"
+                className="absolute right-3 top-3 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-red-600 text-white shadow-lg ring-2 ring-white/80 transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400"
+              >
+                <X className="h-6 w-6" strokeWidth={3} />
+              </button>
+
+              {/* Стрелки навигации */}
+              <button
+                type="button"
+                onClick={goPrev}
+                aria-label="Предыдущая работа"
+                className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white shadow-lg backdrop-blur transition hover:bg-black/75 focus:outline-none focus:ring-2 focus:ring-white/70"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+              <button
+                type="button"
+                onClick={goNext}
+                aria-label="Следующая работа"
+                className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white shadow-lg backdrop-blur transition hover:bg-black/75 focus:outline-none focus:ring-2 focus:ring-white/70"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+
+              <img
+                src={open.src}
+                alt={open.title}
+                className="w-full max-h-[75vh] object-contain bg-black"
+              />
               <div className="p-5">
-                <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{open.category}</div>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                    {open.category}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {(openIndex ?? 0) + 1} / {filtered.length}
+                  </div>
+                </div>
                 <h3 className="mt-1 text-lg font-semibold text-foreground">{open.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{open.desc}</p>
               </div>
