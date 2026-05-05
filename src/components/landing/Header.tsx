@@ -29,16 +29,16 @@ export function Header() {
         scrolled ? "border-b border-border bg-background/85 backdrop-blur-md" : "bg-background"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-8">
-        <a href="#top" className="flex items-center gap-2.5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6 md:px-8">
+        <a href="#top" className="flex items-center gap-3">
           <span
             aria-hidden
-            className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground text-[12px] font-semibold text-background"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-hover text-[13px] font-bold text-primary-foreground shadow-[0_4px_12px_-4px_oklch(0.555_0.205_260/0.45)]"
           >
             ВК
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="text-[15px] font-semibold tracking-tight text-foreground uppercase">
+            <span className="font-display text-[17px] font-extrabold tracking-tight text-foreground uppercase">
               ВОВА КАРЛО
             </span>
             <span className="hidden text-[11px] text-muted-foreground sm:block">
@@ -65,7 +65,7 @@ export function Header() {
             href={MAX_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center rounded-lg bg-primary px-4 py-2 text-[14px] font-medium text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="hidden md:inline-flex items-center rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground shadow-[0_6px_16px_-6px_oklch(0.555_0.205_260/0.5)] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             Отправить фото в MAX
           </a>
