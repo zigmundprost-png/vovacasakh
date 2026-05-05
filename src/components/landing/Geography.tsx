@@ -16,7 +16,7 @@ export function Geography() {
         </div>
 
         <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
-          <h3 className="text-[16px] font-semibold text-foreground">По договорённости — юг Сахалина</h3>
+          <h3 className="text-[16px] font-semibold text-foreground">По договорённости — выезжаю на юг Сахалина</h3>
           <ul className="mt-4 flex flex-wrap gap-2">
             {NEARBY.map((c) => (
               <li
