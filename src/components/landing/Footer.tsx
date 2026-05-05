@@ -1,48 +1,62 @@
-import { MAX_LINK, PHONE_LINK, PHONE_NUMBER } from "@/lib/links";
-import { Phone } from "lucide-react";
+import { MAX_LINK, PHONE_LINK, PHONE_NUMBER, WHATSAPP_LINK } from "@/lib/links";
+import { Phone, MapPin, Clock } from "lucide-react";
 import { MaxLogo } from "./MaxLogo";
+import { WhatsAppIcon } from "./WhatsAppIcon";
+import { BrandMark } from "./BrandMark";
+
+const SECTIONS: [string, string][] = [
+  ["#about", "О мастере"],
+  ["#services", "Что я ремонтирую"],
+  ["#process", "Как проходит работа"],
+  ["#prices", "Цены"],
+  ["#works", "Работы"],
+  ["#reviews", "Отзывы"],
+  ["#guarantee", "Гарантия"],
+  ["#faq", "FAQ"],
+];
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-6xl px-4 py-10 md:px-8 md:py-12">
-        <div className="grid gap-8 md:grid-cols-3">
-          <div>
-            <div className="flex items-center gap-2.5">
-              <span
-                aria-hidden
-                className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground text-[12px] font-semibold text-background"
-              >
-                ВК
-              </span>
-              <span className="text-[15px] font-semibold tracking-tight text-foreground uppercase">
+    <footer className="border-t border-border bg-[color:var(--card-soft)]">
+      <div className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-16">
+        <div className="grid gap-10 md:grid-cols-12">
+          {/* Бренд */}
+          <div className="md:col-span-4">
+            <a href="#top" className="inline-flex items-center gap-3">
+              <BrandMark />
+              <span className="font-display text-[17px] font-extrabold tracking-tight text-foreground uppercase">
                 ВОВА КАРЛО
               </span>
-            </div>
-            <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
-              Я частный мастер по ремонту диванов и мягкой мебели. Работаю в
-              Южно-Сахалинске и на юге Сахалина.
+            </a>
+            <p className="mt-4 text-[14px] leading-relaxed text-muted-foreground">
+              Я частный мастер по ремонту диванов и мягкой мебели. Работаю
+              честно: смотрю поломку, объясняю и берусь только за то, что
+              реально починю.
             </p>
+
+            <ul className="mt-5 space-y-2.5 text-[13px] text-foreground/85">
+              <li className="flex items-start gap-2.5">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />
+                Южно-Сахалинск и юг Сахалина
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />
+                Отвечаю в течение дня — ежедневно
+              </li>
+            </ul>
           </div>
 
-          <div>
-            <h3 className="text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">
+          {/* Разделы */}
+          <div className="md:col-span-4">
+            <h3 className="text-[12px] font-bold uppercase tracking-[0.08em] text-muted-foreground">
               Разделы
             </h3>
-            <ul className="mt-3 grid grid-cols-2 gap-y-1.5 text-[14px]">
-              {[
-                ["#services", "Что я ремонтирую"],
-                ["#process", "Как проходит работа"],
-                ["#prices", "Цены"],
-                ["#works", "Работы"],
-                ["#reviews", "Отзывы"],
-                ["#guarantee", "Гарантия"],
-                ["#faq", "FAQ"],
-              ].map(([href, label]) => (
+            <ul className="mt-4 grid grid-cols-2 gap-y-2.5 text-[14px]">
+              {SECTIONS.map(([href, label]) => (
                 <li key={href}>
                   <a
                     href={href}
-                    className="text-foreground/80 hover:text-foreground transition-colors"
+                    className="text-foreground/85 transition-colors hover:text-primary"
                   >
                     {label}
                   </a>
@@ -51,38 +65,48 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">
+          {/* Связь */}
+          <div className="md:col-span-4">
+            <h3 className="text-[12px] font-bold uppercase tracking-[0.08em] text-muted-foreground">
               Связь
             </h3>
-            <div className="mt-3 flex flex-col gap-2">
+            <div className="mt-4 flex flex-col gap-2.5">
               <a
                 href={MAX_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-2.5 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-3 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
               >
                 <MaxLogo className="h-5 w-5" />
                 Написать в MAX
               </a>
               <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[color:var(--card-soft-border)] bg-card px-5 py-3 text-[14px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)]"
+              >
+                <WhatsAppIcon className="h-4 w-4" />
+                WhatsApp
+              </a>
+              <a
                 href={PHONE_LINK}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[color:var(--card-soft-border)] bg-card px-5 py-2.5 text-[14px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)]"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[color:var(--card-soft-border)] bg-card px-5 py-3 text-[14px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)]"
               >
                 <Phone className="h-4 w-4 text-primary" aria-hidden />
                 {PHONE_NUMBER}
               </a>
             </div>
-            <p className="mt-3 text-[13px] text-muted-foreground">
-              Отвечаю в течение дня. Лучше сразу присылайте мне фото или
-              короткое видео поломки.
+            <p className="mt-3 text-[12px] leading-relaxed text-muted-foreground">
+              Лучше сразу присылайте фото или короткое видео поломки — так я
+              быстрее пойму задачу.
             </p>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-[12px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-2 border-t border-border pt-6 text-[12px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} ВОВА КАРЛО · Ремонт мягкой мебели</span>
-          <span>Южно-Сахалинск и юг Сахалина</span>
+          <span>Сделано с заботой о ваших диванах</span>
         </div>
       </div>
     </footer>
