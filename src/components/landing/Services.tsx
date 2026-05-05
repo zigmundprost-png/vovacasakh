@@ -81,7 +81,7 @@ function NotDoingCard({ items }: { items: string[] }) {
   return (
     <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
       <div className="flex items-center gap-3">
-        <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[oklch(0.96_0.04_25)] text-[oklch(0.55_0.21_27)]">
+        <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[color:var(--tone-danger-soft)] text-[color:var(--tone-danger-fg)]">
           <X className="h-5 w-5" strokeWidth={2.4} />
         </span>
         <h3 className="font-display text-[19px] font-bold text-foreground">
@@ -96,7 +96,7 @@ function NotDoingCard({ items }: { items: string[] }) {
           >
             <span
               aria-hidden
-              className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[oklch(0.96_0.04_25)] text-[oklch(0.55_0.21_27)]"
+              className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[color:var(--tone-danger-soft)] text-[color:var(--tone-danger-fg)]"
             >
               <X className="h-3 w-3" strokeWidth={3} />
             </span>

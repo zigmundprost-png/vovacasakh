@@ -29,15 +29,15 @@ function Column({ title, items, good = false }: { title: string; items: string[]
   const Icon = good ? Check : X;
   const tone = good
     ? {
-        card: "border-[oklch(0.85_0.09_150)] bg-[oklch(0.985_0.025_150)]",
-        badge: "bg-[oklch(0.94_0.06_150)] text-[oklch(0.45_0.15_150)]",
-        chip: "bg-[oklch(0.92_0.08_150)] text-[oklch(0.42_0.16_150)]",
+        card: "border-[color:var(--tone-success-border)] bg-[color:var(--tone-success-soft)]",
+        badge: "bg-[color:var(--tone-success-soft)] text-[color:var(--tone-success-fg)] ring-1 ring-[color:var(--tone-success-border)]",
+        chip: "bg-[color:var(--tone-success)] text-white",
         label: "Подходит",
       }
     : {
-        card: "border-[oklch(0.88_0.06_25)] bg-[oklch(0.985_0.022_25)]",
-        badge: "bg-[oklch(0.96_0.04_25)] text-[oklch(0.55_0.21_27)]",
-        chip: "bg-[oklch(0.94_0.06_25)] text-[oklch(0.52_0.2_27)]",
+        card: "border-[color:var(--tone-danger-border)] bg-[color:var(--tone-danger-soft)]",
+        badge: "bg-[color:var(--tone-danger-soft)] text-[color:var(--tone-danger-fg)] ring-1 ring-[color:var(--tone-danger-border)]",
+        chip: "bg-[color:var(--tone-danger)] text-white",
         label: "Не подходит",
       };
 
