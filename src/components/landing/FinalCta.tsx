@@ -21,13 +21,19 @@ export function FinalCta() {
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href={MAX_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#brief"
             className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover sm:w-auto"
           >
             <MaxLogo className="h-6 w-6 shrink-0" />
-            Написать в MAX
+            Подготовить заявку
+          </a>
+          <a
+            href={MAX_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] border border-[color:var(--card-soft-border)] bg-card px-6 text-[15px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)] sm:w-auto"
+          >
+            Сразу написать в MAX
           </a>
           <a
             href={PHONE_LINK}
