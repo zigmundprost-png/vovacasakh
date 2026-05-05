@@ -2,8 +2,8 @@ import { Section } from "./Section";
 import { Truck, Package, Camera, Home } from "lucide-react";
 
 const PERKS = [
-  { icon: Home, text: "Не нужно самому искать машину" },
-  { icon: Package, text: "Меньше грязи и суеты дома" },
+  { icon: Home, text: "Вам не нужно искать машину" },
+  { icon: Package, text: "Меньше грязи и суеты у вас дома" },
   { icon: Truck, text: "Привезу обратно и помогу занести" },
   { icon: Camera, text: "По желанию пришлю фото- или видеоотчёт" },
 ];
