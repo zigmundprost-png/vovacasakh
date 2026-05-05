@@ -28,7 +28,7 @@ const VALUE_PROPS = [
 const TRUST_STATS = [
   { icon: Award, value: "20+ лет", label: "работаю с мебелью" },
   { icon: CheckCircle2, value: "500+", label: "ремонтов сделал" },
-  { icon: Wallet, value: "от 5 000 ₽", label: "ремонт мягкой мебели" },
+  { icon: Wallet, value: "700₽", label: "ремонт мягкой мебели" },
   { icon: Car, value: "700 ₽", label: "выезд и диагностика" },
 ];
 
