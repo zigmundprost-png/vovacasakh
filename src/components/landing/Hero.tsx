@@ -151,7 +151,7 @@ export function Hero() {
               />
             </div>
             <p className="mt-4 text-[12px] text-muted-foreground">
-              Реальные работы мастера — фото добавим перед запуском.
+              Мои реальные работы — добавлю фото перед запуском.
             </p>
           </div>
         </div>
