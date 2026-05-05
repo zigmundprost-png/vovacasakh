@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -32,84 +33,68 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-surface: var(--surface);
-  --color-surface-strong: var(--surface-strong);
-  --font-display: var(--font-display);
   --font-sans: var(--font-sans);
+  --font-display: var(--font-sans);
 }
 
 :root {
-  --radius: 0.875rem;
+  --radius: 0.75rem;
 
-  /* Тёплый светлый фон, графитовый текст, янтарный акцент */
-  --background: oklch(0.975 0.012 80);          /* #FAF7F2-подобный кремовый */
-  --foreground: oklch(0.245 0.018 60);          /* тёмный графит с тёплым подтоном */
+  --background: oklch(0.972 0.006 85);
+  --foreground: oklch(0.235 0 0);
+  --muted-foreground: oklch(0.48 0 0);
 
-  --surface: oklch(0.955 0.014 78);             /* чуть темнее фона — для карточек/блоков */
-  --surface-strong: oklch(0.925 0.018 76);      /* для placeholder-карточек */
-
+  --surface: oklch(0.955 0.006 85);
   --card: oklch(1 0 0);
   --card-foreground: var(--foreground);
   --popover: oklch(1 0 0);
   --popover-foreground: var(--foreground);
 
-  --primary: oklch(0.62 0.13 55);               /* тёплая охра/янтарь */
-  --primary-foreground: oklch(0.99 0.005 80);
-  --primary-hover: oklch(0.55 0.135 52);
+  --primary: oklch(0.665 0.155 47);
+  --primary-foreground: oklch(1 0 0);
+  --primary-hover: oklch(0.6 0.16 45);
 
-  --secondary: oklch(0.93 0.018 76);
+  --secondary: oklch(0.955 0.006 85);
   --secondary-foreground: var(--foreground);
-
-  --muted: oklch(0.93 0.014 78);
-  --muted-foreground: oklch(0.48 0.018 60);
-
-  --accent: oklch(0.93 0.018 76);
+  --muted: oklch(0.955 0.006 85);
+  --accent: oklch(0.955 0.006 85);
   --accent-foreground: var(--foreground);
 
   --destructive: oklch(0.55 0.18 28);
-  --destructive-foreground: oklch(0.99 0.005 80);
+  --destructive-foreground: oklch(1 0 0);
 
-  --border: oklch(0.88 0.016 75);
-  --input: oklch(0.88 0.016 75);
-  --ring: oklch(0.62 0.13 55);
+  --border: oklch(0.91 0.008 85);
+  --input: oklch(0.91 0.008 85);
+  --ring: oklch(0.665 0.155 47);
 
-  --font-display: "Fraunces", "Source Serif Pro", Georgia, serif;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 .dark {
-  --background: oklch(0.18 0.012 60);
-  --foreground: oklch(0.96 0.008 80);
-  --surface: oklch(0.22 0.014 60);
-  --surface-strong: oklch(0.26 0.016 60);
-  --card: oklch(0.22 0.014 60);
+  --background: oklch(0.18 0.005 85);
+  --foreground: oklch(0.96 0 0);
+  --surface: oklch(0.22 0.006 85);
+  --card: oklch(0.22 0.006 85);
   --card-foreground: var(--foreground);
-  --popover: oklch(0.22 0.014 60);
+  --popover: oklch(0.22 0.006 85);
   --popover-foreground: var(--foreground);
-  --primary: oklch(0.7 0.13 60);
-  --primary-foreground: oklch(0.18 0.012 60);
-  --primary-hover: oklch(0.76 0.13 60);
-  --secondary: oklch(0.26 0.016 60);
+  --primary: oklch(0.7 0.15 47);
+  --primary-foreground: oklch(0.18 0 0);
+  --primary-hover: oklch(0.76 0.15 47);
+  --secondary: oklch(0.26 0.006 85);
   --secondary-foreground: var(--foreground);
-  --muted: oklch(0.26 0.016 60);
-  --muted-foreground: oklch(0.7 0.012 70);
-  --accent: oklch(0.26 0.016 60);
+  --muted: oklch(0.26 0.006 85);
+  --muted-foreground: oklch(0.7 0 0);
+  --accent: oklch(0.26 0.006 85);
   --accent-foreground: var(--foreground);
-  --destructive: oklch(0.65 0.19 28);
-  --destructive-foreground: oklch(0.99 0.005 80);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.7 0.13 60);
+  --ring: oklch(0.7 0.15 47);
 }
 
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -117,9 +102,8 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-
-  h1, h2, h3 {
-    font-family: var(--font-display);
-    letter-spacing: -0.01em;
+  h1, h2, h3, h4 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.02em;
   }
 }
