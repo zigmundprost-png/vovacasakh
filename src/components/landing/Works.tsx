@@ -188,40 +188,64 @@ export function Works() {
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           {open && (
-            <div className="relative">
-              {/* Close — крупный, красный, в правом верхнем углу для удобства на мобилках */}
+            <div
+              className="relative"
+              onTouchStart={(e) => {
+                (e.currentTarget as HTMLDivElement).dataset.tx = String(e.touches[0].clientX);
+                (e.currentTarget as HTMLDivElement).dataset.ty = String(e.touches[0].clientY);
+              }}
+              onTouchEnd={(e) => {
+                const el = e.currentTarget as HTMLDivElement;
+                const sx = Number(el.dataset.tx ?? 0);
+                const sy = Number(el.dataset.ty ?? 0);
+                const dx = e.changedTouches[0].clientX - sx;
+                const dy = e.changedTouches[0].clientY - sy;
+                if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+                  if (dx < 0) goNext();
+                  else goPrev();
+                }
+              }}
+            >
+              {/* Close — дизайнерский крестик: тонкое стекло + красный значок */}
               <button
                 type="button"
                 onClick={() => setOpenIndex(null)}
                 aria-label="Закрыть"
-                className="absolute right-3 top-3 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-red-600 text-white shadow-lg ring-2 ring-white/80 transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="group absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-red-600 shadow-[0_4px_20px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-md transition hover:bg-red-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-red-400 active:scale-95"
               >
-                <X className="h-6 w-6" strokeWidth={3} />
+                <X className="h-5 w-5" strokeWidth={2.5} />
               </button>
 
-              {/* Стрелки навигации */}
+              {/* Стрелки навигации — минималистичные, со стеклом */}
               <button
                 type="button"
                 onClick={goPrev}
                 aria-label="Предыдущая работа"
-                className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white shadow-lg backdrop-blur transition hover:bg-black/75 focus:outline-none focus:ring-2 focus:ring-white/70"
+                className="absolute left-3 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-foreground shadow-[0_4px_20px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-md transition hover:bg-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-foreground active:scale-95 sm:flex"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ArrowLeft className="h-5 w-5" strokeWidth={2.25} />
               </button>
               <button
                 type="button"
                 onClick={goNext}
                 aria-label="Следующая работа"
-                className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white shadow-lg backdrop-blur transition hover:bg-black/75 focus:outline-none focus:ring-2 focus:ring-white/70"
+                className="absolute right-3 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-foreground shadow-[0_4px_20px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-md transition hover:bg-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-foreground active:scale-95 sm:flex"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ArrowRight className="h-5 w-5" strokeWidth={2.25} />
               </button>
 
               <img
                 src={open.src}
                 alt={open.title}
-                className="w-full max-h-[75vh] object-contain bg-black"
+                draggable={false}
+                className="w-full max-h-[75vh] select-none object-contain bg-black"
               />
+
+              {/* Подсказка о свайпе — только на мобилках */}
+              <div className="pointer-events-none absolute bottom-[calc(theme(spacing.5)+72px)] left-1/2 z-10 -translate-x-1/2 rounded-full bg-black/55 px-3 py-1 text-[11px] font-medium text-white/90 backdrop-blur sm:hidden">
+                Свайп ← →
+              </div>
+
               <div className="p-5">
                 <div className="flex items-center justify-between gap-3">
                   <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
