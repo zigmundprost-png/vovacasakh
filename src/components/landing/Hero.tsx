@@ -15,6 +15,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { MAX_LINK } from "@/lib/links";
+import { openMaxBrief } from "./MaxBriefDialog";
 import { MaxLogo } from "./MaxLogo";
 
 
