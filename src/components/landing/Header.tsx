@@ -81,13 +81,11 @@ export function Header() {
           </a>
 
           <a
-            href={MAX_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#brief"
             className="hidden md:inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
           >
             <MaxLogo className="h-5 w-5" />
-            Написать в MAX
+            Подготовить заявку
           </a>
 
           <button
