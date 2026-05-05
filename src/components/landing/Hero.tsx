@@ -114,22 +114,6 @@ export function Hero() {
               </p>
             </div>
 
-            {/* Гарантия */}
-            <div className="relative mt-4 flex items-center gap-3 overflow-hidden rounded-2xl border border-[color:var(--card-soft-border)] bg-[color:var(--card-soft)] px-4 py-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-card text-primary">
-                <ShieldCheck className="h-5 w-5" strokeWidth={2} aria-hidden />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="font-display text-[16px] font-bold text-foreground">Гарантия до 1 года</p>
-                <p className="text-[13px] text-muted-foreground">На выполненные работы и материалы.</p>
-              </div>
-              <ShieldCheck
-                aria-hidden
-                className="pointer-events-none absolute -right-3 -top-2 hidden h-24 w-24 text-primary/10 sm:block"
-                strokeWidth={1}
-              />
-            </div>
-
             {/* Полоса доверия с цифрами */}
             <dl className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-border pt-6">
               {TRUST_STATS.map((s, i) => (
