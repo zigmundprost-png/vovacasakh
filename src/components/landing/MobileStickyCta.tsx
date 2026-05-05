@@ -1,7 +1,8 @@
 import { Phone } from "lucide-react";
-import { MAX_LINK, PHONE_LINK, WHATSAPP_LINK } from "@/lib/links";
+import { PHONE_LINK, WHATSAPP_LINK } from "@/lib/links";
 import { MaxLogo } from "./MaxLogo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { openMaxBrief } from "./MaxBriefDialog";
 
 export function MobileStickyCta() {
   return (
@@ -20,16 +21,15 @@ export function MobileStickyCta() {
           <WhatsAppIcon className="h-[52px] w-[52px] drop-shadow-[0_8px_16px_rgba(37,211,102,0.45)]" rounded={false} />
         </a>
 
-        <a
-          href={MAX_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
+          onClick={openMaxBrief}
           aria-label="Написать в MAX"
           className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-primary px-4 text-[15px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
         >
           <MaxLogo className="h-5 w-5 shrink-0" />
           Написать в MAX
-        </a>
+        </button>
 
         <a
           href={PHONE_LINK}
