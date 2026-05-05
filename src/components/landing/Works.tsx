@@ -9,13 +9,23 @@ import work7 from "@/assets/works/work-7.webp";
 import work8 from "@/assets/works/work-8.webp";
 import work9 from "@/assets/works/work-9.webp";
 import work10 from "@/assets/works/work-10.webp";
+import work11 from "@/assets/works/work-11.webp";
+import work12 from "@/assets/works/work-12.webp";
+import work13 from "@/assets/works/work-13.webp";
+import work14 from "@/assets/works/work-14.webp";
+import work15 from "@/assets/works/work-15.webp";
 
 const WORKS = [
   { src: work1, title: "Большой угловой диван", desc: "Замена поролона и восстановление формы сидений." },
   { src: work2, title: "Прямой диван-книжка", desc: "Перетяжка и замена наполнителя." },
   { src: work3, title: "Угловой диван, светлая ткань", desc: "Восстановление сидений и подушек." },
+  { src: work11, title: "Диван-книжка, серая ткань", desc: "Замена поролона и подтяжка обивки." },
   { src: work4, title: "Диван с ящиком для белья", desc: "Ремонт корпуса и механизма." },
   { src: work5, title: "Диван-аккордеон", desc: "Сборка и ремонт каркаса с заменой деталей." },
+  { src: work12, title: "Стулья из дерева, набор", desc: "Замена обивки сидений на новую ткань." },
+  { src: work13, title: "Светлые деревянные стулья", desc: "Склейка каркасов и восстановление." },
+  { src: work14, title: "Стулья, тёмное дерево", desc: "Полная разборка, склейка и обновление сидений." },
+  { src: work15, title: "Кровать, тёмный каркас", desc: "Сборка после переезда и подтяжка соединений." },
   { src: work6, title: "Шкаф-купе с зеркалами", desc: "Ремонт направляющих и сборка дверей." },
   { src: work7, title: "Комод с ящиками", desc: "Ремонт направляющих и фасадов." },
   { src: work8, title: "Кровать, тёмный корпус", desc: "Восстановление сколов и торцов." },
