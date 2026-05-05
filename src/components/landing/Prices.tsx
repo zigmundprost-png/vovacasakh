@@ -35,12 +35,12 @@ export function Prices() {
       <div className="mt-6 grid gap-4 lg:grid-cols-2">
         <p className="rounded-xl border border-border bg-surface p-5 text-[14px] leading-relaxed text-foreground/85">
           <strong className="font-semibold">Важно.</strong> По фото или видео можно
-          дать предварительное понимание. Окончательная стоимость называется после
-          диагностики, когда понятно, что сломалось и какие материалы нужны.
+          дать предварительное понимание. Окончательную стоимость называю после
+          диагностики — когда понятно, что именно сломалось и какие материалы нужны.
         </p>
         <p className="rounded-xl border border-border bg-surface p-5 text-[14px] leading-relaxed text-foreground/85">
           Это не формат «самый дешёвый мастер на час». Владимир берёт в работу
-          задачи, где ремонт имеет смысл и можно сделать аккуратный результат.
+          задачи, в которых ремонт имеет смысл и можно сделать аккуратный результат.
         </p>
       </div>
     </Section>
