@@ -68,8 +68,20 @@
   --accent: oklch(0.555 0.205 260);
   --accent-foreground: oklch(1 0 0);
   --accent-warm: oklch(0.69 0.18 35);          /* #FF6B4A — коралловый акцент */
+  --accent-warm-soft: oklch(0.985 0.022 45);   /* мягкий фон коралла */
 
-  --destructive: oklch(0.55 0.18 28);
+  /* Семантические тона: чёткое разделение по hue */
+  --tone-success: oklch(0.5 0.15 155);         /* насыщенный зелёный — «да/подходит» */
+  --tone-success-fg: oklch(0.42 0.16 155);
+  --tone-success-soft: oklch(0.96 0.05 155);
+  --tone-success-border: oklch(0.86 0.09 155);
+
+  --tone-danger: oklch(0.58 0.22 18);          /* чистый красный — «нет/не берусь» */
+  --tone-danger-fg: oklch(0.5 0.22 18);
+  --tone-danger-soft: oklch(0.965 0.035 18);
+  --tone-danger-border: oklch(0.87 0.09 18);
+
+  --destructive: oklch(0.58 0.22 18);
   --destructive-foreground: oklch(1 0 0);
 
   --border: oklch(0.91 0.025 250);             /* мягкая голубая граница */
