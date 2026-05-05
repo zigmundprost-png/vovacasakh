@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
+import { About } from "@/components/landing/About";
 import { TrustStrip } from "@/components/landing/TrustStrip";
 import { MobileStickyCta } from "@/components/landing/MobileStickyCta";
 import { DesktopFloatingCta } from "@/components/landing/DesktopFloatingCta";
@@ -47,6 +48,7 @@ function Index() {
       <main className="pb-24 md:pb-0">
         <Hero />
         <TrustStrip />
+        <About />
         <Problem />
         <Services />
         <Process />
