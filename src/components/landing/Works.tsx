@@ -25,12 +25,14 @@ import work21 from "@/assets/works/work-21.webp";
 import work22 from "@/assets/works/work-22.webp";
 import work23 from "@/assets/works/work-23.webp";
 import work24 from "@/assets/works/work-24.webp";
+import work25 from "@/assets/works/work-25.webp";
 
 type Category = "Перетяжка" | "Ремонт" | "Сборка";
 
 type Work = { src: string; title: string; desc: string; category: Category };
 
 const WORKS: Work[] = [
+  { src: work25, title: "Угловой диван, бежевая ткань", desc: "Перетяжка и восстановление формы подушек.", category: "Перетяжка" },
   { src: work1, title: "Большой угловой диван", desc: "Замена поролона и восстановление формы сидений.", category: "Перетяжка" },
   { src: work2, title: "Прямой диван-книжка", desc: "Перетяжка и замена наполнителя.", category: "Перетяжка" },
   { src: work3, title: "Угловой диван, светлая ткань", desc: "Восстановление сидений и подушек.", category: "Перетяжка" },
