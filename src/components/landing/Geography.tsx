@@ -12,7 +12,7 @@ export function Geography() {
             <MapPin className="h-5 w-5" aria-hidden />
           </span>
           <h3 className="mt-4 text-[20px] font-semibold text-foreground">Южно-Сахалинск</h3>
-          <p className="mt-2 text-[14px] text-muted-foreground">Основная зона работы.</p>
+          <p className="mt-2 text-[14px] text-muted-foreground">Моя основная зона работы.</p>
         </div>
 
         <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
