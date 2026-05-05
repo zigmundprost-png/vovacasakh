@@ -84,7 +84,7 @@ export function Header() {
 
           <a
             href="#brief"
-            className="hidden md:inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
+            className="hidden md:inline-flex items-center gap-2 whitespace-nowrap rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
           >
             <MaxLogo className="h-5 w-5" />
             Подготовить заявку
@@ -95,7 +95,7 @@ export function Header() {
             aria-label={open ? "Закрыть меню" : "Открыть меню"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg text-foreground hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="xl:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg text-foreground hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
