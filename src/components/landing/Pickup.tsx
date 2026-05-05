@@ -40,7 +40,7 @@ export function Pickup() {
       </ul>
 
       <p className="mt-6 text-[13px] text-muted-foreground">
-        Забор и возврат, грузчики и выезд за город — обсуждаем заранее.
+        Забор и возврат, грузчики и выезд за город — обсудим заранее.
       </p>
     </Section>
   );
