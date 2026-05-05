@@ -31,7 +31,7 @@ export function Footer() {
             </h3>
             <ul className="mt-3 grid grid-cols-2 gap-y-1.5 text-[14px]">
               {[
-                ["#services", "Что ремонтирую"],
+                ["#services", "Что я ремонтирую"],
                 ["#process", "Как проходит работа"],
                 ["#prices", "Цены"],
                 ["#works", "Работы"],
