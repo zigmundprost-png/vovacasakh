@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { MAX_LINK } from "@/lib/links";
+import { MaxLogo } from "./MaxLogo";
 
 const STEPS = [
   {
