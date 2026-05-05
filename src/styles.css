@@ -50,9 +50,9 @@
   --popover: oklch(1 0 0);
   --popover-foreground: var(--foreground);
 
-  --primary: oklch(0.665 0.155 47);
+  --primary: oklch(0.555 0.158 38);          /* #B5462E — терракота */
   --primary-foreground: oklch(1 0 0);
-  --primary-hover: oklch(0.6 0.16 45);
+  --primary-hover: oklch(0.495 0.16 36);
 
   --secondary: oklch(0.955 0.006 85);
   --secondary-foreground: var(--foreground);
@@ -65,7 +65,7 @@
 
   --border: oklch(0.91 0.008 85);
   --input: oklch(0.91 0.008 85);
-  --ring: oklch(0.665 0.155 47);
+  --ring: oklch(0.555 0.158 38);
 
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
