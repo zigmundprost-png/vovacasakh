@@ -158,15 +158,14 @@ export function Reviews() {
             Отзывы настоящие
           </p>
           <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground">
-            Все отзывы — с реальной площадки объявлений, их можно проверить по ссылке.
-            Кому интересно —{" "}
+            Все отзывы — с реальной площадки объявлений, их можно проверить по ссылке.{" "}
             <a
-              href={WHATSAPP_LINK}
+              href="https://max.ru/u/f9LHodD0cOKGZ4xaImBDKE-TUQXZbPkFvxONgea0X4BcOyG4dStpz0y54-A"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-[color:var(--accent-warm)] underline underline-offset-2 hover:opacity-80"
             >
-              напишите, пришлю ссылку
+              Открыть отзывы
             </a>
             .
           </p>
