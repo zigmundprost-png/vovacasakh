@@ -26,6 +26,15 @@ import work22 from "@/assets/works/work-22.webp";
 import work23 from "@/assets/works/work-23.webp";
 import work24 from "@/assets/works/work-24.webp";
 import work25 from "@/assets/works/work-25.webp";
+import work26 from "@/assets/works/work-26.webp";
+import work27 from "@/assets/works/work-27.webp";
+import work28 from "@/assets/works/work-28.webp";
+import work29 from "@/assets/works/work-29.webp";
+import work30 from "@/assets/works/work-30.webp";
+import work31 from "@/assets/works/work-31.webp";
+import work32 from "@/assets/works/work-32.webp";
+import work33 from "@/assets/works/work-33.webp";
+import work34 from "@/assets/works/work-34.webp";
 
 type Category = "Ремонт" | "Сборка";
 
@@ -33,6 +42,11 @@ type Work = { src: string; title: string; desc: string; category: Category };
 
 const WORKS: Work[] = [
   { src: work25, title: "Угловой диван, бежевая ткань", desc: "Восстановление формы подушек и обивки.", category: "Ремонт" },
+  { src: work26, title: "Диван с разобранным каркасом", desc: "Полная переборка: каркас, ремни и обивка из экокожи.", category: "Ремонт" },
+  { src: work27, title: "Модульный диван, серая ткань", desc: "Подтяжка обивки и восстановление формы подушек.", category: "Ремонт" },
+  { src: work29, title: "Диван с пружинным блоком", desc: "Замена змеевидных пружин и наполнителя.", category: "Ремонт" },
+  { src: work31, title: "Диван-клик-кляк", desc: "Замена изношенной обивки и наполнителя на новую ткань.", category: "Ремонт" },
+  { src: work33, title: "Диван с порванной обивкой", desc: "Аккуратный ремонт ткани в месте прорыва.", category: "Ремонт" },
   { src: work1, title: "Большой угловой диван", desc: "Замена поролона и восстановление формы сидений.", category: "Ремонт" },
   { src: work2, title: "Прямой диван-книжка", desc: "Замена наполнителя и восстановление обивки.", category: "Ремонт" },
   { src: work3, title: "Угловой диван, светлая ткань", desc: "Восстановление сидений и подушек.", category: "Ремонт" },
@@ -45,11 +59,15 @@ const WORKS: Work[] = [
   { src: work12, title: "Стулья из дерева, набор", desc: "Обновление сидений и ремонт каркаса.", category: "Ремонт" },
   { src: work13, title: "Светлые деревянные стулья", desc: "Склейка каркасов и восстановление.", category: "Ремонт" },
   { src: work14, title: "Стулья, тёмное дерево", desc: "Полная разборка, склейка и обновление сидений.", category: "Ремонт" },
+  { src: work30, title: "Деревянные стулья, реставрация", desc: "Разборка, склейка каркасов и обновление сидений.", category: "Ремонт" },
+  { src: work28, title: "Круглая детская кроватка", desc: "Сборка и подгонка трансформируемой кроватки.", category: "Сборка" },
   { src: work15, title: "Кровать, тёмный каркас", desc: "Сборка после переезда и подтяжка соединений.", category: "Сборка" },
   { src: work8, title: "Кровать, тёмный корпус", desc: "Восстановление сколов и торцов.", category: "Ремонт" },
   { src: work10, title: "Каркас кровати, торцы", desc: "Восстановление углов и кромки.", category: "Ремонт" },
   { src: work6, title: "Шкаф-купе с зеркалами", desc: "Ремонт направляющих и сборка дверей.", category: "Сборка" },
   { src: work7, title: "Комод с ящиками", desc: "Ремонт направляющих и фасадов.", category: "Ремонт" },
+  { src: work32, title: "Угловой шкаф с зеркалом", desc: "Сборка и навеска дверей углового шкафа.", category: "Сборка" },
+  { src: work34, title: "Замена петель на шкафу", desc: "Перенавеска дверей и установка новых петель.", category: "Ремонт" },
   { src: work23, title: "Кухонный гарнитур, венге", desc: "Ремонт фасадов и направляющих ящиков.", category: "Ремонт" },
   { src: work22, title: "Угловой офисный стол", desc: "Сборка стола после переезда офиса.", category: "Сборка" },
   { src: work21, title: "Большой угловой стол", desc: "Сборка рабочего места под ключ.", category: "Сборка" },
