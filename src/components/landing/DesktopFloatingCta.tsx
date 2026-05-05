@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { MessageCircle, Phone, X } from "lucide-react";
-import { MAX_LINK, PHONE_LINK, PHONE_NUMBER, WHATSAPP_LINK } from "@/lib/links";
+import { PHONE_LINK, PHONE_NUMBER, WHATSAPP_LINK } from "@/lib/links";
 import { MaxLogo } from "./MaxLogo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { openMaxBrief } from "./MaxBriefDialog";
 
 export function DesktopFloatingCta() {
   const [open, setOpen] = useState(false);
