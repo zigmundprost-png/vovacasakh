@@ -90,8 +90,8 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground shadow-[0_10px_28px_-8px_oklch(0.555_0.205_260/0.55)] transition-all hover:bg-primary-hover hover:shadow-[0_14px_32px_-8px_oklch(0.555_0.205_260/0.65)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto sm:self-start"
               >
-                <Send className="h-[18px] w-[18px]" aria-hidden />
-                Отправить фото или видео в MAX
+                <MaxLogo className="h-6 w-6 shrink-0" />
+                Написать в MAX — отправить фото или видео
               </a>
 
               <a
