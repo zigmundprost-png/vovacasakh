@@ -88,15 +88,14 @@ export function Hero() {
 
             {/* CTA */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a
-                href={MAX_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={openMaxBrief}
                 className="hidden sm:inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
               >
                 <MaxLogo className="h-6 w-6 shrink-0" />
                 Написать в MAX
-              </a>
+              </button>
 
               <a
                 href="#brief"
