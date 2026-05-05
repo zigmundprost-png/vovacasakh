@@ -38,8 +38,8 @@ export function Header() {
             ВК
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="text-[15px] font-semibold tracking-tight text-foreground">
-              Вова Карло
+            <span className="text-[15px] font-semibold tracking-tight text-foreground uppercase">
+              ВОВА КАРЛО
             </span>
             <span className="hidden text-[11px] text-muted-foreground sm:block">
               Ремонт диванов и мягкой мебели
