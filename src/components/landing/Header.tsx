@@ -3,6 +3,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { PHONE_LINK, WHATSAPP_LINK } from "@/lib/links";
 import { MaxLogo } from "./MaxLogo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { BrandMark } from "./BrandMark";
 
 const NAV = [
   { href: "#about", label: "О мастере" },
