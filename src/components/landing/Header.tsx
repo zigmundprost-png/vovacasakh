@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { MAX_LINK, PHONE_LINK } from "@/lib/links";
+import { MAX_LINK, PHONE_LINK, WHATSAPP_LINK } from "@/lib/links";
 import { MaxLogo } from "./MaxLogo";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const NAV = [
   { href: "#services", label: "Что ремонтирую" },
@@ -62,11 +63,21 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Написать в WhatsApp"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_12px_-4px_rgba(37,211,102,0.55)] transition-colors hover:bg-[#1DB954] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] md:h-11 md:w-11"
+          >
+            <WhatsAppIcon className="h-[20px] w-[20px]" />
+          </a>
+
+          <a
             href={PHONE_LINK}
             aria-label="Позвонить мастеру"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--card-soft-border)] bg-card text-primary transition-colors hover:bg-[color:var(--card-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-11 md:w-11"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-foreground text-background transition-colors hover:bg-foreground/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-11 md:w-11"
           >
-            <Phone className="h-[18px] w-[18px]" aria-hidden />
+            <Phone className="h-[18px] w-[18px]" strokeWidth={2.4} aria-hidden />
           </a>
 
           {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
