@@ -4,8 +4,8 @@ import { Truck, Package, Camera, Home } from "lucide-react";
 const PERKS = [
   { icon: Home, text: "Не нужно самому искать машину" },
   { icon: Package, text: "Меньше грязи и суеты дома" },
-  { icon: Truck, text: "После работы мебель возвращается обратно" },
-  { icon: Camera, text: "Можно получить фото или видеоотчёт" },
+  { icon: Truck, text: "После работы привезу мебель обратно" },
+  { icon: Camera, text: "По желанию пришлю фото- или видеоотчёт" },
 ];
 
 export function Pickup() {
