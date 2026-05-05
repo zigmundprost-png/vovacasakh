@@ -87,23 +87,23 @@ export function Hero() {
             </ul>
 
             {/* CTA */}
-            <div className="mt-8 flex flex-col gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href={MAX_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto sm:self-start"
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
               >
                 <MaxLogo className="h-6 w-6 shrink-0" />
                 Написать в MAX
               </a>
 
               <a
-                href="#services"
-                className="inline-flex items-center justify-center gap-1.5 self-center text-[14px] font-semibold text-primary underline decoration-dotted decoration-2 underline-offset-4 transition-colors hover:text-primary-hover sm:self-start"
+                href="#brief"
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-[20px] border-2 border-[color:var(--accent-warm)] bg-card px-7 text-[16px] font-bold text-[color:var(--accent-warm)] transition-colors hover:bg-[oklch(0.98_0.025_45)] sm:w-auto"
               >
-                Что я ремонтирую
-                <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                Заполнить заявку на ремонт
+                <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
             </div>
 
