@@ -35,6 +35,16 @@ import work31 from "@/assets/works/work-31.webp";
 import work32 from "@/assets/works/work-32.webp";
 import work33 from "@/assets/works/work-33.webp";
 import work34 from "@/assets/works/work-34.webp";
+import work35 from "@/assets/works/work-35.webp";
+import work36 from "@/assets/works/work-36.webp";
+import work37 from "@/assets/works/work-37.webp";
+import work38 from "@/assets/works/work-38.webp";
+import work39 from "@/assets/works/work-39.webp";
+import work40 from "@/assets/works/work-40.webp";
+import work41 from "@/assets/works/work-41.webp";
+import work42 from "@/assets/works/work-42.webp";
+import work43 from "@/assets/works/work-43.webp";
+import work44 from "@/assets/works/work-44.webp";
 
 type Category = "Ремонт" | "Сборка";
 
