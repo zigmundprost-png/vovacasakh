@@ -10,9 +10,8 @@ import {
   Lightbulb,
   MapPin,
   Award,
-  Wallet,
   Car,
-  CheckCircle2,
+  PackageCheck,
 } from "lucide-react";
 import { openMaxBrief } from "./MaxBriefDialog";
 import { MaxLogo } from "./MaxLogo";
@@ -20,15 +19,15 @@ import { MaxLogo } from "./MaxLogo";
 
 const VALUE_PROPS = [
   { icon: Sofa, text: "Ремонтирую диваны, кресла, стулья и кровати" },
-  { icon: Video, text: "Начнём с фото или видео — так проще" },
-  { icon: ShieldCheck, text: "По-человечески объясню, что сломалось" },
-  { icon: Truck, text: "Если нужно — заберу и привезу обратно" },
+  { icon: Video, text: "Начинаю с фото или видео, чтобы не гонять вас и себя впустую" },
+  { icon: ShieldCheck, text: "По-человечески объясняю, что сломалось" },
+  { icon: Truck, text: "Если нужно — заберу мебель и привезу обратно" },
 ];
 
 const TRUST_STATS = [
   { icon: Award, value: "20+ лет", label: "работаю с мебелью" },
-  { icon: CheckCircle2, value: "500+", label: "ремонтов сделал" },
-  { icon: Wallet, value: "700₽", label: "ремонт мягкой мебели" },
+  { icon: PackageCheck, value: "1500+", label: "сборок мебели" },
+  { icon: Wrench, value: "500+", label: "ремонтов мебели" },
   { icon: Car, value: "700 ₽", label: "выезд и диагностика" },
 ];
 
@@ -67,8 +66,10 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 text-[16px] leading-[1.6] text-muted-foreground sm:text-[17px]">
-              Меня зовут Владимир, я частный мастер по ремонту мягкой мебели.
-              Покажите поломку на фото или видео — скажу, есть ли смысл ремонта.
+              Меня зовут Владимир. Я ремонтирую диваны, кресла, стулья, кровати
+              и другую мягкую мебель в Южно-Сахалинске и по югу Сахалина.
+              Пришлите фото или видео поломки — скажу, есть ли смысл
+              ремонтировать, нужен ли выезд и какой следующий шаг лучше.
             </p>
 
             {/* Feature cards */}
@@ -91,17 +92,17 @@ export function Hero() {
               <button
                 type="button"
                 onClick={openMaxBrief}
-                className="hidden sm:inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
               >
                 <MaxLogo className="h-6 w-6 shrink-0" />
-                Написать в MAX
+                Отправить фото или видео в MAX
               </button>
 
               <a
-                href="#brief"
+                href="#works"
                 className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-[20px] border-2 border-[color:var(--accent-warm)] bg-card px-7 text-[16px] font-bold text-[color:var(--accent-warm)] transition-colors hover:bg-[oklch(0.98_0.025_45)] sm:w-auto"
               >
-                Заполнить заявку на ремонт
+                Посмотреть работы
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
             </div>
@@ -112,7 +113,7 @@ export function Hero() {
                 <Lightbulb className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden />
               </span>
               <p className="text-[14px] leading-relaxed text-foreground/80">
-                Лучше короткое видео: покажите мебель целиком, место поломки и как проявляется проблема — мне будет проще понять.
+                Лучше короткое видео: покажите мебель целиком, место поломки и то, как проявляется проблема.
               </p>
             </div>
 
@@ -150,7 +151,7 @@ export function Hero() {
               />
             </div>
             <p className="mt-4 text-[12px] text-muted-foreground">
-              Мои реальные работы — добавлю фото перед запуском.
+              Посмотрите реальные работы: диваны, стулья, кровати, корпусная мебель и сборка.
             </p>
           </div>
         </div>

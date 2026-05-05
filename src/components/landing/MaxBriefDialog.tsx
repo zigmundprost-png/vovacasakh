@@ -133,7 +133,7 @@ export function MaxBriefDialog() {
               Заявка в MAX
             </p>
             <h2 className="mt-1 text-[18px] font-extrabold leading-tight text-foreground sm:text-[20px]">
-              5 коротких вопросов — и я сразу пойму поломку
+              Ответьте на 5 вопросов — и я быстрее пойму поломку
             </h2>
           </div>
           <button
@@ -260,7 +260,7 @@ export function MaxBriefDialog() {
             Отправить Владимиру в MAX
           </button>
           <p className="mt-2 text-center text-[11.5px] leading-relaxed text-muted-foreground">
-            Текст скопируется автоматически — вставьте его в чат и приложите фото или видео.
+            Текст заявки скопируется — вставьте его в MAX и приложите фото или видео.
           </p>
         </div>
       </div>

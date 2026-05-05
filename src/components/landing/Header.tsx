@@ -107,7 +107,7 @@ export function Header() {
             className="hidden sm:inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover md:px-5 md:py-2.5 md:text-[14px]"
           >
             <MaxLogo className="h-4 w-4 md:h-5 md:w-5" />
-            <span className="hidden md:inline">Заявка в MAX</span>
+            <span className="hidden md:inline">Отправить фото в MAX</span>
             <span className="md:hidden">MAX</span>
           </a>
 

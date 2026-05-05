@@ -31,7 +31,7 @@ export function Footer() {
             <p className="mt-4 text-[14px] leading-relaxed text-muted-foreground">
               Я частный мастер по ремонту диванов и мягкой мебели. Работаю
               честно: смотрю поломку, объясняю и берусь только за то, что
-              реально починю.
+              реально могу сделать аккуратно.
             </p>
 
             <ul className="mt-5 space-y-2.5 text-[13px] text-foreground/85">
