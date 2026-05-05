@@ -157,7 +157,7 @@ export function Hero() {
               />
             </div>
             <p className="mt-4 text-[12px] text-muted-foreground">
-              Реальные работы мастера — фото будут заменены перед запуском.
+              Реальные работы мастера — фото добавим перед запуском.
             </p>
           </div>
         </div>
