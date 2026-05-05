@@ -67,9 +67,9 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Написать в WhatsApp"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_12px_-4px_rgba(37,211,102,0.55)] transition-colors hover:bg-[#1DB954] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] md:h-11 md:w-11"
+            className="inline-flex h-10 w-10 items-center justify-center transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background md:h-11 md:w-11"
           >
-            <WhatsAppIcon className="h-[20px] w-[20px]" />
+            <WhatsAppIcon className="h-10 w-10 md:h-11 md:w-11 drop-shadow-[0_4px_10px_rgba(37,211,102,0.4)]" />
           </a>
 
           <a
