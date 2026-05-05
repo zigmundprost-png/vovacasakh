@@ -19,15 +19,15 @@ import { MaxLogo } from "./MaxLogo";
 
 
 const VALUE_PROPS = [
-  { icon: Sofa, text: "Диваны, кресла, стулья и кровати" },
-  { icon: Video, text: "Можно начать с фото или видео" },
-  { icon: ShieldCheck, text: "Объясню по-человечески, что сломалось" },
-  { icon: Truck, text: "При необходимости заберу и привезу обратно" },
+  { icon: Sofa, text: "Ремонтирую диваны, кресла, стулья и кровати" },
+  { icon: Video, text: "Начнём с фото или видео — так проще" },
+  { icon: ShieldCheck, text: "По-человечески объясню, что сломалось" },
+  { icon: Truck, text: "Если нужно — заберу и привезу обратно" },
 ];
 
 const TRUST_STATS = [
-  { icon: Award, value: "20+ лет", label: "в мебельной работе" },
-  { icon: CheckCircle2, value: "500+", label: "успешных ремонтов" },
+  { icon: Award, value: "20+ лет", label: "работаю с мебелью" },
+  { icon: CheckCircle2, value: "500+", label: "ремонтов сделал" },
   { icon: Wallet, value: "от 5 000 ₽", label: "ремонт мягкой мебели" },
   { icon: Car, value: "700 ₽", label: "выезд и диагностика" },
 ];
@@ -67,8 +67,8 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 text-[16px] leading-[1.6] text-muted-foreground sm:text-[17px]">
-              Владимир — частный мастер по ремонту мягкой мебели. Посмотрит поломку
-              по фото или видео и скажет, есть ли смысл ремонта.
+              Меня зовут Владимир, я частный мастер по ремонту мягкой мебели.
+              Покажите поломку на фото или видео — скажу, есть ли смысл ремонта.
             </p>
 
             {/* Feature cards */}
@@ -102,7 +102,7 @@ export function Hero() {
                 href="#services"
                 className="inline-flex items-center justify-center gap-1.5 self-center text-[14px] font-semibold text-primary underline decoration-dotted decoration-2 underline-offset-4 transition-colors hover:text-primary-hover sm:self-start"
               >
-                Что ремонтирую
+                Что я ремонтирую
                 <ArrowRight className="h-3.5 w-3.5" aria-hidden />
               </a>
             </div>
@@ -113,7 +113,7 @@ export function Hero() {
                 <Lightbulb className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden />
               </span>
               <p className="text-[14px] leading-relaxed text-foreground/80">
-                Лучше короткое видео: мебель целиком, место поломки и как проявляется проблема.
+                Лучше короткое видео: покажите мебель целиком, место поломки и как проявляется проблема — мне будет проще понять.
               </p>
             </div>
 
@@ -151,7 +151,7 @@ export function Hero() {
               />
             </div>
             <p className="mt-4 text-[12px] text-muted-foreground">
-              Реальные работы мастера — фото добавим перед запуском.
+              Мои реальные работы — добавлю фото перед запуском.
             </p>
           </div>
         </div>

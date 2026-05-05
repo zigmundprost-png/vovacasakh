@@ -20,8 +20,8 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
-              Частный мастер по ремонту диванов и мягкой мебели. Южно-Сахалинск
-              и юг Сахалина.
+              Я частный мастер по ремонту диванов и мягкой мебели. Работаю в
+              Южно-Сахалинске и на юге Сахалина.
             </p>
           </div>
 
@@ -31,7 +31,7 @@ export function Footer() {
             </h3>
             <ul className="mt-3 grid grid-cols-2 gap-y-1.5 text-[14px]">
               {[
-                ["#services", "Что ремонтирую"],
+                ["#services", "Что я ремонтирую"],
                 ["#process", "Как проходит работа"],
                 ["#prices", "Цены"],
                 ["#works", "Работы"],
@@ -74,8 +74,8 @@ export function Footer() {
               </a>
             </div>
             <p className="mt-3 text-[13px] text-muted-foreground">
-              Отвечаю в течение дня. Лучше сразу прислать фото или короткое
-              видео поломки.
+              Отвечаю в течение дня. Лучше сразу присылайте мне фото или
+              короткое видео поломки.
             </p>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { MaxLogo } from "./MaxLogo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const NAV = [
-  { href: "#services", label: "Что ремонтирую" },
+  { href: "#services", label: "Что я ремонтирую" },
   { href: "#process", label: "Как проходит работа" },
   { href: "#prices", label: "Цены" },
   { href: "#works", label: "Работы" },
@@ -74,7 +74,7 @@ export function Header() {
 
           <a
             href={PHONE_LINK}
-            aria-label="Позвонить мастеру"
+            aria-label="Позвонить мне"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-foreground text-background transition-colors hover:bg-foreground/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-11 md:w-11"
           >
             <Phone className="h-[18px] w-[18px]" strokeWidth={2.4} aria-hidden />

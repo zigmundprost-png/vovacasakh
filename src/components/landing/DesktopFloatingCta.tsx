@@ -51,7 +51,7 @@ export function DesktopFloatingCta() {
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-[13px] font-bold text-foreground">{PHONE_NUMBER}</span>
-            <span className="text-[11px] text-muted-foreground">Позвонить мастеру</span>
+            <span className="text-[11px] text-muted-foreground">Позвонить мне</span>
           </span>
         </a>
 

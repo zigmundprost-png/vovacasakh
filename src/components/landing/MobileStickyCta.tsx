@@ -33,7 +33,7 @@ export function MobileStickyCta() {
 
         <a
           href={PHONE_LINK}
-          aria-label="Позвонить мастеру"
+          aria-label="Позвонить мне"
           className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[18px] bg-foreground text-background transition-colors hover:bg-foreground/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           <Phone className="h-[20px] w-[20px]" strokeWidth={2.4} aria-hidden />
