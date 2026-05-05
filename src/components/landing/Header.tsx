@@ -12,6 +12,7 @@ const NAV = [
   { href: "#reviews", label: "Отзывы" },
   { href: "#guarantee", label: "Гарантия" },
   { href: "#faq", label: "FAQ" },
+  { href: "#brief", label: "Заявка" },
 ];
 
 export function Header() {
