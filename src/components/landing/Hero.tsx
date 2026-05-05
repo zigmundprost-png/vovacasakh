@@ -17,14 +17,14 @@ import { MaxLogo } from "./MaxLogo";
 const VALUE_PROPS = [
   { icon: Sofa, text: "Диваны, кресла, стулья и кровати" },
   { icon: Video, text: "Можно начать с фото или видео" },
-  { icon: ShieldCheck, text: "Скажу честно, есть ли смысл ремонтировать" },
+  { icon: ShieldCheck, text: "Объясню по-человечески, что сломалось" },
   { icon: Truck, text: "При необходимости заберу и привезу обратно" },
 ];
 
 const TRUST_STATS = [
   { value: "20+ лет", label: "в мебельной работе" },
-  { value: "от 5 000 ₽", label: "ремонт" },
-  { value: "700 ₽", label: "выезд по Южно-Сахалинску" },
+  { value: "от 5 000 ₽", label: "Ремонт мягкой мебели" },
+  { value: "700 ₽", label: "Выезд и диагностика" },
 ];
 
 export function Hero() {

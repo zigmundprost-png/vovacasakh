@@ -83,7 +83,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-[12px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} ВОВА КАРЛО · Ремонт мягкой мебели</span>
-          <span>Южно-Сахалинск · юг Сахалина</span>
+          <span>Южно-Сахалинск и юг Сахалина</span>
         </div>
       </div>
     </footer>

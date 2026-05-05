@@ -3,8 +3,8 @@ import { MapPin, Camera, Truck, ShieldCheck } from "lucide-react";
 const ITEMS = [
   { icon: Camera, title: "Можно начать с фото", text: "Пришлите снимок или видео — посмотрю и подскажу." },
   { icon: Truck, title: "Забор и возврат", text: "По договорённости — если чинить дома неудобно." },
-  { icon: ShieldCheck, title: "Гарантия до 1 года", text: "На выполненные работы и материалы." },
-  { icon: MapPin, title: "Южно-Сахалинск и юг", text: "Работаю по городу и ближним районам." },
+  { icon: ShieldCheck, title: "Гарантия до 1 года", text: "На выполненный ремонт при нормальной эксплуатации." },
+  { icon: MapPin, title: "Южно-Сахалинск и юг Сахалина", text: "По городу и югу Сахалина — по договорённости." },
 ];
 
 export function TrustStrip() {
