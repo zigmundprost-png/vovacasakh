@@ -40,33 +40,32 @@
 :root {
   --radius: 0.75rem;
 
-  /* Editorial Grounding palette — sand & clay */
-  --background: oklch(0.972 0.018 70);         /* #fff8f1 — surface (тёплый сэнд) */
-  --foreground: oklch(0.225 0.012 50);         /* #1e1b17 — on-surface */
-  --muted-foreground: oklch(0.5 0.02 45);      /* #877369 — outline / приглушённый текст */
+  --background: oklch(0.995 0.002 85);         /* почти белый, чуть тёплый */
+  --foreground: oklch(0.235 0 0);              /* #222 */
+  --muted-foreground: oklch(0.48 0 0);         /* #5F5F5F */
 
-  --surface: oklch(0.953 0.018 68);            /* #faf2ea — surface-container-low */
-  --card: oklch(0.99 0.008 70);                /* почти #ffffff но тёплый — surface-container-lowest */
+  --surface: oklch(0.975 0.004 85);            /* мягкая нейтральная подложка */
+  --card: oklch(1 0 0);                        /* #FFFFFF */
   --card-foreground: var(--foreground);
-  --popover: var(--card);
+  --popover: oklch(1 0 0);
   --popover-foreground: var(--foreground);
 
-  --primary: oklch(0.395 0.075 45);            /* #633425 — primary clay */
-  --primary-foreground: oklch(0.972 0.018 70);
-  --primary-hover: oklch(0.45 0.082 45);       /* #7f4b3a — primary-container */
+  --primary: oklch(0.555 0.158 38);            /* #B5462E — терракота */
+  --primary-foreground: oklch(1 0 0);
+  --primary-hover: oklch(0.495 0.16 36);
 
-  --secondary: oklch(0.895 0.022 65);          /* #e8e1da — surface-container-highest */
+  --secondary: oklch(0.955 0.006 85);
   --secondary-foreground: var(--foreground);
-  --muted: oklch(0.953 0.018 68);
-  --accent: oklch(0.59 0.115 50);              /* медный — secondary в спеке */
-  --accent-foreground: oklch(0.99 0.008 70);
+  --muted: oklch(0.955 0.006 85);
+  --accent: oklch(0.955 0.006 85);
+  --accent-foreground: var(--foreground);
 
   --destructive: oklch(0.55 0.18 28);
   --destructive-foreground: oklch(1 0 0);
 
-  --border: oklch(0.83 0.03 55);               /* #dac2b6 — outline-variant */
-  --input: oklch(0.83 0.03 55);
-  --ring: oklch(0.59 0.115 50);
+  --border: oklch(0.91 0.008 85);              /* #E8E2D8 */
+  --input: oklch(0.91 0.008 85);
+  --ring: oklch(0.555 0.158 38);
 
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
