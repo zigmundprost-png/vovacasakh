@@ -102,7 +102,7 @@ export function Hero() {
                 href="#services"
                 className="inline-flex items-center justify-center gap-1.5 self-center text-[14px] font-semibold text-primary underline decoration-dotted decoration-2 underline-offset-4 transition-colors hover:text-primary-hover sm:self-start"
               >
-                Что ремонтирую
+                Что я ремонтирую
                 <ArrowRight className="h-3.5 w-3.5" aria-hidden />
               </a>
             </div>
