@@ -1,6 +1,6 @@
 import { Section } from "./Section";
 import { Star, BadgeCheck } from "lucide-react";
-import { WHATSAPP_LINK } from "@/lib/links";
+
 
 type Review = { name: string; date: string; text: string };
 
