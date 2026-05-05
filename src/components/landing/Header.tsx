@@ -35,12 +35,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6 md:px-8">
         <a href="#top" className="flex items-center gap-3">
-          <span
-            aria-hidden
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-hover text-[13px] font-bold text-primary-foreground shadow-[0_4px_12px_-4px_oklch(0.555_0.205_260/0.45)]"
-          >
-            ВК
-          </span>
+          <BrandMark />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-[17px] font-extrabold tracking-tight text-foreground uppercase whitespace-nowrap">
               ВОВА КАРЛО
