@@ -113,7 +113,7 @@ export function Hero() {
                 <Lightbulb className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden />
               </span>
               <p className="text-[14px] leading-relaxed text-foreground/80">
-                Лучше короткое видео: мебель целиком, место поломки и как проявляется проблема.
+                Лучше короткое видео: покажите мебель целиком, место поломки и как проявляется проблема — мне будет проще понять.
               </p>
             </div>
 
