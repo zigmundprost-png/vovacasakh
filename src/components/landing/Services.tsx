@@ -1,5 +1,5 @@
 import { Section } from "./Section";
-import { Sofa, Wrench } from "lucide-react";
+import { Sofa, Wrench, Check, Info } from "lucide-react";
 
 const MAIN = [
   "Ремонт каркаса дивана",
@@ -46,10 +46,23 @@ export function Services() {
         <ServiceCard icon={<Wrench className="h-5 w-5" />} title="Дополнительно" items={EXTRA} />
       </div>
 
-      <p className="mt-6 text-[14px] text-muted-foreground">
-        Не беру в центр работы: полную перетяжку, сложный пошив, встроенную мебель,
-        мелкую дешёвую сборку и обещание «чиню всё».
-      </p>
+      {/* Важная заметка — выделена для внимания клиента */}
+      <div className="mt-8 flex items-start gap-3 rounded-2xl border-l-4 border-[color:var(--accent-warm)] border-y border-r border-y-[color:var(--card-soft-border)] border-r-[color:var(--card-soft-border)] bg-[oklch(0.98_0.025_45)] p-5">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm)]">
+          <Info className="h-[18px] w-[18px]" strokeWidth={2.2} aria-hidden />
+        </span>
+        <div className="min-w-0">
+          <p className="font-display text-[14px] font-extrabold uppercase tracking-[0.08em] text-[color:var(--accent-warm)]">
+            Важно знать заранее
+          </p>
+          <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground">
+            Не беру в центр работы:{" "}
+            <span className="font-semibold">полную перетяжку, сложный пошив, встроенную мебель,
+            мелкую дешёвую сборку</span>{" "}
+            и обещание «чиню всё». Лучше честно сказать сразу, чем потратить ваше время.
+          </p>
+        </div>
+      </div>
     </Section>
   );
 }
@@ -67,20 +80,41 @@ function ServiceCard({
 }) {
   return (
     <div
-      className={`rounded-2xl border bg-card p-6 md:p-8 ${
-        primary ? "border-primary/30" : "border-border"
+      className={`relative rounded-2xl border p-6 md:p-8 ${
+        primary
+          ? "border-primary/40 bg-[color:var(--card-soft)] shadow-[0_10px_30px_-18px_oklch(0.555_0.205_260/0.45)]"
+          : "border-border bg-card"
       }`}
     >
+      {primary && (
+        <span className="absolute -top-3 left-6 inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-primary-foreground shadow-[0_4px_12px_-4px_oklch(0.555_0.205_260/0.55)]">
+          Главное направление
+        </span>
+      )}
       <div className="flex items-center gap-3">
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+        <span
+          className={`inline-flex h-11 w-11 items-center justify-center rounded-full ${
+            primary ? "bg-primary text-primary-foreground" : "bg-[color:var(--card-soft)] text-primary"
+          }`}
+        >
           {icon}
         </span>
-        <h3 className="text-[18px] font-semibold text-foreground">{title}</h3>
+        <h3 className="font-display text-[19px] font-bold text-foreground">{title}</h3>
       </div>
       <ul className="mt-5 grid gap-2.5">
         {items.map((it) => (
-          <li key={it} className="flex gap-2.5 text-[15px] leading-relaxed text-foreground/85">
-            <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-foreground/40" />
+          <li
+            key={it}
+            className="flex items-start gap-2.5 text-[15px] leading-[1.5] text-foreground/85"
+          >
+            <span
+              aria-hidden
+              className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
+                primary ? "bg-primary/12 text-primary" : "bg-[color:var(--card-soft)] text-primary"
+              }`}
+            >
+              <Check className="h-3 w-3" strokeWidth={3} />
+            </span>
             {it}
           </li>
         ))}
@@ -88,3 +122,4 @@ function ServiceCard({
     </div>
   );
 }
+
