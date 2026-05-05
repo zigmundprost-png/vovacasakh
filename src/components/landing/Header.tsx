@@ -51,12 +51,12 @@ export function Header() {
           </span>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Основная навигация">
+        <nav className="hidden xl:flex items-center gap-5" aria-label="Основная навигация">
           {NAV.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-[14px] text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:text-foreground"
+              className="whitespace-nowrap text-[14px] text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:text-foreground"
             >
               {item.label}
             </a>
