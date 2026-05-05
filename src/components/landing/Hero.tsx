@@ -83,17 +83,15 @@ export function Hero() {
 
             {/* CTA */}
             <div className="mt-8 flex flex-col gap-4">
-              {/* MAX временно отключён — см. MAX_ENABLED в src/lib/links.ts */}
-              <button
-                type="button"
-                disabled
-                aria-label="Кнопка MAX появится позже"
-                title="Скоро будет доступно"
-                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed sm:w-auto sm:self-start"
+              <a
+                href={MAX_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto sm:self-start"
               >
                 <MaxLogo className="h-6 w-6 shrink-0" />
-                Написать в MAX (скоро)
-              </button>
+                Написать в MAX
+              </a>
 
               <a
                 href="#services"

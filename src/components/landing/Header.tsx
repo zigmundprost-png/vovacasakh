@@ -80,16 +80,15 @@ export function Header() {
             <Phone className="h-[18px] w-[18px]" strokeWidth={2.4} aria-hidden />
           </a>
 
-          {/* MAX временно отключён */}
-          <button
-            type="button"
-            disabled
-            title="Скоро будет доступно"
-            className="hidden md:inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
+          <a
+            href={MAX_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
           >
             <MaxLogo className="h-5 w-5" />
-            Написать в MAX (скоро)
-          </button>
+            Написать в MAX
+          </a>
 
           <button
             type="button"
@@ -116,16 +115,16 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            {/* MAX временно отключён */}
-            <button
-              type="button"
-              disabled
-              title="Скоро будет доступно"
-              className="md:hidden mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-[15px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
+            <a
+              href={MAX_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="md:hidden mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-[15px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
             >
               <MaxLogo className="h-5 w-5" />
-              Написать в MAX (скоро)
-            </button>
+              Написать в MAX
+            </a>
           </nav>
         </div>
       )}

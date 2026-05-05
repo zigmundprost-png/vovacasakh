@@ -1,9 +1,9 @@
-// TODO: Замените MAX_LINK_PLACEHOLDER на реальную ссылку на чат/профиль в MAX
-// перед публикацией сайта. Все CTA-кнопки используют именно эту константу.
-export const MAX_LINK = "MAX_LINK_PLACEHOLDER";
+// Ссылка на чат с Владимиром в MAX.
+export const MAX_LINK =
+  "https://max.ru/u/f9LHodD0cOKGZ4xaImBDKE-TUQXZbPkFvxONgea0X4BcOyG4dStpz0y54-A";
 
-// Флаг — пока MAX недоступен, все кнопки рендерятся как неактивные.
-export const MAX_ENABLED = false;
+// MAX активен — кнопки кликабельны.
+export const MAX_ENABLED = true;
 export const MAX_DISABLED_CLASS = "pointer-events-none opacity-55 grayscale";
 export const MAX_DISABLED_TITLE = "Скоро будет доступно";
 

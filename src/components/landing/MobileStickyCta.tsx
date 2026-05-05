@@ -20,17 +20,16 @@ export function MobileStickyCta() {
           <WhatsAppIcon className="h-[52px] w-[52px] drop-shadow-[0_8px_16px_rgba(37,211,102,0.45)]" rounded={false} />
         </a>
 
-        {/* MAX временно отключён */}
-        <button
-          type="button"
-          disabled
-          aria-label="Кнопка MAX появится позже"
-          title="Скоро будет доступно"
-          className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-primary px-4 text-[15px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
+        <a
+          href={MAX_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Написать в MAX"
+          className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-primary px-4 text-[15px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
         >
           <MaxLogo className="h-5 w-5 shrink-0" />
-          Фото в MAX (скоро)
-        </button>
+          Фото в MAX
+        </a>
 
         <a
           href={PHONE_LINK}
