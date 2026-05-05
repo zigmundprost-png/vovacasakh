@@ -40,7 +40,7 @@ export function FinalCta() {
 
         <p className="mx-auto mt-6 max-w-xl text-[13px] leading-relaxed text-muted-foreground">
           Снимите мебель целиком, место поломки крупно и то, как проявляется
-          проблема. Если видео неудобно — пришлите 2–3 фото.
+          проблема. Если видео неудобно — пришлите 2–3 фото, мне этого хватит.
         </p>
       </div>
     </section>
