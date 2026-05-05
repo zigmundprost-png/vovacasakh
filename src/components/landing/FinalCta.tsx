@@ -1,5 +1,3 @@
-import { MAX_LINK, PHONE_LINK, PHONE_NUMBER } from "@/lib/links";
-import { Phone } from "lucide-react";
 import { MaxLogo } from "./MaxLogo";
 
 export function FinalCta() {
@@ -11,36 +9,21 @@ export function FinalCta() {
           Следующий шаг
         </span>
         <h2 className="font-display mt-4 text-[28px] font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-[42px]">
-          Покажите мне поломку — скажу,{" "}
+          Покажите поломку — скажу,{" "}
           <span className="text-primary">что делать дальше</span>
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.6] text-muted-foreground">
-          Пришлите фото или короткое видео в MAX. Так мне быстрее понять, нужен
-          ли выезд и стоит ли ремонтировать.
+          Пришлите фото или короткое видео в MAX. Так я быстрее пойму, нужен ли
+          выезд, можно ли дать предварительную оценку и стоит ли ремонтировать.
         </p>
 
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-8 flex justify-center">
           <a
             href="#brief"
             className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover sm:w-auto"
           >
             <MaxLogo className="h-6 w-6 shrink-0" />
-            Подготовить заявку
-          </a>
-          <a
-            href={MAX_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] border border-[color:var(--card-soft-border)] bg-card px-6 text-[15px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)] sm:w-auto"
-          >
-            Сразу написать в MAX
-          </a>
-          <a
-            href={PHONE_LINK}
-            className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] border border-[color:var(--card-soft-border)] bg-card px-6 text-[15px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
-          >
-            <Phone className="h-[18px] w-[18px] text-primary" aria-hidden />
-            {PHONE_NUMBER}
+            Отправить фото или видео в MAX
           </a>
         </div>
 
