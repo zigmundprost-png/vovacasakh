@@ -3,6 +3,19 @@ import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { TrustStrip } from "@/components/landing/TrustStrip";
 import { MobileStickyCta } from "@/components/landing/MobileStickyCta";
+import { Problem } from "@/components/landing/Problem";
+import { Services } from "@/components/landing/Services";
+import { Process } from "@/components/landing/Process";
+import { Prices } from "@/components/landing/Prices";
+import { Pickup } from "@/components/landing/Pickup";
+import { Works } from "@/components/landing/Works";
+import { Reviews } from "@/components/landing/Reviews";
+import { Guarantee } from "@/components/landing/Guarantee";
+import { ForWhom } from "@/components/landing/ForWhom";
+import { Geography } from "@/components/landing/Geography";
+import { Faq } from "@/components/landing/Faq";
+import { FinalCta } from "@/components/landing/FinalCta";
+import { Footer } from "@/components/landing/Footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -32,31 +45,21 @@ function Index() {
       <main className="pb-24 md:pb-0">
         <Hero />
         <TrustStrip />
-
-        {/* Заглушки-якоря под будущие секции, чтобы навигация не вела в пустоту */}
-        <SectionStub id="services" title="Что ремонтирую" />
-        <SectionStub id="process" title="Как проходит работа" />
-        <SectionStub id="prices" title="Цены" />
-        <SectionStub id="works" title="Работы" />
-        <SectionStub id="reviews" title="Отзывы" />
-        <SectionStub id="faq" title="FAQ" />
+        <Problem />
+        <Services />
+        <Process />
+        <Prices />
+        <Pickup />
+        <Works />
+        <Reviews />
+        <Guarantee />
+        <ForWhom />
+        <Geography />
+        <Faq />
+        <FinalCta />
       </main>
+      <Footer />
       <MobileStickyCta />
     </div>
-  );
-}
-
-function SectionStub({ id, title }: { id: string; title: string }) {
-  return (
-    <section id={id} className="border-t border-border/60">
-      <div className="mx-auto max-w-6xl px-4 py-16 md:px-8 md:py-20">
-        <h2 className="font-display text-2xl font-semibold text-foreground/70 sm:text-3xl">
-          {title}
-        </h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Раздел в разработке.
-        </p>
-      </div>
-    </section>
   );
 }
