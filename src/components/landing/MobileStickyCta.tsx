@@ -28,7 +28,7 @@ export function MobileStickyCta() {
           className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-primary px-4 text-[15px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
         >
           <MaxLogo className="h-5 w-5 shrink-0" />
-          Фото в MAX
+          Написать в MAX
         </a>
 
         <a
