@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { MAX_LINK } from "@/lib/links";
+import { Menu, X, Phone } from "lucide-react";
+import { MAX_LINK, PHONE_LINK } from "@/lib/links";
+import { MaxLogo } from "./MaxLogo";
 
 const NAV = [
   { href: "#services", label: "Что ремонтирую" },
@@ -60,14 +61,23 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href={PHONE_LINK}
+            aria-label="Позвонить мастеру"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--card-soft-border)] bg-card text-primary transition-colors hover:bg-[color:var(--card-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-11 md:w-11"
+          >
+            <Phone className="h-[18px] w-[18px]" aria-hidden />
+          </a>
+
           {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
           <a
             href={MAX_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground shadow-[0_6px_16px_-6px_oklch(0.555_0.205_260/0.5)] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="hidden md:inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground shadow-[0_6px_16px_-6px_oklch(0.555_0.205_260/0.5)] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            Отправить фото в MAX
+            <MaxLogo className="h-5 w-5" />
+            Написать в MAX
           </a>
 
           <button
@@ -101,9 +111,10 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="md:hidden mt-2 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-3 text-[15px] font-medium text-primary-foreground hover:bg-primary-hover"
+              className="md:hidden mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-[15px] font-bold text-primary-foreground hover:bg-primary-hover"
             >
-              Отправить фото в MAX
+              <MaxLogo className="h-5 w-5" />
+              Написать в MAX
             </a>
           </nav>
         </div>

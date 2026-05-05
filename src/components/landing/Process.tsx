@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { MAX_LINK } from "@/lib/links";
+import { MaxLogo } from "./MaxLogo";
 
 const STEPS = [
   {
@@ -63,9 +64,10 @@ export function Process() {
           href={MAX_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3.5 text-[15px] font-semibold text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3.5 text-[15px] font-bold text-primary-foreground shadow-[0_8px_20px_-8px_oklch(0.555_0.205_260/0.5)] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          Показать поломку Владимиру
+          <MaxLogo className="h-5 w-5" />
+          Показать поломку в MAX
         </a>
       </div>
     </Section>

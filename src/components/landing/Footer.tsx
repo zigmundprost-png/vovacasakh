@@ -1,4 +1,6 @@
-import { MAX_LINK } from "@/lib/links";
+import { MAX_LINK, PHONE_LINK, PHONE_NUMBER } from "@/lib/links";
+import { Phone } from "lucide-react";
+import { MaxLogo } from "./MaxLogo";
 
 export function Footer() {
   return (
@@ -54,14 +56,24 @@ export function Footer() {
               Связь
             </h3>
             {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
-            <a
-              href={MAX_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-[14px] font-medium text-primary-foreground transition-colors hover:bg-primary-hover"
-            >
-              Написать в MAX
-            </a>
+            <div className="mt-3 flex flex-col gap-2">
+              <a
+                href={MAX_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-2.5 text-[14px] font-bold text-primary-foreground shadow-[0_6px_16px_-6px_oklch(0.555_0.205_260/0.5)] transition-colors hover:bg-primary-hover"
+              >
+                <MaxLogo className="h-5 w-5" />
+                Написать в MAX
+              </a>
+              <a
+                href={PHONE_LINK}
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[color:var(--card-soft-border)] bg-card px-5 py-2.5 text-[14px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)]"
+              >
+                <Phone className="h-4 w-4 text-primary" aria-hidden />
+                {PHONE_NUMBER}
+              </a>
+            </div>
             <p className="mt-3 text-[13px] text-muted-foreground">
               Отвечаю в течение дня. Лучше прислать фото или короткое видео
               поломки.
