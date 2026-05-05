@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Section } from "./Section";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import work1 from "@/assets/works/work-1.webp";
