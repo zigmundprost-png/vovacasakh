@@ -139,7 +139,7 @@ export function Hero() {
           </div>
 
           {/* Визуальный блок */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block lg:sticky lg:top-24">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <PlaceholderCard label="Фото до" icon={<ImageIcon className="h-4 w-4" />} aspect="aspect-[4/5]" />
               <PlaceholderCard label="Фото после" icon={<Sparkles className="h-4 w-4" />} aspect="aspect-[4/5]" />
