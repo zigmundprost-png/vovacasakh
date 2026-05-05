@@ -24,7 +24,7 @@ export function About() {
     <Section
       id="about"
       eyebrow="Кто будет работать"
-      title="О Владимире"
+      title="Обо мне"
       intro={
         <div className="space-y-4">
           <p>
