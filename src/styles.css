@@ -40,11 +40,11 @@
 :root {
   --radius: 0.75rem;
 
-  --background: oklch(0.972 0.006 85);
+  --background: oklch(0.995 0.002 85);        /* почти белый, чуть тёплый */
   --foreground: oklch(0.235 0 0);
   --muted-foreground: oklch(0.48 0 0);
 
-  --surface: oklch(0.955 0.006 85);
+  --surface: oklch(0.975 0.004 85);           /* мягкая нейтральная подложка */
   --card: oklch(1 0 0);
   --card-foreground: var(--foreground);
   --popover: oklch(1 0 0);
