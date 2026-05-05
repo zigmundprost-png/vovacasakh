@@ -39,9 +39,12 @@ export function Pickup() {
         ))}
       </ul>
 
-      <p className="mt-6 text-[13px] text-muted-foreground">
-        Забор и возврат, грузчики и выезд за город — обсудим заранее.
-      </p>
+      <div className="mt-6 flex items-start gap-3 rounded-xl border-l-4 border-[color:var(--accent-warm)] bg-[oklch(0.985_0.022_45)] px-4 py-3.5">
+        <span aria-hidden className="mt-0.5 text-[color:var(--accent-warm)] font-bold">!</span>
+        <p className="text-[14px] leading-relaxed text-foreground/90">
+          Забор и возврат, грузчики и выезд за город — <strong>обсудим заранее</strong>.
+        </p>
+      </div>
     </Section>
   );
 }
