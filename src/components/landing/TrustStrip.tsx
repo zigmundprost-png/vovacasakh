@@ -1,10 +1,10 @@
-import { Wrench, Camera, Truck, ShieldCheck } from "lucide-react";
+import { MapPin, Camera, Truck, ShieldCheck } from "lucide-react";
 
 const ITEMS = [
-  { icon: Wrench, title: "20+ лет опыта", text: "В мебельной работе и ремонте на дому." },
   { icon: Camera, title: "Можно начать с фото", text: "Пришлите снимок или видео — посмотрю и подскажу." },
   { icon: Truck, title: "Забор и возврат", text: "По договорённости — если чинить дома неудобно." },
   { icon: ShieldCheck, title: "Гарантия до 1 года", text: "На выполненные работы и материалы." },
+  { icon: MapPin, title: "Южно-Сахалинск и юг", text: "Работаю по городу и ближним районам." },
 ];
 
 export function TrustStrip() {
