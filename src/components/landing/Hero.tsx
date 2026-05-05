@@ -9,6 +9,10 @@ import {
   Truck,
   Lightbulb,
   MapPin,
+  Award,
+  Wallet,
+  Car,
+  CheckCircle2,
 } from "lucide-react";
 import { MAX_LINK } from "@/lib/links";
 import { MaxLogo } from "./MaxLogo";
@@ -22,9 +26,10 @@ const VALUE_PROPS = [
 ];
 
 const TRUST_STATS = [
-  { value: "20+ лет", label: "в мебельной работе" },
-  { value: "от 5 000 ₽", label: "Ремонт мягкой мебели" },
-  { value: "700 ₽", label: "Выезд и диагностика" },
+  { icon: Award, value: "20+ лет", label: "в мебельной работе" },
+  { icon: CheckCircle2, value: "500+", label: "успешных ремонтов" },
+  { icon: Wallet, value: "от 5 000 ₽", label: "ремонт мягкой мебели" },
+  { icon: Car, value: "700 ₽", label: "выезд и диагностика" },
 ];
 
 export function Hero() {
