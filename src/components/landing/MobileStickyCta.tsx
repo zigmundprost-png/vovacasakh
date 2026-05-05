@@ -15,9 +15,9 @@ export function MobileStickyCta() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Написать в WhatsApp"
-          className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[18px] bg-[#25D366] text-white shadow-[0_8px_18px_-8px_rgba(37,211,102,0.6)] transition-colors hover:bg-[#1DB954] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[18px] transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          <WhatsAppIcon className="h-[24px] w-[24px]" />
+          <WhatsAppIcon className="h-[52px] w-[52px] drop-shadow-[0_8px_16px_rgba(37,211,102,0.45)]" rounded={false} />
         </a>
 
         {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
