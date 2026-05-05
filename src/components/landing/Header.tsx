@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { MAX_LINK, PHONE_LINK, WHATSAPP_LINK } from "@/lib/links";
+import { PHONE_LINK, WHATSAPP_LINK } from "@/lib/links";
 import { MaxLogo } from "./MaxLogo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
