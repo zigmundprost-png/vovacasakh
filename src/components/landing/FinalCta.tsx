@@ -11,12 +11,12 @@ export function FinalCta() {
           Следующий шаг
         </span>
         <h2 className="font-display mt-4 text-[28px] font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-[42px]">
-          Покажите поломку — Владимир скажет,{" "}
+          Покажите мне поломку — скажу,{" "}
           <span className="text-primary">что делать дальше</span>
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.6] text-muted-foreground">
-          Пришлите фото или короткое видео в MAX. Так быстрее понять, нужен ли
-          выезд и стоит ли ремонтировать.
+          Пришлите фото или короткое видео в MAX. Так мне быстрее понять, нужен
+          ли выезд и стоит ли ремонтировать.
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
