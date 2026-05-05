@@ -114,14 +114,12 @@ export function Header() {
               </a>
             ))}
             <a
-              href={MAX_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#brief"
               onClick={() => setOpen(false)}
               className="md:hidden mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-[15px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
             >
               <MaxLogo className="h-5 w-5" />
-              Написать в MAX
+              Подготовить заявку
             </a>
           </nav>
         </div>
