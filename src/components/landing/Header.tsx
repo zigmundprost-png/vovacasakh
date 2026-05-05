@@ -51,12 +51,12 @@ export function Header() {
           </span>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Основная навигация">
+        <nav className="hidden xl:flex items-center gap-5" aria-label="Основная навигация">
           {NAV.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-[14px] text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:text-foreground"
+              className="whitespace-nowrap text-[14px] text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:text-foreground"
             >
               {item.label}
             </a>
@@ -84,7 +84,7 @@ export function Header() {
 
           <a
             href="#brief"
-            className="hidden md:inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
+            className="hidden md:inline-flex xl:hidden items-center gap-2 whitespace-nowrap rounded-2xl bg-primary px-4 py-2.5 text-[14px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
           >
             <MaxLogo className="h-5 w-5" />
             Подготовить заявку
@@ -95,7 +95,7 @@ export function Header() {
             aria-label={open ? "Закрыть меню" : "Открыть меню"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg text-foreground hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="xl:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg text-foreground hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -103,7 +103,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-border bg-background">
+        <div className="xl:hidden border-t border-border bg-background">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3" aria-label="Мобильная навигация">
             {NAV.map((item) => (
               <a
