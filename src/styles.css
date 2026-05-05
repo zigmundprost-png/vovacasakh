@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -34,41 +34,50 @@
   --color-ring: var(--ring);
   --color-surface: var(--surface);
   --font-sans: var(--font-sans);
-  --font-display: var(--font-sans);
+  --font-display: var(--font-display);
+  --color-accent-warm: var(--accent-warm);
+  --color-card-soft: var(--card-soft);
+  --color-card-soft-border: var(--card-soft-border);
 }
 
 :root {
   --radius: 0.75rem;
 
-  /* Warm neutral palette — частный мастер, спокойствие, доверие */
-  --background: oklch(0.985 0.005 75);         /* мягкий тёплый off-white */
-  --foreground: oklch(0.225 0.008 60);         /* графитовый */
-  --muted-foreground: oklch(0.52 0.008 60);    /* спокойный серый */
+  /* Modern light blue palette — частный мастер, доверие, мобильно */
+  --background: oklch(0.985 0.005 250);        /* #F8FAFF */
+  --foreground: oklch(0.205 0.045 260);        /* #0F172A */
+  --muted-foreground: oklch(0.515 0.04 255);   /* #475569 */
 
-  --surface: oklch(0.965 0.006 75);            /* чуть темнее фона, без синевы */
-  --card: oklch(1 0 0);                        /* чистый белый для карточек */
+  --surface: oklch(0.97 0.012 250);            /* #EFF6FF */
+  --card: oklch(1 0 0);                        /* #FFFFFF */
   --card-foreground: var(--foreground);
   --popover: oklch(1 0 0);
   --popover-foreground: var(--foreground);
 
-  --primary: oklch(0.555 0.155 38);            /* тёплый терракотовый */
-  --primary-foreground: oklch(0.99 0.005 75);
-  --primary-hover: oklch(0.495 0.158 36);
+  --card-soft: oklch(0.97 0.018 250);          /* мягкий голубой фон карточек */
+  --card-soft-border: oklch(0.91 0.035 250);   /* #DCEBFF — голубая граница */
 
-  --secondary: oklch(0.945 0.008 75);
+  --primary: oklch(0.555 0.205 260);           /* #0B63E5 — основной CTA */
+  --primary-foreground: oklch(1 0 0);
+  --primary-hover: oklch(0.475 0.21 262);      /* #084FC0 */
+
+  --secondary: oklch(0.945 0.012 250);
   --secondary-foreground: var(--foreground);
-  --muted: oklch(0.95 0.006 75);
-  --accent: oklch(0.555 0.155 38);
-  --accent-foreground: oklch(0.99 0.005 75);
+  --muted: oklch(0.95 0.01 250);
+
+  --accent: oklch(0.555 0.205 260);
+  --accent-foreground: oklch(1 0 0);
+  --accent-warm: oklch(0.69 0.18 35);          /* #FF6B4A — коралловый акцент */
 
   --destructive: oklch(0.55 0.18 28);
   --destructive-foreground: oklch(1 0 0);
 
-  --border: oklch(0.9 0.008 70);               /* нейтральная тёплая граница */
-  --input: oklch(0.9 0.008 70);
-  --ring: oklch(0.555 0.155 38);
+  --border: oklch(0.91 0.025 250);             /* мягкая голубая граница */
+  --input: oklch(0.91 0.025 250);
+  --ring: oklch(0.555 0.205 260);
 
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Manrope", "Inter", system-ui, sans-serif;
 }
 
 .dark {
@@ -104,7 +113,11 @@
     text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4 {
-    font-family: var(--font-sans);
+    font-family: var(--font-display);
     letter-spacing: -0.02em;
+  }
+  /* Reserve space for sticky mobile CTA */
+  @media (max-width: 767px) {
+    body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
   }
 }
