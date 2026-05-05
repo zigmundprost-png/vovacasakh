@@ -21,16 +21,16 @@ export function FinalCta() {
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
-          <a
-            href={MAX_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground shadow-[0_10px_28px_-8px_oklch(0.555_0.205_260/0.55)] transition-all hover:bg-primary-hover hover:shadow-[0_14px_32px_-8px_oklch(0.555_0.205_260/0.65)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
+          {/* MAX временно отключён */}
+          <button
+            type="button"
+            disabled
+            title="Скоро будет доступно"
+            className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed sm:w-auto"
           >
             <MaxLogo className="h-6 w-6 shrink-0" />
-            Написать в MAX
-          </a>
+            MAX&nbsp;— скоро
+          </button>
           <a
             href={PHONE_LINK}
             className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] border border-[color:var(--card-soft-border)] bg-card px-6 text-[15px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"

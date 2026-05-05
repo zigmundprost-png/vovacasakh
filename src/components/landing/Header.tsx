@@ -126,7 +126,6 @@ export function Header() {
               <MaxLogo className="h-5 w-5" />
               MAX&nbsp;— скоро
             </button>
-            </a>
           </nav>
         </div>
       )}

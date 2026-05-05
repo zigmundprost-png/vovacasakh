@@ -55,17 +55,17 @@ export function Footer() {
             <h3 className="text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">
               Связь
             </h3>
-            {/* MAX_LINK_PLACEHOLDER — заменить в src/lib/links.ts */}
+            {/* MAX временно отключён */}
             <div className="mt-3 flex flex-col gap-2">
-              <a
-                href={MAX_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-2.5 text-[14px] font-bold text-primary-foreground shadow-[0_6px_16px_-6px_oklch(0.555_0.205_260/0.5)] transition-colors hover:bg-primary-hover"
+              <button
+                type="button"
+                disabled
+                title="Скоро будет доступно"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-2.5 text-[14px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
               >
                 <MaxLogo className="h-5 w-5" />
-                Написать в MAX
-              </a>
+                MAX&nbsp;— скоро
+              </button>
               <a
                 href={PHONE_LINK}
                 className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[color:var(--card-soft-border)] bg-card px-5 py-2.5 text-[14px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)]"
