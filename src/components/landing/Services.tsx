@@ -1,5 +1,5 @@
 import { Section } from "./Section";
-import { Sofa, Wrench, Check, Info } from "lucide-react";
+import { Sofa, Wrench, Check, X, Info } from "lucide-react";
 
 const MAIN = [
   "Ремонт каркаса дивана",
@@ -20,6 +20,14 @@ const EXTRA = [
   "Замена части фурнитуры",
   "Сборка мебели, если задача адекватна по объёму",
   "Крупные сборки — с подключением проверенных людей",
+];
+
+const NOT_DOING = [
+  "Полную перетяжку мебели",
+  "Сложный пошив чехлов и обивки",
+  "Встроенную мебель на заказ",
+  "Мелкую дешёвую сборку из коробок",
+  "Не обещаю «починить всё» — если задача не по профилю, скажу сразу",
 ];
 
 export function Services() {
@@ -46,6 +54,10 @@ export function Services() {
         <ServiceCard icon={<Wrench className="h-5 w-5" />} title="Дополнительно" items={EXTRA} />
       </div>
 
+      <div className="mt-4">
+        <NotDoingCard items={NOT_DOING} />
+      </div>
+
       {/* Важная заметка — выделена для внимания клиента */}
       <div className="mt-8 flex items-start gap-3 rounded-2xl border-l-4 border-[color:var(--accent-warm)] border-y border-r border-y-[color:var(--card-soft-border)] border-r-[color:var(--card-soft-border)] bg-[oklch(0.98_0.025_45)] p-5">
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm)]">
@@ -56,14 +68,43 @@ export function Services() {
             Важно знать заранее
           </p>
           <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground">
-            Не берусь за{" "}
-            <span className="font-semibold">полную перетяжку, сложный пошив, встроенную мебель
-            и мелкую дешёвую сборку</span>. Не обещаю «починить всё» —
-            лучше честно сказать сразу, чем потратить ваше время.
+            Если сомневаетесь — пришлите фото, подскажу, берусь или нет.
+            Лучше честно сказать сразу, чем потратить ваше время.
           </p>
         </div>
       </div>
     </Section>
+  );
+}
+
+function NotDoingCard({ items }: { items: string[] }) {
+  return (
+    <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
+      <div className="flex items-center gap-3">
+        <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-muted text-muted-foreground">
+          <X className="h-5 w-5" strokeWidth={2.4} />
+        </span>
+        <h3 className="font-display text-[19px] font-bold text-foreground">
+          За что Владимир не берётся
+        </h3>
+      </div>
+      <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
+        {items.map((it) => (
+          <li
+            key={it}
+            className="flex items-start gap-2.5 text-[15px] leading-[1.5] text-foreground/85"
+          >
+            <span
+              aria-hidden
+              className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground"
+            >
+              <X className="h-3 w-3" strokeWidth={3} />
+            </span>
+            {it}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
