@@ -160,7 +160,7 @@ export function Reviews() {
           <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground">
             Все отзывы — с реальной площадки объявлений, их можно проверить по ссылке.{" "}
             <a
-              href="https://max.ru/u/f9LHodD0cOKGZ4xaImBDKE-TUQXZbPkFvxONgea0X4BcOyG4dStpz0y54-A"
+              href="https://mnogotovarov.ru/3191299.html"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-[color:var(--accent-warm)] underline underline-offset-2 hover:opacity-80"
