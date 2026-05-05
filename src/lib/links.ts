@@ -1,6 +1,6 @@
 // Ссылка на чат с Владимиром в MAX.
 export const MAX_LINK =
-  "https://max.ru/u/f9LHodD0cOKGZ4xaImBDKE-TUQXZbPkFvxONgea0X4BcOyG4dStpz0y54-A";
+  "https://mnogotovarov.ru/3191299.html";
 
 // MAX активен — кнопки кликабельны.
 export const MAX_ENABLED = true;
