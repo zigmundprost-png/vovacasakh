@@ -42,7 +42,7 @@ export function Header() {
             ВК
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="font-display text-[17px] font-extrabold tracking-tight text-foreground uppercase">
+            <span className="font-display text-[17px] font-extrabold tracking-tight text-foreground uppercase whitespace-nowrap">
               ВОВА КАРЛО
             </span>
             <span className="hidden text-[11px] text-muted-foreground sm:block">
