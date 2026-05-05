@@ -123,19 +123,19 @@ function ServiceCard({
     <div
       className={`relative rounded-2xl border p-6 md:p-8 ${
         primary
-          ? "border-primary/40 bg-[color:var(--card-soft)] shadow-[0_10px_30px_-18px_oklch(0.555_0.205_260/0.45)]"
+          ? "border-[color:var(--accent-warm)]/50 bg-[oklch(0.985_0.022_45)] shadow-[0_14px_40px_-22px_oklch(0.68_0.18_35/0.55)]"
           : "border-border bg-card"
       }`}
     >
       {primary && (
-        <span className="absolute -top-3 left-6 inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-primary-foreground shadow-[0_4px_12px_-4px_oklch(0.555_0.205_260/0.55)]">
+        <span className="absolute -top-3 left-6 inline-flex items-center gap-1.5 rounded-full bg-[color:var(--accent-warm)] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_6px_16px_-6px_oklch(0.68_0.18_35/0.6)]">
           Главное направление
         </span>
       )}
       <div className="flex items-center gap-3">
         <span
           className={`inline-flex h-11 w-11 items-center justify-center rounded-full ${
-            primary ? "bg-primary text-primary-foreground" : "bg-[color:var(--card-soft)] text-primary"
+            primary ? "bg-[color:var(--accent-warm)] text-white" : "bg-[color:var(--card-soft)] text-primary"
           }`}
         >
           {icon}
@@ -151,7 +151,7 @@ function ServiceCard({
             <span
               aria-hidden
               className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
-                primary ? "bg-primary/12 text-primary" : "bg-[color:var(--card-soft)] text-primary"
+                primary ? "bg-[color:var(--accent-warm)]/15 text-[color:var(--accent-warm)]" : "bg-[color:var(--card-soft)] text-primary"
               }`}
             >
               <Check className="h-3 w-3" strokeWidth={3} />
