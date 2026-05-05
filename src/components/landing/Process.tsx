@@ -41,7 +41,7 @@ export function Process() {
       id="process"
       eyebrow="Как это устроено"
       title="Как проходит работа"
-      intro={<p>Шесть простых шагов от первого фото до возврата мебели.</p>}
+      intro={<p>Шесть простых шагов — от вашего первого фото до возврата мебели.</p>}
     >
       <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {STEPS.map((s) => (
