@@ -5,6 +5,7 @@ import { MaxLogo } from "./MaxLogo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const NAV = [
+  { href: "#about", label: "О мастере" },
   { href: "#services", label: "Что я ремонтирую" },
   { href: "#process", label: "Как проходит работа" },
   { href: "#prices", label: "Цены" },
