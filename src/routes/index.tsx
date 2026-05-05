@@ -58,6 +58,7 @@ function Index() {
         <ForWhom />
         <Geography />
         <Faq />
+        <Brief />
         <FinalCta />
       </main>
       <Footer />
