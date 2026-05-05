@@ -64,7 +64,7 @@ export function Footer() {
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-2.5 text-[14px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
               >
                 <MaxLogo className="h-5 w-5" />
-                MAX&nbsp;— скоро
+                Написать в MAX (скоро)
               </button>
               <a
                 href={PHONE_LINK}

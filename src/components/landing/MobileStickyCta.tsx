@@ -29,7 +29,7 @@ export function MobileStickyCta() {
           className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-primary px-4 text-[15px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
         >
           <MaxLogo className="h-5 w-5 shrink-0" />
-          MAX&nbsp;— скоро
+          Фото в MAX (скоро)
         </button>
 
         <a
