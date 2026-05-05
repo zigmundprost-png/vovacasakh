@@ -16,6 +16,7 @@ import { ForWhom } from "@/components/landing/ForWhom";
 import { Geography } from "@/components/landing/Geography";
 import { Faq } from "@/components/landing/Faq";
 import { FinalCta } from "@/components/landing/FinalCta";
+import { Brief } from "@/components/landing/Brief";
 import { Footer } from "@/components/landing/Footer";
 
 export const Route = createFileRoute("/")({
@@ -57,6 +58,7 @@ function Index() {
         <ForWhom />
         <Geography />
         <Faq />
+        <Brief />
         <FinalCta />
       </main>
       <Footer />
