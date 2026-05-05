@@ -1,5 +1,3 @@
-import { MAX_LINK, PHONE_LINK, PHONE_NUMBER } from "@/lib/links";
-import { Phone } from "lucide-react";
 import { MaxLogo } from "./MaxLogo";
 
 export function FinalCta() {
