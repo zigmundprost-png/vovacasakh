@@ -66,7 +66,7 @@ export function Hero() {
                 href={MAX_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-4 text-[16px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_oklch(0.555_0.158_38/0.55)] transition-all hover:bg-primary-hover hover:shadow-[0_12px_28px_-8px_oklch(0.555_0.158_38/0.65)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-4 text-[16px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_oklch(0.5_0.15_155/0.55)] transition-all hover:bg-primary-hover hover:shadow-[0_12px_28px_-8px_oklch(0.5_0.15_155/0.65)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 <Send className="h-4 w-4" aria-hidden />
                 Отправить фото или видео в MAX
