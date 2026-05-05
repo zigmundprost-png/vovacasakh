@@ -3,6 +3,7 @@ import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { TrustStrip } from "@/components/landing/TrustStrip";
 import { MobileStickyCta } from "@/components/landing/MobileStickyCta";
+import { DesktopFloatingCta } from "@/components/landing/DesktopFloatingCta";
 import { Problem } from "@/components/landing/Problem";
 import { Services } from "@/components/landing/Services";
 import { Process } from "@/components/landing/Process";
@@ -60,6 +61,7 @@ function Index() {
       </main>
       <Footer />
       <MobileStickyCta />
+      <DesktopFloatingCta />
     </div>
   );
 }
