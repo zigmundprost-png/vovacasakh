@@ -96,7 +96,7 @@ function NotDoingCard({ items }: { items: string[] }) {
           >
             <span
               aria-hidden
-              className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground"
+              className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[oklch(0.96_0.04_25)] text-[oklch(0.55_0.21_27)]"
             >
               <X className="h-3 w-3" strokeWidth={3} />
             </span>
