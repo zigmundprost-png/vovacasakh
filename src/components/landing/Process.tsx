@@ -59,16 +59,15 @@ export function Process() {
       </ol>
 
       <div className="mt-10 flex justify-center">
-        {/* MAX временно отключён */}
-        <button
-          type="button"
-          disabled
-          title="Скоро будет доступно"
-          className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3.5 text-[15px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed"
+        <a
+          href={MAX_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3.5 text-[15px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
         >
           <MaxLogo className="h-5 w-5" />
-          Написать в MAX (скоро)
-        </button>
+          Написать в MAX
+        </a>
       </div>
     </Section>
   );

@@ -20,16 +20,15 @@ export function FinalCta() {
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          {/* MAX временно отключён */}
-          <button
-            type="button"
-            disabled
-            title="Скоро будет доступно"
-            className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground opacity-55 grayscale cursor-not-allowed sm:w-auto"
+          <a
+            href={MAX_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover sm:w-auto"
           >
             <MaxLogo className="h-6 w-6 shrink-0" />
-            Написать в MAX (скоро)
-          </button>
+            Написать в MAX
+          </a>
           <a
             href={PHONE_LINK}
             className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] border border-[color:var(--card-soft-border)] bg-card px-6 text-[15px] font-bold text-foreground transition-colors hover:bg-[color:var(--card-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
