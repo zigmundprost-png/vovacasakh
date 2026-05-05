@@ -27,14 +27,14 @@ import work23 from "@/assets/works/work-23.webp";
 import work24 from "@/assets/works/work-24.webp";
 import work25 from "@/assets/works/work-25.webp";
 
-type Category = "Ремонт" | "Ремонт" | "Сборка";
+type Category = "Ремонт" | "Сборка";
 
 type Work = { src: string; title: string; desc: string; category: Category };
 
 const WORKS: Work[] = [
-  { src: work25, title: "Угловой диван, бежевая ткань", desc: "Перетяжка и восстановление формы подушек.", category: "Ремонт" },
+  { src: work25, title: "Угловой диван, бежевая ткань", desc: "Восстановление формы подушек и обивки.", category: "Ремонт" },
   { src: work1, title: "Большой угловой диван", desc: "Замена поролона и восстановление формы сидений.", category: "Ремонт" },
-  { src: work2, title: "Прямой диван-книжка", desc: "Перетяжка и замена наполнителя.", category: "Ремонт" },
+  { src: work2, title: "Прямой диван-книжка", desc: "Замена наполнителя и восстановление обивки.", category: "Ремонт" },
   { src: work3, title: "Угловой диван, светлая ткань", desc: "Восстановление сидений и подушек.", category: "Ремонт" },
   { src: work11, title: "Диван-книжка, серая ткань", desc: "Замена поролона и подтяжка обивки.", category: "Ремонт" },
   { src: work4, title: "Диван с ящиком для белья", desc: "Ремонт корпуса и механизма.", category: "Ремонт" },
@@ -59,7 +59,7 @@ const WORKS: Work[] = [
   { src: work17, title: "Шкафы со стеклянными дверцами", desc: "Сборка медицинской мебели в коридоре.", category: "Сборка" },
 ];
 
-const CATEGORIES: ("Все" | Category)[] = ["Все", "Ремонт", "Ремонт", "Сборка"];
+const CATEGORIES: ("Все" | Category)[] = ["Все", "Ремонт", "Сборка"];
 
 export function Works() {
   const [active, setActive] = useState<"Все" | Category>("Все");
