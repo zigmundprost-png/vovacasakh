@@ -19,6 +19,7 @@ import { Faq } from "@/components/landing/Faq";
 import { FinalCta } from "@/components/landing/FinalCta";
 import { Brief } from "@/components/landing/Brief";
 import { Footer } from "@/components/landing/Footer";
+import { MaxBriefDialog } from "@/components/landing/MaxBriefDialog";
 
 export const Route = createFileRoute("/")({
   component: Index,
