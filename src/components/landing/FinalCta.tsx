@@ -12,12 +12,11 @@ export function FinalCta() {
         </span>
         <h2 className="font-display mt-4 text-[28px] font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-[42px]">
           Покажите поломку — Владимир скажет,{" "}
-          <span className="text-primary">какой следующий шаг лучше</span>
+          <span className="text-primary">какой шаг лучше дальше</span>
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.6] text-muted-foreground">
-          Отправьте фото или короткое видео в MAX. Так быстрее понять, можно ли
-          дать предварительную оценку, нужен ли выезд и стоит ли ремонт
-          рассматривать.
+          Пришлите фото или короткое видео в MAX. Так быстрее понять, можно ли
+          дать предварительную оценку, нужен ли выезд и стоит ли рассматривать ремонт.
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -41,8 +40,8 @@ export function FinalCta() {
         </div>
 
         <p className="mx-auto mt-6 max-w-xl text-[13px] leading-relaxed text-muted-foreground">
-          Снимите мебель целиком, место поломки крупно и то, как проблема
-          проявляется. Если видео неудобно, пришлите 2–3 фото.
+          Снимите мебель целиком, место поломки крупно и то, как проявляется
+          проблема. Если видео неудобно — пришлите 2–3 фото.
         </p>
       </div>
     </section>
