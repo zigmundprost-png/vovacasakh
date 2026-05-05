@@ -81,7 +81,7 @@ function NotDoingCard({ items }: { items: string[] }) {
   return (
     <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
       <div className="flex items-center gap-3">
-        <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-muted text-muted-foreground">
+        <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[oklch(0.96_0.04_25)] text-[oklch(0.55_0.21_27)]">
           <X className="h-5 w-5" strokeWidth={2.4} />
         </span>
         <h3 className="font-display text-[19px] font-bold text-foreground">
