@@ -19,10 +19,10 @@ import { MaxLogo } from "./MaxLogo";
 
 
 const VALUE_PROPS = [
-  { icon: Sofa, text: "Диваны, кресла, стулья и кровати" },
-  { icon: Video, text: "Можно начать с фото или видео" },
-  { icon: ShieldCheck, text: "Объясню по-человечески, что сломалось" },
-  { icon: Truck, text: "При необходимости заберу и привезу обратно" },
+  { icon: Sofa, text: "Ремонтирую диваны, кресла, стулья и кровати" },
+  { icon: Video, text: "Начнём с фото или видео — так проще" },
+  { icon: ShieldCheck, text: "По-человечески объясню, что сломалось" },
+  { icon: Truck, text: "Если нужно — заберу и привезу обратно" },
 ];
 
 const TRUST_STATS = [
