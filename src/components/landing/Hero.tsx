@@ -11,7 +11,6 @@ import {
   MapPin,
   Award,
   Car,
-  PackageCheck,
 } from "lucide-react";
 import { openMaxBrief } from "./MaxBriefDialog";
 import { MaxLogo } from "./MaxLogo";
