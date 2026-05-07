@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -88,8 +88,8 @@
   --input: oklch(0.91 0.025 250);
   --ring: oklch(0.555 0.205 260);
 
-  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Manrope", "Inter", system-ui, sans-serif;
+  --font-sans: "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Unbounded", "Golos Text", system-ui, sans-serif;
 }
 
 .dark {
@@ -131,7 +131,7 @@
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
     text-wrap: balance;
     overflow-wrap: break-word;
   }
