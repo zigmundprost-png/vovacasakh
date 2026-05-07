@@ -19,13 +19,14 @@ export function FinalCta() {
         </p>
 
         <div className="mt-8 flex justify-center">
-          <a
-            href="#brief"
+          <button
+            type="button"
+            onClick={openMaxBrief}
             className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-[20px] bg-primary px-7 text-[16px] font-bold text-primary-foreground transition-colors hover:bg-primary-hover sm:w-auto"
           >
             <MaxLogo className="h-6 w-6 shrink-0" />
             Отправить фото или видео в MAX
-          </a>
+          </button>
         </div>
 
         <p className="mx-auto mt-6 max-w-xl text-[13px] leading-relaxed text-muted-foreground">
