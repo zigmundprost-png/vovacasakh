@@ -1,4 +1,5 @@
 import { MaxLogo } from "./MaxLogo";
+import { openMaxBrief } from "./MaxBriefDialog";
 
 export function FinalCta() {
   return (
