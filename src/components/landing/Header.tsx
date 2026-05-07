@@ -30,7 +30,7 @@ const NAV: NavItem[] = [
   { href: "#services", label: "Что я ремонтирую", hint: "Диваны, кресла, кровати", icon: Wrench },
   { href: "#process", label: "Как проходит работа", hint: "От фото до возврата", icon: ListChecks },
   { href: "#prices", label: "Цены", hint: "От 700 ₽ за выезд", icon: Tag },
-  { href: "#works", label: "Работы", hint: "25+ фото", icon: Images },
+  { href: "#works", label: "Работы", hint: "40+ фото", icon: Images },
   { href: "#reviews", label: "Отзывы", hint: "Реальные люди", icon: Star },
   { href: "#guarantee", label: "Гарантия", hint: "Чиню честно", icon: ShieldCheck },
   { href: "#faq", label: "Вопросы", hint: "Частые ответы", icon: HelpCircle },
