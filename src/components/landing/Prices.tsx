@@ -34,10 +34,9 @@ export function Prices() {
 
       <div className="mt-6">
         <p className="rounded-xl border border-border bg-surface p-5 text-[14px] leading-relaxed text-foreground/85">
-          <strong className="font-semibold">Важно.</strong> По фото или видео я
-          могу дать предварительное понимание. Окончательную стоимость называю
-          после диагностики — когда понятно, что именно сломалось, какие
-          материалы нужны и какой объём работы предстоит.
+          <strong className="font-semibold">Важно.</strong> Окончательную
+          стоимость называю после диагностики — когда понятно, что именно
+          сломалось, какие материалы нужны и какой объём работы предстоит.
         </p>
       </div>
     </Section>

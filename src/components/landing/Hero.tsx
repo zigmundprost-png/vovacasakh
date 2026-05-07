@@ -7,7 +7,7 @@ import {
   Video,
   ShieldCheck,
   Truck,
-  Lightbulb,
+  
   MapPin,
   Award,
   Car,

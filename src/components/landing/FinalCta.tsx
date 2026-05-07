@@ -14,8 +14,8 @@ export function FinalCta() {
           <span className="text-primary">что делать дальше</span>
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.6] text-muted-foreground">
-          Пришлите фото или короткое видео в MAX. Так я быстрее пойму, нужен ли
-          выезд, можно ли дать предварительную оценку и стоит ли ремонтировать.
+          Пришлите фото или короткое видео в MAX. Я посмотрю и отвечу: можно ли
+          ремонтировать, нужен ли выезд и какой следующий шаг лучше.
         </p>
 
         <div className="mt-8 flex justify-center">
@@ -28,11 +28,6 @@ export function FinalCta() {
             Отправить фото или видео в MAX
           </button>
         </div>
-
-        <p className="mx-auto mt-6 max-w-xl text-[13px] leading-relaxed text-muted-foreground">
-          Снимите мебель целиком, место поломки крупно и то, как проявляется
-          проблема. Если видео неудобно — пришлите 2–3 фото, мне этого хватит.
-        </p>
       </div>
     </section>
   );
