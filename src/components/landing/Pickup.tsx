@@ -1,11 +1,13 @@
 import { Section } from "./Section";
-import { Truck, Package, Camera, Home } from "lucide-react";
+import { Truck, Package, Camera, Home, MapPin, Users, Info } from "lucide-react";
 
 const PERKS = [
-  { icon: Home, text: "Вам не нужно искать машину" },
-  { icon: Package, text: "Меньше грязи и суеты у вас дома" },
-  { icon: Truck, text: "Привезу обратно и помогу занести" },
+  { icon: Truck, text: "Заберу мебель" },
+  { icon: Home, text: "Привезу обратно и помогу занести" },
   { icon: Camera, text: "По желанию пришлю фото или видеоотчёт" },
+  { icon: MapPin, text: "Возможен выезд за город" },
+  { icon: Users, text: "Грузчики, если они нужны" },
+  { icon: Package, text: "Меньше грязи и суеты у вас дома" },
 ];
 
 export function Pickup() {
