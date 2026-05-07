@@ -37,7 +37,7 @@ export function Footer() {
             <ul className="mt-5 space-y-2.5 text-[13px] text-foreground/85">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />
-                Южно-Сахалинск и юг Сахалина
+                Южно-Сахалинск и южная часть Сахалина
               </li>
               <li className="flex items-start gap-2.5">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />
@@ -97,10 +97,6 @@ export function Footer() {
                 {PHONE_NUMBER}
               </a>
             </div>
-            <p className="mt-3 text-[12px] leading-relaxed text-muted-foreground">
-              Лучше сразу присылайте фото или короткое видео поломки — так я
-              быстрее пойму задачу.
-            </p>
           </div>
         </div>
 

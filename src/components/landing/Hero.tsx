@@ -7,7 +7,7 @@ import {
   Video,
   ShieldCheck,
   Truck,
-  Lightbulb,
+  
   MapPin,
   Award,
   Car,
@@ -19,7 +19,7 @@ import { MaxLogo } from "./MaxLogo";
 const VALUE_PROPS = [
   { icon: Sofa, text: "Ремонтирую диваны, кресла, стулья и кровати" },
   { icon: Video, text: "Начинаю с фото или видео, чтобы не гонять вас и себя впустую" },
-  { icon: ShieldCheck, text: "По-человечески объясняю, что сломалось" },
+  { icon: ShieldCheck, text: "Объясняю простым языком, что сломалось" },
   { icon: Truck, text: "Если нужно — заберу мебель и привезу обратно" },
 ];
 
@@ -39,7 +39,7 @@ export function Hero() {
           <div className="max-w-xl">
             <span className="inline-flex items-center gap-2 text-[13px] font-medium text-muted-foreground">
               <MapPin className="h-3.5 w-3.5 text-primary" aria-hidden />
-              Южно-Сахалинск и юг Сахалина
+              Южно-Сахалинск и южная часть Сахалина
             </span>
 
             <h1 className="font-display mt-5 text-[34px] font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-[52px] lg:text-[60px]">
@@ -66,9 +66,9 @@ export function Hero() {
 
             <p className="mt-6 text-[16px] leading-[1.6] text-muted-foreground sm:text-[17px]">
               Меня зовут Владимир. Я ремонтирую диваны, кресла, стулья, кровати
-              и другую мягкую мебель в Южно-Сахалинске и по югу Сахалина.
-              Пришлите фото или видео поломки — скажу, есть ли смысл
-              ремонтировать, нужен ли выезд и какой следующий шаг лучше.
+              и другую мягкую мебель в Южно-Сахалинске и южной части Сахалина.
+              Пришлите фото или короткое видео поломки — скажу, есть ли смысл
+              ремонтировать, нужен ли выезд и что делать дальше.
             </p>
 
             {/* Feature cards */}
@@ -104,16 +104,6 @@ export function Hero() {
                 Посмотреть работы
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
-            </div>
-
-            {/* Подсказка */}
-            <div className="mt-5 flex items-start gap-3 rounded-2xl border border-border bg-card px-4 py-3.5">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[oklch(0.96_0.04_35)] text-[color:var(--accent-warm)]">
-                <Lightbulb className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden />
-              </span>
-              <p className="text-[14px] leading-relaxed text-foreground/80">
-                Лучше короткое видео: покажите мебель целиком, место поломки и то, как проявляется проблема.
-              </p>
             </div>
 
             {/* Полоса доверия с цифрами */}
