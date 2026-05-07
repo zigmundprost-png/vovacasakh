@@ -43,50 +43,49 @@
 :root {
   --radius: 0.75rem;
 
-  /* Modern light blue palette — частный мастер, доверие, мобильно */
-  --background: oklch(0.985 0.005 250);        /* #F8FAFF */
-  --foreground: oklch(0.205 0.045 260);        /* #0F172A */
-  --muted-foreground: oklch(0.515 0.04 255);   /* #475569 */
+  /* Мастерская: тёплый светлый фон, графит, глубокий зелёный, дерево */
+  --background: oklch(0.975 0.012 80);         /* тёплая бумага */
+  --foreground: oklch(0.27 0.01 70);           /* графит */
+  --muted-foreground: oklch(0.48 0.015 70);
 
-  --surface: oklch(0.97 0.012 250);            /* #EFF6FF */
-  --card: oklch(1 0 0);                        /* #FFFFFF */
+  --surface: oklch(0.955 0.018 75);
+  --card: oklch(0.99 0.008 80);
   --card-foreground: var(--foreground);
   --popover: oklch(1 0 0);
   --popover-foreground: var(--foreground);
 
-  --card-soft: oklch(0.97 0.018 250);          /* мягкий голубой фон карточек */
-  --card-soft-border: oklch(0.91 0.035 250);   /* #DCEBFF — голубая граница */
+  --card-soft: oklch(0.95 0.025 75);
+  --card-soft-border: oklch(0.88 0.03 70);
 
-  --primary: oklch(0.555 0.205 260);           /* #0B63E5 — основной CTA */
-  --primary-foreground: oklch(1 0 0);
-  --primary-hover: oklch(0.475 0.21 262);      /* #084FC0 */
+  --primary: oklch(0.42 0.09 155);             /* глубокий зелёный — CTA */
+  --primary-foreground: oklch(0.985 0.01 80);
+  --primary-hover: oklch(0.36 0.085 155);
 
-  --secondary: oklch(0.945 0.012 250);
+  --secondary: oklch(0.94 0.015 75);
   --secondary-foreground: var(--foreground);
-  --muted: oklch(0.95 0.01 250);
+  --muted: oklch(0.945 0.014 75);
 
-  --accent: oklch(0.555 0.205 260);
-  --accent-foreground: oklch(1 0 0);
-  --accent-warm: oklch(0.69 0.18 35);          /* #FF6B4A — коралловый акцент */
-  --accent-warm-soft: oklch(0.985 0.022 45);   /* мягкий фон коралла */
+  --accent: oklch(0.42 0.09 155);
+  --accent-foreground: oklch(0.985 0.01 80);
+  --accent-warm: oklch(0.55 0.09 55);          /* тёплое дерево */
+  --accent-warm-soft: oklch(0.95 0.04 60);
 
-  /* Семантические тона: чёткое разделение по hue */
-  --tone-success: oklch(0.5 0.15 155);         /* насыщенный зелёный — «да/подходит» */
-  --tone-success-fg: oklch(0.42 0.16 155);
-  --tone-success-soft: oklch(0.96 0.05 155);
-  --tone-success-border: oklch(0.86 0.09 155);
+  --tone-success: oklch(0.5 0.13 155);
+  --tone-success-fg: oklch(0.42 0.13 155);
+  --tone-success-soft: oklch(0.95 0.05 155);
+  --tone-success-border: oklch(0.85 0.08 155);
 
-  --tone-danger: oklch(0.58 0.22 18);          /* чистый красный — «нет/не берусь» */
-  --tone-danger-fg: oklch(0.5 0.22 18);
-  --tone-danger-soft: oklch(0.965 0.035 18);
-  --tone-danger-border: oklch(0.87 0.09 18);
+  --tone-danger: oklch(0.55 0.18 25);
+  --tone-danger-fg: oklch(0.48 0.18 25);
+  --tone-danger-soft: oklch(0.96 0.03 25);
+  --tone-danger-border: oklch(0.86 0.08 25);
 
-  --destructive: oklch(0.58 0.22 18);
+  --destructive: oklch(0.55 0.18 25);
   --destructive-foreground: oklch(1 0 0);
 
-  --border: oklch(0.91 0.025 250);             /* мягкая голубая граница */
-  --input: oklch(0.91 0.025 250);
-  --ring: oklch(0.555 0.205 260);
+  --border: oklch(0.88 0.018 70);
+  --input: oklch(0.88 0.018 70);
+  --ring: oklch(0.42 0.09 155);
 
   --font-sans: "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-display: "Unbounded", "Golos Text", system-ui, sans-serif;
