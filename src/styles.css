@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -88,8 +88,8 @@
   --input: oklch(0.91 0.025 250);
   --ring: oklch(0.555 0.205 260);
 
-  --font-sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Playfair Display", "Inter Tight", Georgia, serif;
+  --font-sans: "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Unbounded", "Golos Text", system-ui, sans-serif;
 }
 
 .dark {
@@ -124,26 +124,18 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "kern", "liga", "calt", "ss01", "cv11";
-    font-optical-sizing: auto;
+    font-feature-settings: "kern", "liga", "calt";
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    line-height: 1.65;
-    letter-spacing: -0.005em;
     overflow-x: hidden;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-feature-settings: "kern", "liga", "dlig";
-    font-optical-sizing: auto;
-    letter-spacing: -0.018em;
-    line-height: 1.08;
+    letter-spacing: -0.025em;
     text-wrap: balance;
     overflow-wrap: break-word;
   }
-  h1 { letter-spacing: -0.025em; }
-  p { text-wrap: pretty; line-height: 1.65; }
+  p { text-wrap: pretty; }
   :where(section[id], div[id]) { scroll-margin-top: 80px; }
   @media (max-width: 767px) {
     body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
