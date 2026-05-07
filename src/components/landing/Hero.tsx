@@ -26,9 +26,9 @@ const VALUE_PROPS = [
 
 const TRUST_STATS = [
   { icon: Award, value: "20+ лет", label: "работаю с мебелью" },
-  { icon: PackageCheck, value: "1500+", label: "сборок мебели" },
   { icon: Wrench, value: "500+", label: "ремонтов мебели" },
   { icon: Car, value: "700 ₽", label: "выезд и диагностика" },
+  { icon: ShieldCheck, value: "до 1 года", label: "гарантия на работу" },
 ];
 
 export function Hero() {
