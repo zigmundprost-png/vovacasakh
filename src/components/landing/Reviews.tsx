@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Section } from "./Section";
-import { Star, BadgeCheck } from "lucide-react";
+import { Star, BadgeCheck, ChevronDown } from "lucide-react";
 
 
 type Review = { name: string; date: string; text: string };
@@ -137,7 +138,27 @@ const REVIEWS: Review[] = [
   },
 ];
 
+const PRIORITY_NAMES = new Set([
+  "4uppoku",
+  "Alex57399",
+  "aem02111990",
+  "dili76",
+  "piskorskiid",
+  "Aksa",
+  "1979inna",
+  "сонькавадим",
+]);
+
+const SORTED: Review[] = [
+  ...REVIEWS.filter((r) => PRIORITY_NAMES.has(r.name)),
+  ...REVIEWS.filter((r) => !PRIORITY_NAMES.has(r.name)),
+];
+
 export function Reviews() {
+  const [expanded, setExpanded] = useState(false);
+  const visible = expanded ? SORTED : SORTED.slice(0, 8);
+  const hiddenCount = SORTED.length - 8;
+
   return (
     <Section
       id="reviews"
@@ -173,7 +194,7 @@ export function Reviews() {
       </div>
 
       <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4 [&>*]:break-inside-avoid">
-        {REVIEWS.map((r) => (
+        {visible.map((r) => (
           <article
             key={`${r.name}-${r.date}`}
             className="rounded-xl border border-border bg-card p-5"
@@ -200,6 +221,22 @@ export function Reviews() {
           </article>
         ))}
       </div>
+
+      {hiddenCount > 0 && (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            className="inline-flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 text-[15px] font-semibold text-foreground transition-colors hover:bg-surface"
+          >
+            {expanded ? "Свернуть отзывы" : `Показать ещё (${hiddenCount})`}
+            <ChevronDown
+              className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`}
+              aria-hidden
+            />
+          </button>
+        </div>
+      )}
     </Section>
   );
 }

@@ -1,11 +1,13 @@
 import { Section } from "./Section";
-import { Truck, Package, Camera, Home } from "lucide-react";
+import { Truck, Package, Camera, Home, MapPin, Users, Info } from "lucide-react";
 
 const PERKS = [
-  { icon: Home, text: "Вам не нужно искать машину" },
-  { icon: Package, text: "Меньше грязи и суеты у вас дома" },
-  { icon: Truck, text: "Привезу обратно и помогу занести" },
+  { icon: Truck, text: "Заберу мебель" },
+  { icon: Home, text: "Привезу обратно и помогу занести" },
   { icon: Camera, text: "По желанию пришлю фото или видеоотчёт" },
+  { icon: MapPin, text: "Возможен выезд за город" },
+  { icon: Users, text: "Грузчики, если они нужны" },
+  { icon: Package, text: "Меньше грязи и суеты у вас дома" },
 ];
 
 export function Pickup() {
@@ -40,7 +42,9 @@ export function Pickup() {
       </ul>
 
       <div className="mt-6 flex items-start gap-3 rounded-xl border-l-4 border-[color:var(--accent-warm)] bg-[oklch(0.985_0.022_45)] px-4 py-3.5">
-        <span aria-hidden className="mt-0.5 text-[color:var(--accent-warm)] font-bold">!</span>
+        <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm)]">
+          <Info className="h-3.5 w-3.5" aria-hidden />
+        </span>
         <p className="text-[14px] leading-relaxed text-foreground/90">
           Забор и возврат, грузчики и выезд за город — <strong>обсудим заранее</strong>.
         </p>
