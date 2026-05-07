@@ -78,8 +78,13 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5 sm:px-6 md:px-8">
         <a href="#top" className="flex items-center gap-2.5">
           <BrandMark className="h-9 w-9 text-[12px]" />
-          <span className="font-display text-[15px] font-extrabold tracking-tight text-foreground uppercase whitespace-nowrap sm:text-[17px]">
-            ВОВА КАРЛО
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-[15px] font-extrabold tracking-tight text-foreground uppercase whitespace-nowrap sm:text-[17px]">
+              ВОВА КАРЛО
+            </span>
+            <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-[11px]">
+              мастерская
+            </span>
           </span>
         </a>
 
