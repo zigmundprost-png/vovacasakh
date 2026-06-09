@@ -43,10 +43,10 @@ export function Hero() {
             </span>
 
             <h1 className="font-display mt-5 text-[34px] font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-[52px] lg:text-[60px]">
-              Сломался диван?
+              Сломалась мебель?
               <br />
               <span className="relative inline-block text-primary">
-                Не спешите покупать новый
+                Не спешите покупать новую!
                 <svg
                   aria-hidden
                   viewBox="0 0 320 14"
