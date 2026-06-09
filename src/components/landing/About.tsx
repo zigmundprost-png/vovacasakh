@@ -1,26 +1,22 @@
-import masterPhoto from "@/assets/about-master-temp.png.asset.json";
-import workPhoto1 from "@/assets/about-work-1.png.asset.json";
-import workPhoto2 from "@/assets/about-work-2.png.asset.json";
-import workPhoto3 from "@/assets/about-work-3.png.asset.json";
-import workPhoto4 from "@/assets/about-work-4.png.asset.json";
+import masterPhoto from "@/assets/about-photo-9.png.asset.json";
+import workPhoto1 from "@/assets/about-photo-1.png.asset.json";
+import workPhoto2 from "@/assets/about-photo-2.png.asset.json";
+import workPhoto3 from "@/assets/about-photo-3.png.asset.json";
+import workPhoto4 from "@/assets/about-photo-4.png.asset.json";
+import workPhoto5 from "@/assets/about-photo-5.png.asset.json";
+import workPhoto6 from "@/assets/about-photo-6.png.asset.json";
+import workPhoto7 from "@/assets/about-photo-7.png.asset.json";
+import workPhoto8 from "@/assets/about-photo-8.png.asset.json";
 
 const WORK_PHOTOS = [
-  {
-    src: workPhoto1.url,
-    alt: "Владимир ремонтирует деревянную часть мебели шуруповертом",
-  },
-  {
-    src: workPhoto2.url,
-    alt: "Владимир укрепляет каркас мебели во время ремонта",
-  },
-  {
-    src: workPhoto3.url,
-    alt: "Владимир ремонтирует основание дивана",
-  },
-  {
-    src: workPhoto4.url,
-    alt: "Владимир работает с механизмом дивана во время ремонта",
-  },
+  { src: workPhoto1.url, alt: "Владимир ремонтирует деревянный каркас мебели шуруповертом" },
+  { src: workPhoto2.url, alt: "Владимир работает с механизмом мебели во время ремонта" },
+  { src: workPhoto3.url, alt: "Владимир укрепляет основание мебели" },
+  { src: workPhoto4.url, alt: "Владимир ремонтирует деревянную часть мебели" },
+  { src: workPhoto5.url, alt: "Владимир восстанавливает деталь мебели" },
+  { src: workPhoto6.url, alt: "Владимир работает над креплением мебели" },
+  { src: workPhoto7.url, alt: "Владимир ремонтирует мягкую мебель" },
+  { src: workPhoto8.url, alt: "Владимир выполняет ремонт мебели на дому" },
 ];
 
 export function About() {
@@ -65,7 +61,7 @@ export function About() {
               </p>
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
               {WORK_PHOTOS.map((photo) => (
                 <div
                   key={photo.src}
