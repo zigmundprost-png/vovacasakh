@@ -2,7 +2,7 @@ import { Section } from "./Section";
 import { Truck, Package, Camera, Home, MapPin, Users, Info } from "lucide-react";
 
 const PERKS = [
-  { icon: Truck, text: "Заберу мебель" },
+  { icon: Truck, text: "Вывезу мебель" },
   { icon: Home, text: "Привезу обратно и помогу занести" },
   { icon: Camera, text: "По желанию пришлю фото или видеоотчёт" },
   { icon: MapPin, text: "Возможен выезд за город" },
@@ -14,13 +14,13 @@ export function Pickup() {
   return (
     <Section
       id="pickup"
-      eyebrow="Забор и возврат"
-      title="Если дома ремонтировать неудобно — заберу мебель к себе"
+      eyebrow="Вывоз и возврат"
+      title="Если дома ремонтировать неудобно — вывезу мебель к себе"
       intro={
         <>
           <p>
             Некоторые работы шумные, грязные или требуют нормального доступа к
-            деталям. В таких случаях мне удобнее забрать мебель, спокойно её
+            деталям. В таких случаях мне удобнее вывезти мебель, спокойно её
             отремонтировать и привезти обратно.
           </p>
           <p className="mt-4">
@@ -46,7 +46,7 @@ export function Pickup() {
           <Info className="h-3.5 w-3.5" aria-hidden />
         </span>
         <p className="text-[14px] leading-relaxed text-foreground/90">
-          Забор и возврат, грузчики и выезд за город — <strong>обсудим заранее</strong>.
+          Вывоз и возврат, грузчики и выезд за город — <strong>обсудим заранее</strong>.
         </p>
       </div>
     </Section>
