@@ -211,7 +211,7 @@ export function Reviews() {
                   <div className="text-[12px] text-muted-foreground">{r.date}</div>
                 </div>
               </div>
-              <div className="flex gap-0.5 text-amber-500" aria-label="5 из 5">
+              <div className="flex gap-0.5 text-amber-500" role="img" aria-label="Оценка 5 из 5">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-3.5 w-3.5 fill-current" aria-hidden />
                 ))}

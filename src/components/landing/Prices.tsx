@@ -59,10 +59,10 @@ export function Prices() {
       <Accordion type="single" collapsible defaultValue="prices-0" className="rounded-2xl border border-primary/15 bg-card shadow-[0_14px_40px_-22px_oklch(0.55_0.20_260/0.35)]">
         {PRICES.map((g, gi) => (
           <AccordionItem key={g.group} value={`prices-${gi}`} className="border-b border-primary/10 last:border-b-0">
-            <AccordionTrigger className="px-5 py-4 text-[15px] font-semibold hover:no-underline sm:px-6 sm:py-5">
-              <span className="flex w-full items-center justify-between gap-3">
-                <span>{g.group}</span>
-                <span className="text-base font-bold text-primary sm:text-[18px]">{g.summary}</span>
+            <AccordionTrigger className="px-4 py-4 text-[15px] font-semibold hover:no-underline sm:px-6 sm:py-5">
+              <span className="flex w-full flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+                <span className="[overflow-wrap:anywhere]">{g.group}</span>
+                <span className="text-[15px] font-bold text-primary sm:text-[18px] [overflow-wrap:anywhere]">{g.summary}</span>
               </span>
             </AccordionTrigger>
             <AccordionContent className="px-5 pb-5 sm:px-6">
@@ -85,7 +85,7 @@ export function Prices() {
         ))}
       </Accordion>
 
-      <div className="mt-8 overflow-hidden rounded-2xl border border-primary/15 bg-card">
+      <dl className="mt-8 overflow-hidden rounded-2xl border border-primary/15 bg-card">
         {CTA.map((o, i) => (
           <div
             key={o.label}
@@ -95,7 +95,7 @@ export function Prices() {
             <dd className="text-base font-bold text-primary">{o.value}</dd>
           </div>
         ))}
-      </div>
+      </dl>
 
       <div className="mt-6">
         <p className="rounded-xl border border-primary/15 bg-primary/5 p-5 text-[14px] leading-relaxed text-foreground/85">

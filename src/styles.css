@@ -34,6 +34,7 @@
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
   --color-accent-warm: var(--accent-warm);
+  --color-accent-warm-strong: var(--accent-warm-strong);
   --color-card-soft: var(--card-soft);
   --color-card-soft-border: var(--card-soft-border);
 }
@@ -65,7 +66,8 @@
 
   --accent: oklch(0.555 0.205 260);
   --accent-foreground: oklch(1 0 0);
-  --accent-warm: oklch(0.69 0.18 35);          /* #FF6B4A — коралловый акцент */
+  --accent-warm: oklch(0.69 0.18 35);          /* #FF6B4A — коралловый акцент (для фонов/границ) */
+  --accent-warm-strong: oklch(0.55 0.19 35);   /* насыщенный коралл для мелкого текста, контраст ≥ 4.5:1 на светлом фоне */
   --accent-warm-soft: oklch(0.985 0.022 45);   /* мягкий фон коралла */
 
   /* Семантические тона: чёткое разделение по hue */
