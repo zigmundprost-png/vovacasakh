@@ -107,24 +107,24 @@ export function Hero() {
             </div>
 
             {/* Полоса доверия с цифрами */}
-            <dl className="mt-8 grid grid-cols-2 gap-3 border-t border-border pt-6 sm:grid-cols-4 sm:gap-4">
+            <ul className="mt-8 grid grid-cols-2 gap-3 border-t border-border pt-6 sm:grid-cols-4 sm:gap-4">
               {TRUST_STATS.map(({ icon: Icon, value, label }) => (
-                <div
+                <li
                   key={value}
                   className="rounded-2xl border border-[color:var(--card-soft-border)] bg-card p-4 transition-colors hover:border-primary/30"
                 >
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--card-soft)] text-primary">
                     <Icon className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden />
                   </span>
-                  <dt className="font-display mt-3 text-[18px] font-extrabold leading-tight text-foreground">
+                  <div className="font-display mt-3 text-[18px] font-extrabold leading-tight text-foreground">
                     {value}
-                  </dt>
-                  <dd className="mt-0.5 text-[12px] leading-snug text-muted-foreground">
+                  </div>
+                  <div className="mt-0.5 text-[12px] leading-snug text-muted-foreground">
                     {label}
-                  </dd>
-                </div>
+                  </div>
+                </li>
               ))}
-            </dl>
+            </ul>
           </div>
 
           {/* Визуальный блок */}

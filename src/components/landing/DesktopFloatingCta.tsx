@@ -17,7 +17,8 @@ export function DesktopFloatingCta() {
   }, []);
 
   return (
-    <div
+    <aside
+      aria-label="Быстрая связь"
       className={`hidden md:flex fixed bottom-6 right-6 z-40 flex-col items-end gap-3 transition-all duration-300 ${
         visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
@@ -96,6 +97,6 @@ export function DesktopFloatingCta() {
           )}
         </span>
       </button>
-    </div>
+    </aside>
   );
 }
