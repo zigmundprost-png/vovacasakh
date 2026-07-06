@@ -175,10 +175,16 @@ export function Works() {
                 loading="lazy"
                 className="h-full w-full object-cover transition group-hover:scale-105"
               />
+              {w.price && (
+                <span className="absolute right-2 top-2 rounded-full bg-foreground/90 px-2.5 py-1 text-[11px] font-bold text-background shadow-sm backdrop-blur">
+                  {w.price}
+                </span>
+              )}
               <span className="absolute left-2 bottom-2 right-2 rounded-md bg-background/90 px-2 py-1 text-[11px] font-semibold text-foreground shadow-sm backdrop-blur">
                 {w.tag}
               </span>
             </div>
+
           </button>
         ))}
       </div>
