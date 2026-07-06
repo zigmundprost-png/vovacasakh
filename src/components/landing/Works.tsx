@@ -48,8 +48,24 @@ import work43 from "@/assets/works/work-43.webp";
 import work44 from "@/assets/works/work-44.webp";
 import work45Asset from "@/assets/works/work-45.jpg.asset.json";
 import work46Asset from "@/assets/works/work-46.jpg.asset.json";
+import work47Asset from "@/assets/works/work-47.jpg.asset.json";
+import work48Asset from "@/assets/works/work-48.jpg.asset.json";
+import work49Asset from "@/assets/works/work-49.jpg.asset.json";
+import work50Asset from "@/assets/works/work-50.jpg.asset.json";
+import work51Asset from "@/assets/works/work-51.jpg.asset.json";
+import work52Asset from "@/assets/works/work-52.jpg.asset.json";
+import work53Asset from "@/assets/works/work-53.jpg.asset.json";
+import work54Asset from "@/assets/works/work-54.jpg.asset.json";
 const work45 = work45Asset.url;
 const work46 = work46Asset.url;
+const work47 = work47Asset.url;
+const work48 = work48Asset.url;
+const work49 = work49Asset.url;
+const work50 = work50Asset.url;
+const work51 = work51Asset.url;
+const work52 = work52Asset.url;
+const work53 = work53Asset.url;
+const work54 = work54Asset.url;
 
 type Category = "Ремонт" | "Сборка";
 
@@ -70,6 +86,14 @@ const WORKS: Work[] = [
   { src: work44, title: "Диван с тканью «лён»", desc: "Ремонт деревянного каркаса, замена деревянных элементов подлокотника. Подлокотник забирал к себе.", category: "Ремонт", tag: "усиление каркаса", price: "7 000 ₽" },
   { src: work45, title: "Кресло-кровать «Малютка»", desc: "Ремонт каркаса и выкатного механизма: заменил бруски и ламели, восстановил раскладку. Забирал изделие к себе.", category: "Ремонт", tag: "ремонт механизма раскладывания", price: "6 500 ₽" },
   { src: work46, title: "Шкаф-купе и подиум-кровать", desc: "Сборка шкафа-купе и изготовление подиума-кровати с ящиками по месту у заказчика.", category: "Сборка", tag: "сборка мебели", price: "6 000 ₽" },
+  { src: work47, title: "Механизм «книжка»", desc: "Замена механизма «книжка» на новый, у заказчицы дома.", category: "Ремонт", tag: "ремонт механизма раскладывания", price: "7 000 ₽" },
+  { src: work48, title: "Диван «Аккордеон»", desc: "Ремонт у заказчицы дома: замена части раздвижного элемента и частичная замена деревянных ламелей. Запасную часть клиент покупал сам, ламели тоже.", category: "Ремонт", tag: "ремонт механизма раскладывания", price: "6 500 ₽" },
+  { src: work49, title: "Двухдверный шкаф-купе", desc: "Сборка двухдверного шкафа-купе с зеркальными фасадами.", category: "Сборка", tag: "сборка шкафа", price: "6 000 ₽" },
+  { src: work50, title: "Стол руководителя с приставкой", desc: "Сборка стола руководителя и брифинг-приставки. Проект «Офисная мебель».", category: "Сборка", tag: "сборка мебели" },
+  { src: work51, title: "Сломанный зависимый пружинный блок", desc: "Пример сломанного зависимого пружинного блока — сравните с независимым.", category: "Ремонт", tag: "замена пружинного блока" },
+  { src: work52, title: "Целый независимый пружинный блок", desc: "Пример целого независимого пружинного блока — идёт на замену старому.", category: "Ремонт", tag: "замена пружинного блока" },
+  { src: work53, title: "Четырёхстворчатые стеллажи", desc: "Сборка партии четырёхстворчатых стеллажей. Проект «Офисная мебель».", category: "Сборка", tag: "сборка шкафа" },
+  { src: work54, title: "Установка фасада с вырванными петлями", desc: "Установка фасада на место вырванных шурупов, было вырвано три петли.", category: "Ремонт", tag: "ремонт шкафа", price: "4 000 ₽" },
   { src: work1, title: "Большой угловой диван", desc: "Замена поролона и восстановление формы сидений.", category: "Ремонт", tag: "замена поролона" },
   { src: work2, title: "Прямой диван-книжка", desc: "Замена наполнителя и восстановление обивки.", category: "Ремонт", tag: "замена поролона" },
   { src: work3, title: "Угловой диван, светлая ткань", desc: "Восстановление сидений и подушек.", category: "Ремонт", tag: "замена поролона" },
