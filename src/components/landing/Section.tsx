@@ -17,7 +17,7 @@ export function Section({
 }) {
   return (
     <section id={id} className={`border-t border-border bg-background ${className}`}>
-      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 md:px-8 md:py-24">
+      <div className="mx-auto max-w-6xl px-5 py-10 sm:px-6 md:px-8 md:py-16">
         <header className="max-w-2xl">
           {eyebrow && (
             <span className="inline-flex items-center gap-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-[color:var(--accent-warm-strong)]">

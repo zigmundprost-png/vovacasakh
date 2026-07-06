@@ -132,7 +132,7 @@ export function MaxBriefDialog() {
             <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-primary">
               Заявка в MAX
             </p>
-            <h2 className="mt-1 text-[18px] font-extrabold leading-tight text-foreground sm:text-[20px]">
+            <h2 className="font-display mt-1 text-[18px] font-extrabold leading-tight text-foreground sm:text-[20px]">
               Ответьте на 5 вопросов — и я быстрее пойму поломку
             </h2>
           </div>

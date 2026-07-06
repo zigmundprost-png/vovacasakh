@@ -113,7 +113,7 @@ export function Prices() {
                       <div className="text-[15px] font-medium text-foreground/90">{o.label}</div>
                       <div className="mt-0.5 text-xs text-muted-foreground">{o.note}</div>
                     </div>
-                    <div className="text-[17px] font-extrabold tracking-tight text-primary">
+                    <div className="text-[17px] font-bold tracking-tight text-primary">
                       {o.range}
                     </div>
                   </div>
