@@ -46,6 +46,10 @@ import work41 from "@/assets/works/work-41.webp";
 import work42 from "@/assets/works/work-42.webp";
 import work43 from "@/assets/works/work-43.webp";
 import work44 from "@/assets/works/work-44.webp";
+import work45Asset from "@/assets/works/work-45.jpg.asset.json";
+import work46Asset from "@/assets/works/work-46.jpg.asset.json";
+const work45 = work45Asset.url;
+const work46 = work46Asset.url;
 
 type Category = "Ремонт" | "Сборка";
 
