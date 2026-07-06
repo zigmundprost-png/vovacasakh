@@ -269,6 +269,14 @@ export function Works() {
                   </div>
                 </div>
                 <h3 className="mt-1 text-lg font-semibold text-foreground">{open.title}</h3>
+                {open.price && (
+                  <div className="mt-3 flex items-center gap-2">
+                    <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-bold text-primary ring-1 ring-primary/20">
+                      {open.price}
+                    </span>
+                    <span className="text-xs text-muted-foreground">стоимость этой работы</span>
+                  </div>
+                )}
                 <div className="mt-3 space-y-3 rounded-2xl border border-border bg-[color:var(--card-soft)] p-5 shadow-sm">
                   <p className="whitespace-pre-line text-[15px] leading-relaxed text-foreground/90">
                     {open.desc}
