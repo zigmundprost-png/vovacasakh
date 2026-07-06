@@ -197,12 +197,12 @@ export function Works() {
 
       <Dialog open={openIndex !== null} onOpenChange={(v) => !v && setOpenIndex(null)}>
         <DialogContent
-          className="max-w-3xl p-0 overflow-hidden [&>button]:hidden"
+          className="max-w-3xl p-0 overflow-hidden [&>button]:hidden max-h-[92vh] flex flex-col"
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           {open && (
             <div
-              className="relative"
+              className="relative flex min-h-0 flex-1 flex-col"
               onTouchStart={(e) => {
                 (e.currentTarget as HTMLDivElement).dataset.tx = String(e.touches[0].clientX);
                 (e.currentTarget as HTMLDivElement).dataset.ty = String(e.touches[0].clientY);
@@ -219,7 +219,7 @@ export function Works() {
                 }
               }}
             >
-              {/* Close — дизайнерский крестик: тонкое стекло + красный значок */}
+              {/* Close */}
               <button
                 type="button"
                 onClick={() => setOpenIndex(null)}
@@ -229,37 +229,34 @@ export function Works() {
                 <X className="h-5 w-5" strokeWidth={2.5} />
               </button>
 
-              {/* Стрелки навигации — минималистичные, со стеклом */}
-              <button
-                type="button"
-                onClick={goPrev}
-                aria-label="Предыдущая работа"
-                className="absolute left-3 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-foreground shadow-[0_4px_20px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-md transition hover:bg-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-foreground active:scale-95 sm:flex"
-              >
-                <ArrowLeft className="h-5 w-5" strokeWidth={2.25} />
-              </button>
-              <button
-                type="button"
-                onClick={goNext}
-                aria-label="Следующая работа"
-                className="absolute right-3 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-foreground shadow-[0_4px_20px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-md transition hover:bg-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-foreground active:scale-95 sm:flex"
-              >
-                <ArrowRight className="h-5 w-5" strokeWidth={2.25} />
-              </button>
+              <div className="relative shrink-0">
+                <img
+                  src={open.src}
+                  alt={open.title}
+                  draggable={false}
+                  className="w-full max-h-[55vh] select-none object-contain bg-black"
+                />
 
-              <img
-                src={open.src}
-                alt={open.title}
-                draggable={false}
-                className="w-full max-h-[75vh] select-none object-contain bg-black"
-              />
-
-              {/* Подсказка о свайпе — только на мобилках */}
-              <div className="pointer-events-none absolute bottom-[calc(theme(spacing.5)+72px)] left-1/2 z-10 -translate-x-1/2 rounded-full bg-black/55 px-3 py-1 text-[11px] font-medium text-white/90 backdrop-blur sm:hidden">
-                Свайп ← →
+                {/* Стрелки навигации — поверх фото, видны и на мобилке, и на десктопе */}
+                <button
+                  type="button"
+                  onClick={goPrev}
+                  aria-label="Предыдущая работа"
+                  className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-foreground shadow-[0_4px_20px_rgba(0,0,0,0.3)] ring-1 ring-black/5 backdrop-blur-md transition hover:bg-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-foreground active:scale-95 sm:left-3 sm:h-11 sm:w-11"
+                >
+                  <ArrowLeft className="h-5 w-5" strokeWidth={2.25} />
+                </button>
+                <button
+                  type="button"
+                  onClick={goNext}
+                  aria-label="Следующая работа"
+                  className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-foreground shadow-[0_4px_20px_rgba(0,0,0,0.3)] ring-1 ring-black/5 backdrop-blur-md transition hover:bg-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-foreground active:scale-95 sm:right-3 sm:h-11 sm:w-11"
+                >
+                  <ArrowRight className="h-5 w-5" strokeWidth={2.25} />
+                </button>
               </div>
 
-              <div className="p-5">
+              <div className="min-h-0 flex-1 overflow-y-auto p-5">
                 <div className="flex items-center justify-between gap-3">
                   <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                     {open.category}
