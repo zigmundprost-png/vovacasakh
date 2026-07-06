@@ -7,14 +7,12 @@ import {
   Video,
   ShieldCheck,
   Truck,
-  
   MapPin,
   Award,
   Car,
 } from "lucide-react";
 import { openMaxBrief } from "./MaxBriefDialog";
 import { MaxLogo } from "./MaxLogo";
-
 
 const VALUE_PROPS = [
   { icon: Sofa, text: "Ремонтирую диваны, кресла, стулья и кровати" },
@@ -65,10 +63,9 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 text-[16px] leading-[1.6] text-muted-foreground sm:text-[17px]">
-              Меня зовут Владимир. Я ремонтирую диваны, кресла, стулья, кровати
-              и другую мягкую мебель в Южно-Сахалинске и южной части Сахалина.
-              Пришлите фото или короткое видео поломки — скажу, есть ли смысл
-              ремонтировать, нужен ли выезд и что делать дальше.
+              Меня зовут Владимир. Я ремонтирую диваны, кресла, стулья, кровати и другую мягкую
+              мебель в Южно-Сахалинске и южной части Сахалина. Пришлите фото или короткое видео
+              поломки — скажу, есть ли смысл ремонтировать, нужен ли выезд и что делать дальше.
             </p>
 
             {/* Feature cards */}
@@ -81,7 +78,9 @@ export function Hero() {
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[color:var(--card-soft)] text-primary">
                     <Icon className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden />
                   </span>
-                  <span className="text-[15px] font-medium leading-snug text-foreground">{text}</span>
+                  <span className="text-[15px] font-medium leading-snug text-foreground">
+                    {text}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -130,8 +129,16 @@ export function Hero() {
           {/* Визуальный блок */}
           <div className="hidden lg:block lg:sticky lg:top-24">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <PlaceholderCard label="Фото до" icon={<ImageIcon className="h-4 w-4" />} aspect="aspect-[4/5]" />
-              <PlaceholderCard label="Фото после" icon={<Sparkles className="h-4 w-4" />} aspect="aspect-[4/5]" />
+              <PlaceholderCard
+                label="Фото до"
+                icon={<ImageIcon className="h-4 w-4" />}
+                aspect="aspect-[4/5]"
+              />
+              <PlaceholderCard
+                label="Фото после"
+                icon={<Sparkles className="h-4 w-4" />}
+                aspect="aspect-[4/5]"
+              />
               <PlaceholderCard
                 label="Процесс ремонта"
                 icon={<Wrench className="h-4 w-4" />}
@@ -161,7 +168,9 @@ function PlaceholderCard({
   className?: string;
 }) {
   return (
-    <div className={`relative ${aspect} overflow-hidden rounded-2xl border border-[color:var(--card-soft-border)] bg-[color:var(--card-soft)] ${className}`}>
+    <div
+      className={`relative ${aspect} overflow-hidden rounded-2xl border border-[color:var(--card-soft-border)] bg-[color:var(--card-soft)] ${className}`}
+    >
       <div className="absolute inset-0 flex flex-col justify-between p-4">
         <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-card text-primary">
           {icon}

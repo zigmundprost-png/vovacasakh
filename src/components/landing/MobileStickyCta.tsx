@@ -37,7 +37,10 @@ export function MobileStickyCta() {
           aria-label="Написать в WhatsApp"
           className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[18px] transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          <WhatsAppIcon className="h-[52px] w-[52px] drop-shadow-[0_8px_16px_rgba(37,211,102,0.45)]" rounded={false} />
+          <WhatsAppIcon
+            className="h-[52px] w-[52px] drop-shadow-[0_8px_16px_rgba(37,211,102,0.45)]"
+            rounded={false}
+          />
         </a>
       </div>
     </aside>

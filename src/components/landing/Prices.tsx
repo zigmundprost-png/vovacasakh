@@ -1,15 +1,32 @@
 import { Section } from "./Section";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const PRICES = [
   {
     group: "Мягкая мебель",
     summary: "от 3 500 до 48 000 ₽",
     items: [
-      { label: "Замена поролона и наполнителя", range: "от 10 000 до 48 000 ₽", note: "в среднем 32 000 ₽" },
+      {
+        label: "Замена поролона и наполнителя",
+        range: "от 10 000 до 48 000 ₽",
+        note: "в среднем 32 000 ₽",
+      },
       { label: "Замена пружинного блока", range: "от 12 000 ₽", note: "вместе с работой" },
-      { label: "Усиление каркаса / деревянной опоры", range: "от 5 000 до 20 000 ₽", note: "в среднем 13 000 ₽" },
-      { label: "Ремонт механизма раскладывания", range: "от 6 500 ₽", note: "«книжка», «клик-кляк», «аккордеон»" },
+      {
+        label: "Усиление каркаса / деревянной опоры",
+        range: "от 5 000 до 20 000 ₽",
+        note: "в среднем 13 000 ₽",
+      },
+      {
+        label: "Ремонт механизма раскладывания",
+        range: "от 6 500 ₽",
+        note: "«книжка», «клик-кляк», «аккордеон»",
+      },
       { label: "Ремонт подлокотника", range: "от 3 500 ₽", note: "мелкий ремонт ткани" },
     ],
   },
@@ -17,7 +34,11 @@ const PRICES = [
     group: "Стулья и кресла",
     summary: "от 6 500 до 18 000 ₽",
     items: [
-      { label: "Ремонт и перетяжка стула", range: "от 6 500 до 18 000 ₽", note: "в среднем 11 000 ₽" },
+      {
+        label: "Ремонт и перетяжка стула",
+        range: "от 6 500 до 18 000 ₽",
+        note: "в среднем 11 000 ₽",
+      },
     ],
   },
   {
@@ -33,7 +54,11 @@ const PRICES = [
     group: "Сборка и прочее",
     summary: "по договорённости",
     items: [
-      { label: "Сборка офисной мебели", range: "по договорённости", note: "столы, стеллажи, тумбы" },
+      {
+        label: "Сборка офисной мебели",
+        range: "по договорённости",
+        note: "столы, стеллажи, тумбы",
+      },
     ],
   },
 ];
@@ -52,17 +77,29 @@ export function Prices() {
       title="Сколько стоит ремонт"
       intro={
         <p>
-          Цены — настоящие, собранные из выполненных работ. Точная стоимость зависит от поломки, материалов и объёма, но эти цифры дают понятную ориентировку.
+          Цены — настоящие, собранные из выполненных работ. Точная стоимость зависит от поломки,
+          материалов и объёма, но эти цифры дают понятную ориентировку.
         </p>
       }
     >
-      <Accordion type="single" collapsible defaultValue="prices-0" className="rounded-2xl border border-primary/15 bg-card shadow-[0_14px_40px_-22px_oklch(0.55_0.20_260/0.35)]">
+      <Accordion
+        type="single"
+        collapsible
+        defaultValue="prices-0"
+        className="rounded-2xl border border-primary/15 bg-card shadow-[0_14px_40px_-22px_oklch(0.55_0.20_260/0.35)]"
+      >
         {PRICES.map((g, gi) => (
-          <AccordionItem key={g.group} value={`prices-${gi}`} className="border-b border-primary/10 last:border-b-0">
+          <AccordionItem
+            key={g.group}
+            value={`prices-${gi}`}
+            className="border-b border-primary/10 last:border-b-0"
+          >
             <AccordionTrigger className="px-4 py-4 text-[15px] font-semibold hover:no-underline sm:px-6 sm:py-5">
               <span className="flex w-full flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
                 <span className="[overflow-wrap:anywhere]">{g.group}</span>
-                <span className="text-[15px] font-bold text-primary sm:text-[18px] [overflow-wrap:anywhere]">{g.summary}</span>
+                <span className="text-[15px] font-bold text-primary sm:text-[18px] [overflow-wrap:anywhere]">
+                  {g.summary}
+                </span>
               </span>
             </AccordionTrigger>
             <AccordionContent className="px-5 pb-5 sm:px-6">
@@ -76,7 +113,9 @@ export function Prices() {
                       <div className="text-[15px] font-medium text-foreground/90">{o.label}</div>
                       <div className="mt-0.5 text-xs text-muted-foreground">{o.note}</div>
                     </div>
-                    <div className="text-[17px] font-extrabold tracking-tight text-primary">{o.range}</div>
+                    <div className="text-[17px] font-extrabold tracking-tight text-primary">
+                      {o.range}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -99,7 +138,9 @@ export function Prices() {
 
       <div className="mt-6">
         <p className="rounded-xl border border-primary/15 bg-primary/5 p-5 text-[14px] leading-relaxed text-foreground/85">
-          <strong className="font-semibold text-[color:var(--primary-hover)]">Важно.</strong> Окончательную стоимость называю после диагностики — когда понятно, что именно сломалось, какие материалы нужны и какой объём работы предстоит.
+          <strong className="font-semibold text-[color:var(--primary-hover)]">Важно.</strong>{" "}
+          Окончательную стоимость называю после диагностики — когда понятно, что именно сломалось,
+          какие материалы нужны и какой объём работы предстоит.
         </p>
       </div>
     </Section>

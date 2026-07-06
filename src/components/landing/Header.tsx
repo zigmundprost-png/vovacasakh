@@ -148,9 +148,7 @@ export function Header() {
                       <span className="text-[14px] font-bold text-foreground truncate">
                         {label}
                       </span>
-                      <span className="text-[12px] text-muted-foreground truncate">
-                        {hint}
-                      </span>
+                      <span className="text-[12px] text-muted-foreground truncate">{hint}</span>
                     </span>
                   </a>
                 ))}

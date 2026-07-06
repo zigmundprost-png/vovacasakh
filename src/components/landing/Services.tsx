@@ -32,9 +32,8 @@ export function Services() {
       title="Что я ремонтирую"
       intro={
         <p>
-          Основное направление — диваны и мягкая мебель. Дополнительно могу
-          обсудить ремонт корпусной мебели и сборку, если задача подходит по
-          объёму.
+          Основное направление — диваны и мягкая мебель. Дополнительно могу обсудить ремонт
+          корпусной мебели и сборку, если задача подходит по объёму.
         </p>
       }
     >
@@ -62,8 +61,8 @@ export function Services() {
             Важно знать заранее
           </p>
           <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground">
-            Если сомневаетесь — пришлите фото, я подскажу, берусь или нет.
-            Лучше честно сказать сразу, чем тратить ваше время.
+            Если сомневаетесь — пришлите фото, я подскажу, берусь или нет. Лучше честно сказать
+            сразу, чем тратить ваше время.
           </p>
         </div>
       </div>
@@ -78,9 +77,7 @@ function NotDoingCard({ items }: { items: string[] }) {
         <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[color:var(--tone-danger-soft)] text-[color:var(--tone-danger-fg)]">
           <X className="h-5 w-5" strokeWidth={2.4} />
         </span>
-        <h3 className="font-display text-[19px] font-bold text-foreground">
-          За что я не берусь
-        </h3>
+        <h3 className="font-display text-[19px] font-bold text-foreground">За что я не берусь</h3>
       </div>
       <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
         {items.map((it) => (
@@ -129,7 +126,9 @@ function ServiceCard({
       <div className="flex items-center gap-3">
         <span
           className={`inline-flex h-11 w-11 items-center justify-center rounded-full ${
-            primary ? "bg-[color:var(--accent-warm-strong)] text-white" : "bg-[color:var(--card-soft)] text-primary"
+            primary
+              ? "bg-[color:var(--accent-warm-strong)] text-white"
+              : "bg-[color:var(--card-soft)] text-primary"
           }`}
         >
           {icon}
@@ -145,7 +144,9 @@ function ServiceCard({
             <span
               aria-hidden
               className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
-                primary ? "bg-[color:var(--accent-warm)]/15 text-[color:var(--accent-warm-strong)]" : "bg-[color:var(--card-soft)] text-primary"
+                primary
+                  ? "bg-[color:var(--accent-warm)]/15 text-[color:var(--accent-warm-strong)]"
+                  : "bg-[color:var(--card-soft)] text-primary"
               }`}
             >
               <Check className="h-3 w-3" strokeWidth={3} />
@@ -157,4 +158,3 @@ function ServiceCard({
     </div>
   );
 }
-
