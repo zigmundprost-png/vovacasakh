@@ -22,7 +22,7 @@ const WORK_PHOTOS = [
 export function About() {
   return (
     <section id="about" className="border-t border-border bg-background">
-      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 md:px-8 md:py-24">
+      <div className="mx-auto max-w-6xl px-5 py-10 sm:px-6 md:px-8 md:py-16">
         <header className="max-w-2xl">
           <span className="inline-flex items-center gap-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-[color:var(--accent-warm-strong)]">
             <span className="h-[2px] w-7 rounded-full bg-[color:var(--accent-warm)]" aria-hidden />
