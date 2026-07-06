@@ -49,9 +49,17 @@ import work44 from "@/assets/works/work-44.webp";
 
 type Category = "Ремонт" | "Сборка";
 
-type Work = { src: string; title: string; desc: string; category: Category; tag: string };
+type Work = { src: string; title: string; desc: string; category: Category; tag: string; price?: string };
 
-const WORKS: Work[] = [
+function extractPrice(desc: string): string | undefined {
+  const itog = desc.match(/Итого[\s—–-]+([\d\s]+\d\s*₽)/i);
+  if (itog) return itog[1].replace(/\s+/g, " ");
+  const any = desc.match(/Стоимость[^\n]*?[\s—–-]+([\d\s]+\d\s*₽)/i);
+  if (any) return any[1].replace(/\s+/g, " ");
+  return undefined;
+}
+
+const WORKS: Work[] = (
   { src: work25, title: "Угловой диван, бежевая ткань", desc: "Полная замена пружинного блока, поролона и поролоновых лент углового дивана. Диван привезли из Москвы — ткань осталась целой, а наполнитель расползся после года эксплуатации.\n\nСтоимость:\nПружинный блок — 10 000 ₽\nПоролон и ленты — 15 000 ₽\nКлей — 2 000 ₽\nСкобы — 1 000 ₽\nДоставка туда и обратно — 5 000 ₽\nРабота — 15 000 ₽\nИтого — 48 000 ₽\nСкидка за объём работ.", category: "Ремонт", tag: "замена поролона" },
   { src: work26, title: "Диван с разобранным каркасом", desc: "Ремонт дивана из экокожи. Замена и усиление продольной деревянной опоры (бруски). Изделие увезли в мастерскую — работа под ключ.\n\nСтоимость работы — 20 000 ₽.", category: "Ремонт", tag: "усиление каркаса" },
   { src: work27, title: "Модульный диван, серая ткань", desc: "Ремонт модульного дивана: замена креплений пружинной системы «змейка» на всех модулях. Заказчик привозил диван сам из г. Тамари.\n\nСтоимость работы — 30 000 ₽.", category: "Ремонт", tag: "замена поролона" },
