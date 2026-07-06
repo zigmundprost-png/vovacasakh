@@ -52,9 +52,9 @@ function Index() {
         <Problem />
         <Services />
         <Process />
-        <Prices />
         <Pickup />
         <Works />
+        <Prices />
         <Reviews />
         <Guarantee />
         <ForWhom />
