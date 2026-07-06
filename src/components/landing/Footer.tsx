@@ -11,7 +11,7 @@ const SECTIONS: [string, string][] = [
   ["#prices", "Цены"],
   ["#works", "Работы"],
   ["#reviews", "Отзывы"],
-  ["#guarantee", "Гарантия"],
+  ["#guarantee", "Качество"],
   ["#faq", "FAQ"],
 ];
 

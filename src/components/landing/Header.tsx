@@ -32,7 +32,7 @@ const NAV: NavItem[] = [
   { href: "#prices", label: "Цены", hint: "От 1000 ₽ за выезд", icon: Tag },
   { href: "#works", label: "Работы", hint: "40+ фото", icon: Images },
   { href: "#reviews", label: "Отзывы", hint: "Реальные люди", icon: Star },
-  { href: "#guarantee", label: "Гарантия", hint: "Чиню честно", icon: ShieldCheck },
+  { href: "#guarantee", label: "Качество", hint: "Качество работы", icon: ShieldCheck },
   { href: "#faq", label: "Вопросы", hint: "Частые ответы", icon: HelpCircle },
   { href: "#brief", label: "Заявка", hint: "Готовый текст в MAX", icon: Send },
 ];
