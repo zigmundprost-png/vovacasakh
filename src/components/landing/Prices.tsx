@@ -1,8 +1,10 @@
 import { Section } from "./Section";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const PRICES = [
   {
     group: "Мягкая мебель",
+    summary: "от 3 500 до 48 000 ₽",
     items: [
       { label: "Замена поролона и наполнителя", range: "от 10 000 до 48 000 ₽", note: "в среднем 32 000 ₽" },
       { label: "Замена пружинного блока", range: "от 12 000 ₽", note: "вместе с работой" },
@@ -13,12 +15,14 @@ const PRICES = [
   },
   {
     group: "Стулья и кресла",
+    summary: "от 6 500 до 18 000 ₽",
     items: [
       { label: "Ремонт и перетяжка стула", range: "от 6 500 до 18 000 ₽", note: "в среднем 11 000 ₽" },
     ],
   },
   {
     group: "Кровати и шкафы",
+    summary: "от 4 000 до 6 000 ₽",
     items: [
       { label: "Сборка кровати", range: "от 6 000 ₽", note: "после переезда" },
       { label: "Сборка шкафа / купе", range: "от 6 000 ₽", note: "сложность влияет" },
@@ -27,6 +31,7 @@ const PRICES = [
   },
   {
     group: "Сборка и прочее",
+    summary: "по договорённости",
     items: [
       { label: "Сборка офисной мебели", range: "по договорённости", note: "столы, стеллажи, тумбы" },
     ],
@@ -51,27 +56,34 @@ export function Prices() {
         </p>
       }
     >
-      <div className="space-y-8">
-        {PRICES.map((g) => (
-          <div key={g.group}>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary">{g.group}</h3>
-            <div className="overflow-hidden rounded-2xl border border-primary/15 bg-card shadow-[0_14px_40px_-22px_oklch(0.55_0.20_260/0.35)]">
-              {g.items.map((o, i) => (
-                <div
-                  key={o.label}
-                  className={`flex flex-col gap-1 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-5 ${i !== g.items.length - 1 ? "border-b border-primary/10" : ""}`}
-                >
-                  <div>
-                    <dt className="text-[15px] font-medium text-foreground/90">{o.label}</dt>
-                    <dd className="mt-0.5 text-xs text-muted-foreground">{o.note}</dd>
+      <Accordion type="single" collapsible defaultValue="prices-0" className="rounded-2xl border border-primary/15 bg-card shadow-[0_14px_40px_-22px_oklch(0.55_0.20_260/0.35)]">
+        {PRICES.map((g, gi) => (
+          <AccordionItem key={g.group} value={`prices-${gi}`} className="border-b border-primary/10 last:border-b-0">
+            <AccordionTrigger className="px-5 py-4 text-[15px] font-semibold hover:no-underline sm:px-6 sm:py-5">
+              <span className="flex w-full items-center justify-between gap-3">
+                <span>{g.group}</span>
+                <span className="text-base font-bold text-primary sm:text-[18px]">{g.summary}</span>
+              </span>
+            </AccordionTrigger>
+            <AccordionContent className="px-5 pb-5 sm:px-6">
+              <div className="overflow-hidden rounded-xl border border-primary/10">
+                {g.items.map((o, i) => (
+                  <div
+                    key={o.label}
+                    className={`flex flex-col gap-1 px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between sm:px-5 sm:py-4 ${i !== g.items.length - 1 ? "border-b border-primary/10" : ""}`}
+                  >
+                    <div>
+                      <div className="text-[15px] font-medium text-foreground/90">{o.label}</div>
+                      <div className="mt-0.5 text-xs text-muted-foreground">{o.note}</div>
+                    </div>
+                    <div className="text-[17px] font-extrabold tracking-tight text-primary">{o.range}</div>
                   </div>
-                  <div className="text-[18px] font-extrabold tracking-tight text-primary sm:text-[20px]">{o.range}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
         ))}
-      </div>
+      </Accordion>
 
       <div className="mt-8 overflow-hidden rounded-2xl border border-primary/15 bg-card">
         {CTA.map((o, i) => (
