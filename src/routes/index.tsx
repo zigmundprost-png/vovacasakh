@@ -38,7 +38,9 @@ export const Route = createFileRoute("/")({
           "Пришлите фото или видео поломки — я скажу, есть ли смысл ремонтировать, и помогу восстановить мебель.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.vovacarlo.ru/" },
     ],
+    links: [{ rel: "canonical", href: "https://www.vovacarlo.ru/" }],
   }),
 });
 
