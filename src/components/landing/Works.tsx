@@ -49,7 +49,15 @@ import work44 from "@/assets/works/work-44.webp";
 
 type Category = "Ремонт" | "Сборка";
 
-type Work = { src: string; title: string; desc: string; category: Category; tag: string };
+type Work = { src: string; title: string; desc: string; category: Category; tag: string; price?: string };
+
+function extractPrice(desc: string): string | undefined {
+  const itog = desc.match(/Итого[\s—–-]+([\d\s]+\d\s*₽)/i);
+  if (itog) return itog[1].replace(/\s+/g, " ");
+  const any = desc.match(/Стоимость[^\n]*?[\s—–-]+([\d\s]+\d\s*₽)/i);
+  if (any) return any[1].replace(/\s+/g, " ");
+  return undefined;
+}
 
 const WORKS: Work[] = [
   { src: work25, title: "Угловой диван, бежевая ткань", desc: "Полная замена пружинного блока, поролона и поролоновых лент углового дивана. Диван привезли из Москвы — ткань осталась целой, а наполнитель расползся после года эксплуатации.\n\nСтоимость:\nПружинный блок — 10 000 ₽\nПоролон и ленты — 15 000 ₽\nКлей — 2 000 ₽\nСкобы — 1 000 ₽\nДоставка туда и обратно — 5 000 ₽\nРабота — 15 000 ₽\nИтого — 48 000 ₽\nСкидка за объём работ.", category: "Ремонт", tag: "замена поролона" },
@@ -96,7 +104,7 @@ const WORKS: Work[] = [
   { src: work19, title: "Офисные столы, белый каркас", desc: "Сборка партии столов в новом офисе.", category: "Сборка", tag: "сборка мебели" },
   { src: work18, title: "Шкафы для документов", desc: "Сборка и установка шкафов в ряд.", category: "Сборка", tag: "сборка шкафа" },
   { src: work17, title: "Шкафы со стеклянными дверцами", desc: "Сборка медицинской мебели в коридоре.", category: "Сборка", tag: "сборка шкафа" },
-];
+].map((w) => ({ ...w, price: extractPrice(w.desc) } as Work));
 
 const CATEGORIES: ("Все" | Category)[] = ["Все", "Ремонт", "Сборка"];
 
@@ -174,6 +182,11 @@ export function Works() {
                 loading="lazy"
                 className="h-full w-full object-cover transition group-hover:scale-105"
               />
+              {w.price && (
+                <span className="absolute right-2 top-2 z-10 rounded-full bg-primary px-2.5 py-1 text-[11px] font-bold text-primary-foreground shadow-md shadow-primary/25 ring-1 ring-primary-foreground/20 backdrop-blur-sm">
+                  {w.price}
+                </span>
+              )}
               <span className="absolute left-2 bottom-2 right-2 rounded-md bg-background/90 px-2 py-1 text-[11px] font-semibold text-foreground shadow-sm backdrop-blur">
                 {w.tag}
               </span>
@@ -256,6 +269,14 @@ export function Works() {
                   </div>
                 </div>
                 <h3 className="mt-1 text-lg font-semibold text-foreground">{open.title}</h3>
+                {open.price && (
+                  <div className="mt-3 flex items-center gap-2">
+                    <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-bold text-primary ring-1 ring-primary/20">
+                      {open.price}
+                    </span>
+                    <span className="text-xs text-muted-foreground">стоимость этой работы</span>
+                  </div>
+                )}
                 <div className="mt-3 space-y-3 rounded-2xl border border-border bg-[color:var(--card-soft)] p-5 shadow-sm">
                   <p className="whitespace-pre-line text-[15px] leading-relaxed text-foreground/90">
                     {open.desc}
