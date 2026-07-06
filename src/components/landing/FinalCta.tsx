@@ -5,7 +5,7 @@ export function FinalCta() {
   return (
     <section id="contact" className="border-t border-border bg-[color:var(--card-soft)]">
       <div className="mx-auto max-w-4xl px-5 py-16 sm:px-6 md:px-8 md:py-28 text-center">
-        <span className="inline-flex items-center gap-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-[color:var(--accent-warm)]">
+        <span className="inline-flex items-center gap-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-[color:var(--accent-warm-strong)]">
           <span className="h-[2px] w-7 rounded-full bg-[color:var(--accent-warm)]" aria-hidden />
           Следующий шаг
         </span>

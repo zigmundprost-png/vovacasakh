@@ -171,11 +171,11 @@ export function Reviews() {
       }
     >
       <div className="mb-6 flex items-start gap-3 rounded-2xl border-l-4 border-[color:var(--accent-warm)] border-y border-r border-y-[color:var(--card-soft-border)] border-r-[color:var(--card-soft-border)] bg-[oklch(0.98_0.025_45)] p-5">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm)]">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm-strong)]">
           <BadgeCheck className="h-[18px] w-[18px]" strokeWidth={2.2} aria-hidden />
         </span>
         <div className="min-w-0">
-          <p className="font-display text-[14px] font-extrabold uppercase tracking-[0.08em] text-[color:var(--accent-warm)]">
+          <p className="font-display text-[14px] font-extrabold uppercase tracking-[0.08em] text-[color:var(--accent-warm-strong)]">
             Отзывы настоящие
           </p>
           <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground">
@@ -184,7 +184,7 @@ export function Reviews() {
               href="https://mnogotovarov.ru/3191299.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-[color:var(--accent-warm)] underline underline-offset-2 hover:opacity-80"
+              className="font-semibold text-[color:var(--accent-warm-strong)] underline underline-offset-2 hover:opacity-80"
             >
               Открыть отзывы
             </a>

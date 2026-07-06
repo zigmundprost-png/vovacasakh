@@ -51,7 +51,7 @@ export function Hero() {
                   aria-hidden
                   viewBox="0 0 320 14"
                   preserveAspectRatio="none"
-                  className="pointer-events-none absolute -bottom-1.5 left-0 h-2.5 w-full text-[color:var(--accent-warm)]"
+                  className="pointer-events-none absolute -bottom-1.5 left-0 h-2.5 w-full text-[color:var(--accent-warm-strong)]"
                 >
                   <path
                     d="M2 8 C 60 2, 140 12, 220 6 S 310 4, 318 7"
@@ -99,7 +99,7 @@ export function Hero() {
 
               <a
                 href="#works"
-                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-[20px] border-2 border-[color:var(--accent-warm)] bg-card px-7 text-[16px] font-bold text-[color:var(--accent-warm)] transition-colors hover:bg-[oklch(0.98_0.025_45)] sm:w-auto"
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-[20px] border-2 border-[color:var(--accent-warm)] bg-card px-7 text-[16px] font-bold text-[color:var(--accent-warm-strong)] transition-colors hover:bg-[oklch(0.98_0.025_45)] sm:w-auto"
               >
                 Посмотреть работы
                 <ArrowRight className="h-4 w-4" aria-hidden />

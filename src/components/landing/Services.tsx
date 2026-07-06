@@ -54,11 +54,11 @@ export function Services() {
 
       {/* Важная заметка — выделена для внимания клиента */}
       <div className="mt-8 flex items-start gap-3 rounded-2xl border-l-4 border-[color:var(--accent-warm)] border-y border-r border-y-[color:var(--card-soft-border)] border-r-[color:var(--card-soft-border)] bg-[oklch(0.98_0.025_45)] p-5">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm)]">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm-strong)]">
           <Info className="h-[18px] w-[18px]" strokeWidth={2.2} aria-hidden />
         </span>
         <div className="min-w-0">
-          <p className="font-display text-[14px] font-extrabold uppercase tracking-[0.08em] text-[color:var(--accent-warm)]">
+          <p className="font-display text-[14px] font-extrabold uppercase tracking-[0.08em] text-[color:var(--accent-warm-strong)]">
             Важно знать заранее
           </p>
           <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground">
@@ -122,14 +122,14 @@ function ServiceCard({
       }`}
     >
       {primary && (
-        <span className="absolute -top-3 left-6 inline-flex items-center gap-1.5 rounded-full bg-[color:var(--accent-warm)] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_6px_16px_-6px_oklch(0.68_0.18_35/0.6)]">
+        <span className="absolute -top-3 left-6 inline-flex items-center gap-1.5 rounded-full bg-[color:var(--accent-warm-strong)] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_6px_16px_-6px_oklch(0.68_0.18_35/0.6)]">
           Главное направление
         </span>
       )}
       <div className="flex items-center gap-3">
         <span
           className={`inline-flex h-11 w-11 items-center justify-center rounded-full ${
-            primary ? "bg-[color:var(--accent-warm)] text-white" : "bg-[color:var(--card-soft)] text-primary"
+            primary ? "bg-[color:var(--accent-warm-strong)] text-white" : "bg-[color:var(--card-soft)] text-primary"
           }`}
         >
           {icon}
@@ -145,7 +145,7 @@ function ServiceCard({
             <span
               aria-hidden
               className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
-                primary ? "bg-[color:var(--accent-warm)]/15 text-[color:var(--accent-warm)]" : "bg-[color:var(--card-soft)] text-primary"
+                primary ? "bg-[color:var(--accent-warm)]/15 text-[color:var(--accent-warm-strong)]" : "bg-[color:var(--card-soft)] text-primary"
               }`}
             >
               <Check className="h-3 w-3" strokeWidth={3} />
