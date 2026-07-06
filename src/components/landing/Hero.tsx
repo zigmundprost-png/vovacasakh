@@ -31,7 +31,7 @@ const TRUST_STATS = [
 export function Hero() {
   return (
     <section id="top" className="bg-background">
-      <div className="mx-auto max-w-6xl px-5 pt-8 pb-12 sm:px-6 md:px-8 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28">
+      <div className="mx-auto max-w-6xl px-5 pt-8 pb-8 sm:px-6 md:px-8 md:pt-16 md:pb-10 lg:pt-20 lg:pb-14">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:items-start">
           {/* Текст */}
           <div className="max-w-xl">
