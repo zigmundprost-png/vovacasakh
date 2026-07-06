@@ -56,6 +56,10 @@ import work51Asset from "@/assets/works/work-51.jpg.asset.json";
 import work52Asset from "@/assets/works/work-52.jpg.asset.json";
 import work53Asset from "@/assets/works/work-53.jpg.asset.json";
 import work54Asset from "@/assets/works/work-54.jpg.asset.json";
+import work55Asset from "@/assets/works/work-55.jpg.asset.json";
+import work56Asset from "@/assets/works/work-56.jpg.asset.json";
+import work57Asset from "@/assets/works/work-57.jpg.asset.json";
+import work58Asset from "@/assets/works/work-58.jpg.asset.json";
 const work45 = work45Asset.url;
 const work46 = work46Asset.url;
 const work47 = work47Asset.url;
@@ -66,6 +70,10 @@ const work51 = work51Asset.url;
 const work52 = work52Asset.url;
 const work53 = work53Asset.url;
 const work54 = work54Asset.url;
+const work55 = work55Asset.url;
+const work56 = work56Asset.url;
+const work57 = work57Asset.url;
+const work58 = work58Asset.url;
 
 type Category = "Ремонт" | "Сборка";
 
@@ -94,6 +102,10 @@ const WORKS: Work[] = [
   { src: work52, title: "Целый независимый пружинный блок", desc: "Пример целого независимого пружинного блока — идёт на замену старому.", category: "Ремонт", tag: "замена пружинного блока" },
   { src: work53, title: "Четырёхстворчатые стеллажи", desc: "Сборка партии четырёхстворчатых стеллажей. Проект «Офисная мебель».", category: "Сборка", tag: "сборка шкафа" },
   { src: work54, title: "Установка фасада с вырванными петлями", desc: "Установка фасада на место вырванных шурупов, было вырвано три петли.", category: "Ремонт", tag: "ремонт шкафа", price: "4 000 ₽" },
+  { src: work55, title: "Гинекологическое кресло", desc: "Полный ремонт: восстановление обивки и механизмов, замена изношенных элементов.", category: "Ремонт", tag: "усиление каркаса", price: "15 000 ₽" },
+  { src: work56, title: "Три шкафа и стеллаж в ряд", desc: "Сборка трёх шкафов и одного стеллажа, соединение между собой без стяжек и шурупов, установка по месту.", category: "Сборка", tag: "сборка шкафа", price: "12 000 ₽" },
+  { src: work57, title: "Столы и выкатные тумбы", desc: "Сборка столов и выкатных тумб. Проект «Офисная мебель».", category: "Сборка", tag: "сборка мебели" },
+  { src: work58, title: "Новый и старый пружинные блоки", desc: "Сравнение: новый независимый пружинный блок рядом со старым — идёт под замену.", category: "Ремонт", tag: "замена пружинного блока" },
   { src: work1, title: "Большой угловой диван", desc: "Замена поролона и восстановление формы сидений.", category: "Ремонт", tag: "замена поролона" },
   { src: work2, title: "Прямой диван-книжка", desc: "Замена наполнителя и восстановление обивки.", category: "Ремонт", tag: "замена поролона" },
   { src: work3, title: "Угловой диван, светлая ткань", desc: "Восстановление сидений и подушек.", category: "Ремонт", tag: "замена поролона" },
