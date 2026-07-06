@@ -56,6 +56,10 @@ import work51Asset from "@/assets/works/work-51.jpg.asset.json";
 import work52Asset from "@/assets/works/work-52.jpg.asset.json";
 import work53Asset from "@/assets/works/work-53.jpg.asset.json";
 import work54Asset from "@/assets/works/work-54.jpg.asset.json";
+import work55Asset from "@/assets/works/work-55.jpg.asset.json";
+import work56Asset from "@/assets/works/work-56.jpg.asset.json";
+import work57Asset from "@/assets/works/work-57.jpg.asset.json";
+import work58Asset from "@/assets/works/work-58.jpg.asset.json";
 const work45 = work45Asset.url;
 const work46 = work46Asset.url;
 const work47 = work47Asset.url;
@@ -66,6 +70,10 @@ const work51 = work51Asset.url;
 const work52 = work52Asset.url;
 const work53 = work53Asset.url;
 const work54 = work54Asset.url;
+const work55 = work55Asset.url;
+const work56 = work56Asset.url;
+const work57 = work57Asset.url;
+const work58 = work58Asset.url;
 
 type Category = "Ремонт" | "Сборка";
 
