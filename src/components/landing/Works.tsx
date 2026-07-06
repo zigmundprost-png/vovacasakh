@@ -256,9 +256,11 @@ export function Works() {
                   </div>
                 </div>
                 <h3 className="mt-1 text-lg font-semibold text-foreground">{open.title}</h3>
-                <p className="mt-3 whitespace-pre-line rounded-xl border border-[color:var(--accent-warm)]/40 bg-[oklch(0.985_0.022_45)] p-4 text-sm leading-relaxed text-[color:var(--accent-warm)] shadow-sm">
-                  {open.desc}
-                </p>
+                <div className="mt-3 space-y-3 rounded-2xl border border-border bg-[color:var(--card-soft)] p-5 shadow-sm">
+                  <p className="whitespace-pre-line text-[15px] leading-relaxed text-foreground/90">
+                    {open.desc}
+                  </p>
+                </div>
               </div>
             </div>
           )}
