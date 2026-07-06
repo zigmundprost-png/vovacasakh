@@ -1,0 +1,20 @@
+Fonts in this directory
+=======================
+
+Files:
+  golos-text-*.woff2   — Golos Text
+  unbounded-*.woff2    — Unbounded
+
+Both families are licensed under the SIL Open Font License, Version 1.1
+(OFL-1.1). The full text of the license is available at:
+  https://openfontlicense.org
+  https://scripts.sil.org/OFL
+
+Copyright notices:
+  Copyright 2018 Contributors to the Golos Text project.
+  Copyright 2020-2022 The Unbounded Project Authors
+  (https://github.com/googlefonts/unbounded).
+
+The files were downloaded from Google Fonts (fonts.gstatic.com) and are
+served locally to avoid a runtime dependency on the Google Fonts CDN.
+No modifications were made to the font files.

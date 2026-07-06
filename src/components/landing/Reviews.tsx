@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Section } from "./Section";
 import { Star, BadgeCheck, ChevronDown } from "lucide-react";
 
-
 type Review = { name: string; date: string; text: string };
 
 const REVIEWS: Review[] = [
@@ -164,18 +163,14 @@ export function Reviews() {
       id="reviews"
       eyebrow="Отзывы клиентов"
       title="Что говорят те, кто уже ко мне обращался"
-      intro={
-        <p>
-          Это реальные отзывы с площадок объявлений. Я их не правил и не выдумывал имена.
-        </p>
-      }
+      intro={<p>Это реальные отзывы с площадок объявлений. Я их не правил и не выдумывал имена.</p>}
     >
       <div className="mb-6 flex items-start gap-3 rounded-2xl border-l-4 border-[color:var(--accent-warm)] border-y border-r border-y-[color:var(--card-soft-border)] border-r-[color:var(--card-soft-border)] bg-[oklch(0.98_0.025_45)] p-5">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm)]">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm-strong)]">
           <BadgeCheck className="h-[18px] w-[18px]" strokeWidth={2.2} aria-hidden />
         </span>
         <div className="min-w-0">
-          <p className="font-display text-[14px] font-extrabold uppercase tracking-[0.08em] text-[color:var(--accent-warm)]">
+          <p className="font-display text-[14px] font-extrabold uppercase tracking-[0.08em] text-[color:var(--accent-warm-strong)]">
             Отзывы настоящие
           </p>
           <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground">
@@ -184,7 +179,7 @@ export function Reviews() {
               href="https://mnogotovarov.ru/3191299.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-[color:var(--accent-warm)] underline underline-offset-2 hover:opacity-80"
+              className="font-semibold text-[color:var(--accent-warm-strong)] underline underline-offset-2 hover:opacity-80"
             >
               Открыть отзывы
             </a>
@@ -211,7 +206,7 @@ export function Reviews() {
                   <div className="text-[12px] text-muted-foreground">{r.date}</div>
                 </div>
               </div>
-              <div className="flex gap-0.5 text-amber-500" aria-label="5 из 5">
+              <div className="flex gap-0.5 text-amber-500" role="img" aria-label="Оценка 5 из 5">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-3.5 w-3.5 fill-current" aria-hidden />
                 ))}

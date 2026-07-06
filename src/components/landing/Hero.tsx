@@ -7,14 +7,12 @@ import {
   Video,
   ShieldCheck,
   Truck,
-  
   MapPin,
   Award,
   Car,
 } from "lucide-react";
 import { openMaxBrief } from "./MaxBriefDialog";
 import { MaxLogo } from "./MaxLogo";
-
 
 const VALUE_PROPS = [
   { icon: Sofa, text: "Ремонтирую диваны, кресла, стулья и кровати" },
@@ -51,7 +49,7 @@ export function Hero() {
                   aria-hidden
                   viewBox="0 0 320 14"
                   preserveAspectRatio="none"
-                  className="pointer-events-none absolute -bottom-1.5 left-0 h-2.5 w-full text-[color:var(--accent-warm)]"
+                  className="pointer-events-none absolute -bottom-1.5 left-0 h-2.5 w-full text-[color:var(--accent-warm-strong)]"
                 >
                   <path
                     d="M2 8 C 60 2, 140 12, 220 6 S 310 4, 318 7"
@@ -65,10 +63,9 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 text-[16px] leading-[1.6] text-muted-foreground sm:text-[17px]">
-              Меня зовут Владимир. Я ремонтирую диваны, кресла, стулья, кровати
-              и другую мягкую мебель в Южно-Сахалинске и южной части Сахалина.
-              Пришлите фото или короткое видео поломки — скажу, есть ли смысл
-              ремонтировать, нужен ли выезд и что делать дальше.
+              Меня зовут Владимир. Я ремонтирую диваны, кресла, стулья, кровати и другую мягкую
+              мебель в Южно-Сахалинске и южной части Сахалина. Пришлите фото или короткое видео
+              поломки — скажу, есть ли смысл ремонтировать, нужен ли выезд и что делать дальше.
             </p>
 
             {/* Feature cards */}
@@ -81,7 +78,9 @@ export function Hero() {
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[color:var(--card-soft)] text-primary">
                     <Icon className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden />
                   </span>
-                  <span className="text-[15px] font-medium leading-snug text-foreground">{text}</span>
+                  <span className="text-[15px] font-medium leading-snug text-foreground">
+                    {text}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -99,7 +98,7 @@ export function Hero() {
 
               <a
                 href="#works"
-                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-[20px] border-2 border-[color:var(--accent-warm)] bg-card px-7 text-[16px] font-bold text-[color:var(--accent-warm)] transition-colors hover:bg-[oklch(0.98_0.025_45)] sm:w-auto"
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-[20px] border-2 border-[color:var(--accent-warm)] bg-card px-7 text-[16px] font-bold text-[color:var(--accent-warm-strong)] transition-colors hover:bg-[oklch(0.98_0.025_45)] sm:w-auto"
               >
                 Посмотреть работы
                 <ArrowRight className="h-4 w-4" aria-hidden />
@@ -107,31 +106,39 @@ export function Hero() {
             </div>
 
             {/* Полоса доверия с цифрами */}
-            <dl className="mt-8 grid grid-cols-2 gap-3 border-t border-border pt-6 sm:grid-cols-4 sm:gap-4">
+            <ul className="mt-8 grid grid-cols-2 gap-3 border-t border-border pt-6 sm:grid-cols-4 sm:gap-4">
               {TRUST_STATS.map(({ icon: Icon, value, label }) => (
-                <div
+                <li
                   key={value}
                   className="rounded-2xl border border-[color:var(--card-soft-border)] bg-card p-4 transition-colors hover:border-primary/30"
                 >
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--card-soft)] text-primary">
                     <Icon className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden />
                   </span>
-                  <dt className="font-display mt-3 text-[18px] font-extrabold leading-tight text-foreground">
+                  <div className="font-display mt-3 text-[18px] font-extrabold leading-tight text-foreground">
                     {value}
-                  </dt>
-                  <dd className="mt-0.5 text-[12px] leading-snug text-muted-foreground">
+                  </div>
+                  <div className="mt-0.5 text-[12px] leading-snug text-muted-foreground">
                     {label}
-                  </dd>
-                </div>
+                  </div>
+                </li>
               ))}
-            </dl>
+            </ul>
           </div>
 
           {/* Визуальный блок */}
           <div className="hidden lg:block lg:sticky lg:top-24">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <PlaceholderCard label="Фото до" icon={<ImageIcon className="h-4 w-4" />} aspect="aspect-[4/5]" />
-              <PlaceholderCard label="Фото после" icon={<Sparkles className="h-4 w-4" />} aspect="aspect-[4/5]" />
+              <PlaceholderCard
+                label="Фото до"
+                icon={<ImageIcon className="h-4 w-4" />}
+                aspect="aspect-[4/5]"
+              />
+              <PlaceholderCard
+                label="Фото после"
+                icon={<Sparkles className="h-4 w-4" />}
+                aspect="aspect-[4/5]"
+              />
               <PlaceholderCard
                 label="Процесс ремонта"
                 icon={<Wrench className="h-4 w-4" />}
@@ -161,7 +168,9 @@ function PlaceholderCard({
   className?: string;
 }) {
   return (
-    <div className={`relative ${aspect} overflow-hidden rounded-2xl border border-[color:var(--card-soft-border)] bg-[color:var(--card-soft)] ${className}`}>
+    <div
+      className={`relative ${aspect} overflow-hidden rounded-2xl border border-[color:var(--card-soft-border)] bg-[color:var(--card-soft)] ${className}`}
+    >
       <div className="absolute inset-0 flex flex-col justify-between p-4">
         <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-card text-primary">
           {icon}

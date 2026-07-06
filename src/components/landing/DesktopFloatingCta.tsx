@@ -17,9 +17,12 @@ export function DesktopFloatingCta() {
   }, []);
 
   return (
-    <div
+    <aside
+      aria-label="Быстрая связь"
       className={`hidden md:flex fixed bottom-6 right-6 z-40 flex-col items-end gap-3 transition-all duration-300 ${
-        visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none"
+        visible
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
       {/* Раскрывающееся меню */}
@@ -83,10 +86,7 @@ export function DesktopFloatingCta() {
         className="relative flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_12px_28px_-8px_oklch(0.555_0.205_260/0.6)] transition-all hover:bg-primary-hover hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         {!open && (
-          <span
-            aria-hidden
-            className="absolute inset-0 rounded-full bg-primary/40 animate-ping"
-          />
+          <span aria-hidden className="absolute inset-0 rounded-full bg-primary/40 animate-ping" />
         )}
         <span className="relative">
           {open ? (
@@ -96,6 +96,6 @@ export function DesktopFloatingCta() {
           )}
         </span>
       </button>
-    </div>
+    </aside>
   );
 }

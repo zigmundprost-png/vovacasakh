@@ -42,7 +42,7 @@ export function Pickup() {
       </ul>
 
       <div className="mt-6 flex items-start gap-3 rounded-xl border-l-4 border-[color:var(--accent-warm)] bg-[oklch(0.985_0.022_45)] px-4 py-3.5">
-        <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm)]">
+        <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-card text-[color:var(--accent-warm-strong)]">
           <Info className="h-3.5 w-3.5" aria-hidden />
         </span>
         <p className="text-[14px] leading-relaxed text-foreground/90">
