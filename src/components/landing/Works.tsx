@@ -182,6 +182,11 @@ export function Works() {
                 loading="lazy"
                 className="h-full w-full object-cover transition group-hover:scale-105"
               />
+              {w.price && (
+                <span className="absolute right-2 top-2 z-10 rounded-full bg-primary px-2.5 py-1 text-[11px] font-bold text-primary-foreground shadow-md shadow-primary/25 ring-1 ring-primary-foreground/20 backdrop-blur-sm">
+                  {w.price}
+                </span>
+              )}
               <span className="absolute left-2 bottom-2 right-2 rounded-md bg-background/90 px-2 py-1 text-[11px] font-semibold text-foreground shadow-sm backdrop-blur">
                 {w.tag}
               </span>
