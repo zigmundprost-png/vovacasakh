@@ -264,6 +264,11 @@ export function Works() {
                 </div>
                 <h3 className="mt-1 text-lg font-semibold text-foreground">{open.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{open.desc}</p>
+                {open.price && (
+                  <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-[color:var(--card-soft)] px-3 py-1 text-sm font-bold text-foreground">
+                    Цена работ: <span className="text-[color:var(--accent-warm)]">{open.price}</span>
+                  </p>
+                )}
               </div>
             </div>
           )}
