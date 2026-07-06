@@ -104,7 +104,7 @@ const WORKS: Work[] = [
   { src: work19, title: "Офисные столы, белый каркас", desc: "Сборка партии столов в новом офисе.", category: "Сборка", tag: "сборка мебели" },
   { src: work18, title: "Шкафы для документов", desc: "Сборка и установка шкафов в ряд.", category: "Сборка", tag: "сборка шкафа" },
   { src: work17, title: "Шкафы со стеклянными дверцами", desc: "Сборка медицинской мебели в коридоре.", category: "Сборка", tag: "сборка шкафа" },
-].map((w) => ({ ...w, price: extractPrice(w.desc) }));
+].map((w) => ({ ...w, price: extractPrice(w.desc) } as Work));
 
 const CATEGORIES: ("Все" | Category)[] = ["Все", "Ремонт", "Сборка"];
 
